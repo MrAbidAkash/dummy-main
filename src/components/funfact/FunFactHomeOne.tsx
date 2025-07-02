@@ -43,7 +43,7 @@ const FunFactHomeOne = ({style_2, style_3} :any) => {
               <div className="cs_funfact cs_style1">
                 <div className={`cs_funfact_number  me-4 ${style_2 ? 'cs_stroke_normal' : 'cs_stroke_text'}`}>
                   <div className="amin_auto_count">
-                    <Count number={item.number} add_style={true} />
+                    <Count number={item.number} text={item.title} add_style={true} />
                   </div>
                   {i === 0 && <span>K</span>}
                   {i === 1 && <span>K</span>}
