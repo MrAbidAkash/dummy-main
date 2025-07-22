@@ -81,12 +81,17 @@ const menu_data: DataType[] = [
     sub_menu: [
       {
         id: 1,
-        title: "Services",
-        link: "/service",
+        title: "Digital Marketing Strategy & Execution",
+        link: "/service-details",
       },
       {
         id: 2,
-        title: "Services Details",
+        title: "Marketing CRM Implementation & Optimization",
+        link: "/service-details",
+      },
+      {
+        id: 3,
+        title: "Business Systems & Automation",
         link: "/service-details",
       },
     ],
@@ -95,19 +100,7 @@ const menu_data: DataType[] = [
     id: 5,
     title: "Portfolio",
     link: "/portfolio",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Portfolio",
-        link: "/portfolio",
-      },
-      {
-        id: 2,
-        title: "Portfolio Details",
-        link: "/portfolio-details",
-      },
-    ],
+    has_dropdown: false,
   },
   {
     id: 6,
@@ -233,19 +226,27 @@ const HeaderOne = () => {
               </div>
               <div className="cs_main_header_right">
                 <div className="cs_nav cs_medium">
-                  <MobileMenu
-                    active={active}
-                    navTitle={navTitle}
-                    openMobileMenu={openMobileMenu}
-                  />
-                  <span
-                    className={`cs_munu_toggle ${
-                      active ? "cs_toggle_active" : ""
-                    }`}
-                    onClick={handleActive}
-                  >
-                    <span></span>
-                  </span>
+                  <ul className="cs_nav_list">
+                    {menu_data.map((item, i) => (
+                      <li
+                        key={i}
+                        className={`${item.has_dropdown ? "menu-item-has-children" : ""}`}
+                      >
+                        <Link href={item.link}>{item.title}</Link>
+                        {item.has_dropdown && item.sub_menu && (
+                          <ul>
+                            {item.sub_menu.map((sub_item, index) => (
+                              <li key={index}>
+                                <Link href={sub_item.link}>
+                                  {sub_item.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="cs_toolbox">
                   <span className="cs_icon_btn">
@@ -262,6 +263,13 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu */}
+      <MobileMenu
+        active={active}
+        navTitle={navTitle}
+        openMobileMenu={openMobileMenu}
+      />
 
       <div className={`cs_side_header ${active ? "active" : ""}`}>
         <button className="cs_close" onClick={handleActive}></button>
@@ -330,8 +338,8 @@ const HeaderOne = () => {
                       ></path>
                     </svg>
                     <span className="ms-2">
-                      46 JOHN ST TORONTO ON <br />
-                      &nbsp; &nbsp; &nbsp; &nbsp; M5V 3W2
+                      Toronto, ON Canada <br />
+                      &nbsp; &nbsp; &nbsp; &nbsp; Digital Transformation Hub
                     </span>
                   </p>
 
@@ -387,10 +395,10 @@ const HeaderOne = () => {
                   <hr className="mt-2 me-5 mb-2" />
                   <h2>
                     <a
-                      href="mailto:info@email.com"
+                      href="mailto:hello@leads360.ca"
                       className="cs_primary_font cs_text_btn"
                     >
-                      <span className="cs_black">info@email.com</span>
+                      <span className="cs_black">hello@leads360.ca</span>
                     </a>
                   </h2>
                 </div>

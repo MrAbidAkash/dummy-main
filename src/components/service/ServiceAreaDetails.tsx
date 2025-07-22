@@ -9,23 +9,18 @@ interface DataType {
 const service_data = [
   {
     id: "one",
-    title: "Audit",
-    description: `We start with a deep dive into your metrics, audiences, and current marketing assets to uncover opportunities.`,
+    title: "Digital Marketing Strategy & Execution",
+    description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and drive qualified leads.`,
   },
   {
     id: "two",
-    title: "Strategy",
-    description: `Next, we craft a bespoke roadmap—social content plans, ad campaigns, and automation flows—tailored to your goals.`,
+    title: "Marketing CRM Implementation & Optimization",
+    description: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with your marketing tools for streamlined operations.`,
   },
   {
     id: "three",
-    title: "Implementation",
-    description: `Our team executes campaigns, builds your CRM workflows, and launches website or email updates to drive real results.`,
-  },
-  {
-    id: "four",
-    title: "Optimize",
-    description: `We continuously monitor performance, refine targeting and creative, and iterate your systems for maximum ROI.`,
+    title: "Business Systems & Automation",
+    description: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency.`,
   },
 ];
 
@@ -38,12 +33,10 @@ const ServiceAreaDetails = () => {
         <div className="container">
           <div className="cs_work cs_work_text">
             <h4 className="anim_heading_title">
-              Specialization & Working Process
+              Our Core Services: Driving Your Digital Success
             </h4>
             <p className="cs_mp0 anim_text">
-              Welcome to our digital agency! We specialize in helping businesses like yours succeed online.
-              From website design and development to digital marketing and advertising, we have the tools and
-              expertise to elevate your online presence.
+              At Leads360, we are a dedicated digital transformation company committed to helping small businesses achieve sustainable growth without chaos. Our suite of services is meticulously designed to address your unique challenges, providing tailored strategies and cutting-edge tools to optimize your operations, enhance your online presence, and drive measurable results.
             </p>
           </div>
           <div className="cs_height_80 cs_height_lg_40"></div>

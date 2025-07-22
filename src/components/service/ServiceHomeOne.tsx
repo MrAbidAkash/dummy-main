@@ -16,28 +16,18 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    title: `Social Media Marketing & Management`,
-    des: `Build authentic relationships with your local community through strategic content creation, community management, and engagement on Facebook, Instagram, and LinkedIn. Drive referrals and repeat business.`,
+    title: `Digital Marketing Strategy & Execution`,
+    des: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and attract qualified leads with measurable ROI.`,
   },
   {
     id: 2,
-    title: `Facebook & Instagram Advertising`,
-    des: `Target your ideal clients with precision using Facebook and Instagram ads. From lead generation to brand awareness, we create campaigns that convert visitors into paying customers.`,
+    title: `Marketing CRM Implementation & Optimization`,
+    des: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations and scalable growth.`,
   },
   {
     id: 3,
-    title: `Website Design & Maintenance`,
-    des: `Professional, mobile-friendly websites that convert visitors into customers. Includes ongoing maintenance, security updates, and performance optimization to keep your site fast and secure.`,
-  },
-  {
-    id: 4,
-    title: `CRM Setup & Business Automation`,
-    des: `Streamline your business operations with custom CRM solutions. Automate appointment scheduling, follow-ups, and client communication to save time and increase customer retention.`,
-  },
-  {
-    id: 5,
-    title: `Email Marketing & Lead Nurturing`,
-    des: `Convert leads into customers with strategic email campaigns. From welcome sequences to promotional offers, we create emails that engage your audience and drive sales.`,
+    title: `Business Systems & Automation`,
+    des: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency across your business.`,
   },
 ];
 
@@ -170,13 +160,13 @@ const ServiceHomeOne = () => {
                 ref={subtitleRef}
                 className="cs_section_subtitle anim_div_ShowZoom"
               >
-                Our Services
+                Leads360 Services
               </div>
               <h2
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Digital Marketing Solutions That Drive Real Business Growth
+                Your Path to Scalable Growth & Digital Transformation
               </h2>
             </div>
             <div

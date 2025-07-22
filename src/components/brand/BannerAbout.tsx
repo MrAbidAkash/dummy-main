@@ -17,8 +17,8 @@ const BannerAbout = () => {
                 transition={{ duration: 0.3, ease: "linear" }}
                 className="cs_section_title anim_text_writting"
               >
-                How Our Agency is Transforming <br /> Businesses and Brands
-                through <br /> Online Solutions
+                About Leads360: <br />  Your Partner for 
+                Sustainable <br /> Small Business Growth
               </motion.h2>
             </div>
             <div className="cs_section_heading_right">
@@ -39,7 +39,7 @@ const BannerAbout = () => {
                           href="#textPath"
                           startOffset="0%"
                         >
-                          Leads360 Digital Agency . Leads360 Digital Agency .
+                          Your Partner for Sustainable Small Business Growth.
                           &nbsp;
                         </textPath>
                       </text>

@@ -15,8 +15,10 @@ interface DataType {
 
 const about_content: DataType = {
   subtitle: `Our Agency Story`,
-  title: `How Our Agency is Pushing the Boundaries of Online Marketing and Design`,
-  des: `Digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you navigate the evolving world of digital to drive growth and reach your goals.`,
+  title: `Our Story: Empowering Businesses to Thrive Without Chaos`,
+  des: `At Leads360, we believe that true business growth isn't just about expansion; it's about sustainable growth without chaos. We've witnessed firsthand the challenges small businesses face when scaling – from managing increased demand to optimizing complex operations. Our agency, a leading digital transformation company, was founded on the principle of providing tailored, strategic solutions that empower businesses to overcome these hurdles and achieve their full potential.
+
+We are more than just a digital agency; we are your dedicated growth partners. Our mission is to transform businesses and brands through intelligent, online solutions that deliver measurable results. We understand that every business is unique, which is why we reject one-size-fits-all approaches. Instead, we focus on crafting custom strategies that address your specific pain points and unlock new opportunities for scalable growth.`,
 }
 
 const About = () => {

@@ -23,20 +23,20 @@ const testimonial_data: DataType[] = [
   {
     img: avatar_img,
     name: `Mike Johnson`,
-    location: `Local Electrician`,
-    des: `"Leads360 transformed our business! Within 3 months, our Facebook ads and social media content brought in 40% more service calls. The CRM automation saves me hours every week on follow-ups."`,
+    location: `Local Electrician, Denver`,
+    des: `"Before Leads360, managing growth was chaotic - more calls meant more missed opportunities. Their CRM automation and Facebook ad strategy brought us 40% more qualified leads while streamlining our booking process. Now we grow without the stress."`,
   },
   {
     img: avatar_img,
     name: `Dr. Sarah Chen`,
-    location: `Physiotherapy Clinic`,
-    des: `"Their social media strategy and email marketing campaigns helped us fill our appointment books consistently. We've seen a 60% increase in new patient referrals in just 6 months."`,
+    location: `Physiotherapy Clinic Owner`,
+    des: `"Leads360 transformed our patient acquisition from unpredictable to systematic. Their tailored digital marketing strategy filled our appointment books consistently, bringing us 60% more new patients in 6 months - all while reducing our administrative workload."`,
   },
   {
     img: avatar_img,
     name: `Tom Williams`,
-    location: `Plumbing Services`,
-    des: `"The Facebook ads and website optimization brought us more qualified leads than ever. Our booking system automation means I can focus on the work instead of admin tasks."`,
+    location: `Williams Plumbing Services`,
+    des: `"The challenge wasn't getting leads - it was managing sustainable growth. Leads360's custom approach optimized our entire customer journey, from initial contact to completed jobs. Revenue increased 50% while operational chaos decreased significantly."`,
   },
 ];
 
@@ -226,7 +226,7 @@ const Testimonial = ({ style_service }: any) => {
                 }`}
               >
                 <h2 className="cs_testimonial_title">
-                  Real Results from Real Businesses
+                  Client Success Stories: Real Results, Real Growth
                 </h2>
                 <Swiper
                   loop={true}

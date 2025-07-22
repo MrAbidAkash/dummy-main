@@ -8,95 +8,6 @@ import Link from "next/link";
 import CTA from "@/components/common/CTA";
 
 const CRMImplementation = () => {
-  const benefits = [
-    {
-      title: "Streamlined Operations",
-      description:
-        "Automate repetitive tasks and organize your business processes to save time and reduce errors.",
-      icon: "⚡",
-    },
-    {
-      title: "Better Customer Relationships",
-      description:
-        "Track all customer interactions and provide personalized service that builds loyalty and trust.",
-      icon: "🤝",
-    },
-    {
-      title: "Increased Sales",
-      description:
-        "Follow up with leads automatically and never miss a sales opportunity with our CRM systems.",
-      icon: "💰",
-    },
-    {
-      title: "Data-Driven Decisions",
-      description:
-        "Get insights into your business performance with detailed reports and analytics.",
-      icon: "📊",
-    },
-  ];
-
-  const features = [
-    {
-      title: "Lead Management",
-      description:
-        "Capture, track, and nurture leads through automated workflows and follow-up sequences.",
-      capabilities: [
-        "Lead scoring",
-        "Automated follow-ups",
-        "Pipeline tracking",
-        "Conversion optimization",
-      ],
-    },
-    {
-      title: "Customer Database",
-      description:
-        "Centralized customer information with complete interaction history and preferences.",
-      capabilities: [
-        "Contact management",
-        "Interaction history",
-        "Customer profiles",
-        "Data organization",
-      ],
-    },
-    {
-      title: "Automation Workflows",
-      description:
-        "Automate repetitive tasks like appointment reminders, follow-ups, and customer communications.",
-      capabilities: [
-        "Email automation",
-        "SMS reminders",
-        "Task automation",
-        "Calendar integration",
-      ],
-    },
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Business Analysis",
-      description:
-        "We analyze your current processes and identify opportunities for automation and improvement.",
-    },
-    {
-      step: "02",
-      title: "CRM Selection",
-      description:
-        "Choose the perfect CRM platform based on your business size, needs, and budget.",
-    },
-    {
-      step: "03",
-      title: "Custom Setup",
-      description:
-        "Configure your CRM with custom fields, workflows, and automation rules specific to your business.",
-    },
-    {
-      step: "04",
-      title: "Training & Support",
-      description:
-        "Comprehensive training for your team and ongoing support to ensure successful adoption.",
-    },
-  ];
 
   return (
     <Wrapper>
@@ -128,19 +39,16 @@ const CRMImplementation = () => {
                         fill="#101010"
                       />
                     </svg>
-                    CRM Implementation
+                    Leads360 Marketing CRM
                   </div>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <h1 className="cs_hero_title" style={{ fontSize: "60px" }}>
-                    Streamline Your Business & Never Miss a Lead
+                    Marketing CRM Implementation & Optimization
                   </h1>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <div className="cs_hero_text_in">
                     <div className="cs_hero_subtitle -mt-15">
-                      Transform your business operations with a custom CRM
-                      system that automates follow-ups, organizes customer data,
-                      and helps you close more deals. Perfect for tradespeople
-                      and small businesses looking to scale efficiently.
+                      Efficient customer relationship management is the backbone of scalable growth. Our Marketing CRM services are designed to streamline your sales and marketing processes, ensuring no lead is left behind and every customer interaction is optimized.
                     </div>
                     <div className="cs_height_20 cs_height_lg_20"></div>
                     <div className="cs_hero_btn_wrap">
@@ -150,10 +58,10 @@ const CRMImplementation = () => {
                           className="cs_hero_btn cs_round_btn btn-item"
                         >
                           <span></span>
-                          Get Your CRM
+                          Get Started
                         </Link>
                         <Link
-                          href="#features"
+                          href="#services"
                           className="cs_hero_btn cs_round_btn btn-item m-3 transition"
                         >
                           <span></span>
@@ -166,102 +74,67 @@ const CRMImplementation = () => {
               </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className="cs_benefits_section">
+            {/* About Section */}
+            <section className="cs_about_section">
               <div className="cs_height_100 cs_height_lg_60"></div>
               <div className="container">
                 <div className="cs_section_heading cs_style_1">
                   <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">
-                      Why Implement a CRM?
-                    </div>
                     <h2 className="cs_section_title">
-                      Transform Your Business Operations
+                      Our Core Services: Driving Your Digital Success
                     </h2>
                   </div>
-                </div>
-                <div className="cs_height_50 cs_height_lg_30"></div>
-                <div className="row">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="col-lg-6 col-md-6">
-                      <div className="cs_benefit_card">
-                        <div className="cs_benefit_icon">{benefit.icon}</div>
-                        <h3 className="cs_benefit_title">{benefit.title}</h3>
-                        <p className="cs_benefit_description">
-                          {benefit.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
               <div className="cs_height_100 cs_height_lg_60"></div>
             </section>
 
-            {/* Features Section */}
+            {/* Services Section */}
             <section
-              id="features"
-              className="cs_features_section cs_primary_bg"
+              id="services"
+              className="cs_services_section cs_primary_bg"
             >
               <div className="cs_height_100 cs_height_lg_60"></div>
               <div className="container">
                 <div className="cs_section_heading cs_style_1 cs_color_1">
                   <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">CRM Features</div>
                     <h2 className="cs_section_title">
-                      Powerful Tools to Grow Your Business
+                      2. Marketing CRM Implementation & Optimization
                     </h2>
                   </div>
                 </div>
                 <div className="cs_height_50 cs_height_lg_30"></div>
                 <div className="row">
-                  {features.map((feature, index) => (
-                    <div key={index} className="col-lg-4 col-md-6">
-                      <div className="cs_feature_card">
-                        <h3 className="cs_feature_title">{feature.title}</h3>
-                        <p className="cs_feature_description">
-                          {feature.description}
-                        </p>
-                        <ul className="cs_feature_capabilities">
-                          {feature.capabilities.map(
-                            (capability, capabilityIndex) => (
-                              <li key={capabilityIndex}>{capability}</li>
-                            ),
-                          )}
-                        </ul>
-                      </div>
+                  <div className="col-lg-12">
+                    <div className="cs_service_details">
+                      <p><strong>•	CRM System Setup & Customization:</strong> We help you select, implement, and customize the ideal Marketing CRM solution tailored to your specific business needs. This includes configuring workflows, user roles, and data fields to match your operational requirements.</p>
+                      <p><strong>•	Lead Management & Nurturing:</strong> Automate lead capture, scoring, and nurturing processes within your Marketing CRM. Ensure timely follow-ups and personalized communication to move leads efficiently through your sales funnel.</p>
+                      <p><strong>•	Sales Pipeline Management:</strong> Gain clear visibility into your sales pipeline, track opportunities, and forecast revenue with robust CRM functionalities. Empower your sales team with tools for effective deal management.</p>
+                      <p><strong>•	Customer Segmentation & Personalization:</strong> Leverage CRM data to segment your customer base and deliver highly personalized marketing messages, improving engagement and conversion rates.</p>
+                      <p><strong>•	Integration with Marketing Tools:</strong> Seamlessly integrate your Marketing CRM with other digital marketing tools (e.g., email platforms, analytics, social media) to create a unified and efficient ecosystem.</p>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
               <div className="cs_height_100 cs_height_lg_60"></div>
             </section>
 
-            {/* Process Section */}
-            <section className="cs_process_section">
+            {/* Why Choose Section */}
+            <section className="cs_why_choose_section">
               <div className="cs_height_100 cs_height_lg_60"></div>
               <div className="container">
                 <div className="cs_section_heading cs_style_1">
                   <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">Our Process</div>
                     <h2 className="cs_section_title">
-                      How We Implement Your Perfect CRM
+                      Why Choose Leads360 as Your Digital Transformation Partner?
                     </h2>
+                    <p>
+                      Choosing Leads360 means partnering with a digital transformation company that truly understands the unique needs of small businesses. We combine strategic thinking with hands-on execution, delivering solutions that are not only innovative but also practical and results-driven. Our commitment is to provide you with the tools and expertise to achieve scalable growth without chaos, ensuring your business is future-ready.
+                    </p>
+                    <p>
+                      Ready to transform your business? Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success.
+                    </p>
                   </div>
-                </div>
-                <div className="cs_height_50 cs_height_lg_30"></div>
-                <div className="row">
-                  {process.map((step, index) => (
-                    <div key={index} className="col-lg-6 col-md-6">
-                      <div className="cs_process_card">
-                        <div className="cs_process_number">{step.step}</div>
-                        <h3 className="cs_process_title">{step.title}</h3>
-                        <p className="cs_process_description">
-                          {step.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
               <div className="cs_height_100 cs_height_lg_60"></div>
@@ -269,9 +142,9 @@ const CRMImplementation = () => {
 
             {/* CTA Section */}
             <CTA
-              title="Ready to Streamline Your Business?"
-              subtitle="Join hundreds of businesses already saving time and increasing sales with our custom CRM implementations."
-              buttonText="Start Your CRM Setup"
+              title="Ready to Transform Your Business?"
+              subtitle="Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success."
+              buttonText="Start Your Digital Transformation"
               className="cs_primary_bg"
             />
           </main>

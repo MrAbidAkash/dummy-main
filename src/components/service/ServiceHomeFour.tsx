@@ -14,14 +14,12 @@ interface DataType {
 }
 
 const service_content = {
-  title: "Our Services",
-  des: "Marketing Retainers & Business Systems",
+  title: "Leads360 Services",
+  des: "Your Path to Scalable Growth & Digital Transformation",
   service_data: [
-    { id: 1, title: "Digital Marketing Strategy" },
-    { id: 2, title: "Social Media Management" },
-    { id: 3, title: "CRM Implementation" },
-    { id: 4, title: "Email Marketing" },
-    { id: 5, title: "Web Development & Maintenance" },
+    { id: 1, title: "Digital Marketing Strategy & Execution" },
+    { id: 2, title: "Marketing CRM Implementation & Optimization" },
+    { id: 3, title: "Business Systems & Automation" },
   ],
 };
 const { title, des, service_data } = service_content

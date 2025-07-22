@@ -18,6 +18,7 @@ import AboutHomeFour from '@/components/about/AboutHomeFour';
 import BlogHomeOne from '@/components/blog/BlogHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import VideoPopup from '@/components/modals/VideoPopup';
+import PortfolioHomeOne from '@/components/portfolio/PortfolioHomeOne';
 
 
 
@@ -40,7 +41,7 @@ const index = () => {
             <VideoHomeFive setIsVideoOpen={setIsVideoOpen} />
             <ServiceHomeFive />
             <FeatureHomeTwo style_2={true} />
-            <PortfolioHomeFive />
+            <PortfolioHomeOne />
             <FunFactHomeOne style_2={true} />
             <AwardsHomeOne />
             <Testimonial />

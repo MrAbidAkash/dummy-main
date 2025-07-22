@@ -76,28 +76,18 @@ const menu_data: DataType[] = [
     sub_menu: [
       {
         id: 1,
-        title: "Social Media Marketing",
-        link: "/service/social-media-marketing",
+        title: "Digital Marketing Strategy & Execution",
+        link: "/service-details",
       },
       {
         id: 2,
-        title: "Web Development & Maintenance",
-        link: "/service/web-development-maintenance",
+        title: "Marketing CRM Implementation & Optimization",
+        link: "/service-details",
       },
       {
         id: 3,
-        title: "CRM Implementation",
-        link: "/service/crm-implementation",
-      },
-      {
-        id: 4,
-        title: "LinkedIn Authority & Lead Gen",
-        link: "/service/linkedin-authority-lead-gen",
-      },
-      {
-        id: 5,
-        title: "Email Marketing",
-        link: "/service/email-marketing",
+        title: "Business Systems & Automation",
+        link: "/service-details",
       },
     ],
   },
@@ -105,19 +95,7 @@ const menu_data: DataType[] = [
     id: 5,
     title: "Portfolio",
     link: "/portfolio",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Portfolio",
-        link: "/portfolio",
-      },
-      {
-        id: 2,
-        title: "Portfolio Details",
-        link: "/portfolio-details",
-      },
-    ],
+    has_dropdown: false,
   },
   {
     id: 6,

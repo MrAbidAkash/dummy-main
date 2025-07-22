@@ -15,10 +15,10 @@ const ServiceHomeFive = () => {
           <div className="cs_section_heading cs_style_1 cs_type_1">
             <div className="cs_section_heading_text">
               <div className="cs_section_subtitle anim_div_ShowZoom">
-                Services
+                Leads360 Services
               </div>
               <h2 className="cs_section_title anim_heading_title">
-                Digital Marketing Strategy <br />Transformation
+                Your Path to Scalable Growth <br />& Digital Transformation
               </h2>
             </div>
           </div>

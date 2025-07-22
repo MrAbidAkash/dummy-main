@@ -29,24 +29,26 @@ interface DataType {
 }
 
 const blog_details_content: DataType = {
-  title: `How a Creative Agency Can Help Your Business Grow`,
+  title: `What Is a CRM & Why Your Small Business Needs One`,
   info: [
-    { title: `Posted By`, des: `Andrew Nikulas` },
-    { title: `Published Date`, des: `02 - Dec - 2023` },
-    { title: `Read Time`, des: `2 Min Read` },
+    { title: `Posted By`, des: `Leads360 Team` },
+    { title: `Published Date`, des: `15 - Jan - 2025` },
+    { title: `Read Time`, des: `5 Min Read` },
   ],
-  title_2: `Unlocking Growth Through Creative Partnership`,
-  des_1: `In today's competitive digital landscape, partnering with a creative agency can be the catalyst your business needs. Whether it's building a high-converting website, crafting compelling brand messaging, or launching automated marketing campaigns — a creative agency brings both strategy and execution under one roof.`,
+  title_2: `Discover How a Robust CRM System Can Revolutionize Your Small Business Operations`,
+  des_1: `In today's competitive business landscape, small businesses need every advantage to thrive. A Customer Relationship Management (CRM) system isn't just a nice-to-have tool—it's essential for sustainable growth. Whether you're struggling to keep track of leads, missing follow-up opportunities, or losing customers due to poor communication, a CRM system can transform your business operations from chaotic to streamlined.`,
   features: [
-    `Custom Branding that sets you apart in the marketplace.`,
-    `Modern Web Design & Development tailored to your goals.`,
-    `Automated Workflows that save you time and convert leads.`,
-    `Strategic Launch Plans that maximize reach and ROI.`,
+    `Effortlessly organize all client interactions in one centralized location.`,
+    `Automate crucial follow-ups to never miss an opportunity again.`,
+    `Significantly boost customer retention and repeat business rates.`,
+    `Track sales pipeline and forecast revenue with precision.`,
+    `Generate detailed reports to make data-driven business decisions.`,
+    `Scale your operations without increasing administrative chaos.`,
   ],
-  des_2: `An agency combines the power of creative vision with real-world data. From your first customer touchpoint to post-sale follow-up, every element is intentionally designed to guide users toward action. With experts in every area — design, development, advertising, CRM, automation — your growth journey becomes smoother, faster, and more profitable.`,
+  des_2: `A well-implemented CRM system becomes the backbone of your business operations. From the moment a lead enters your system to post-sale follow-up and retention campaigns, every customer touchpoint is tracked, organized, and optimized. With automation handling routine tasks, your team can focus on building relationships and closing deals rather than managing spreadsheets and sticky notes.`,
   qute: `“Working with the right creative team isn’t just about visuals. It’s about delivering a clear message, solving customer pain points, and turning your digital presence into a 24/7 sales machine.”`,
-  writer: `Andrew Jackson`,
-  des_3: `If you're ready to take your brand to the next level, a creative agency could be your smartest investment. You'll get more than just beautiful assets — you'll get results that drive revenue, boost credibility, and position your business for long-term success.`,
+  writer: `Leads360 Digital Strategist`,
+  des_3: `Ready to revolutionize your small business operations? Implementing the right CRM system is your first step toward organized growth. At Leads360, we specialize in CRM implementation and optimization that aligns with your unique business needs. Stop losing leads, start building lasting customer relationships, and watch your business grow systematically and sustainably.`,
 };
 
 

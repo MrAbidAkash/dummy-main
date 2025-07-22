@@ -19,34 +19,29 @@ const service_faq_content: DataType = {
   faq_data: [
     {
       id: 'One',
-      question: `What is the design process for branding?`,
-      answer: `Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying conse quences lalin karar or one avoids a pain that produces no resultant pleasure.`,
+      question: `What makes Leads360 different from other digital marketing agencies?`,
+      answer: `At Leads360, we're a dedicated digital transformation company focused on sustainable growth without chaos. Unlike traditional agencies that offer generic solutions, we provide tailored strategies specifically designed for small businesses. We combine digital marketing, CRM implementation, and business automation into a comprehensive approach that addresses your unique challenges and ensures scalable growth.`,
     },
     {
       id: 'Two',
-      question: `What services does your agency offer?`,
-      answer: `Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying conse quences lalin karar or one avoids a pain that produces no resultant pleasure.`,
+      question: `How do you ensure my marketing CRM implementation is successful?`,
+      answer: `Our CRM implementation process is thorough and customized to your business needs. We start by analyzing your current processes, then select and configure the ideal CRM solution with proper workflows, user roles, and data fields. We provide complete training, seamless integration with your marketing tools, and ongoing optimization to ensure maximum adoption and ROI.`,
     },
     {
       id: 'Three',
-      question: `How do you approach a new project?`,
-      answer: `Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying conse quences lalin karar or one avoids a pain that produces no resultant pleasure.`,
-    },
-    {
-      id: 'Four',
-      question: `How do you handle revisions or changes to a project?`,
-      answer: `Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying conse quences lalin karar or one avoids a pain that produces no resultant pleasure.`,
+      question: `What's included in your Digital Marketing Strategy & Execution service?`,
+      answer: `Our comprehensive digital marketing service includes SEO optimization, social media marketing, content creation, PPC campaign management, and email marketing automation. We develop data-driven strategies tailored to your target audience, create compelling content that converts, and continuously optimize campaigns for maximum ROI and sustainable growth.`,
     },
   ],
-  title: `Others Services List`,
-  description: `Welcome to our digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence.`,
+  title: `Our Complete Service Portfolio`,
+  description: `At Leads360, we provide comprehensive digital transformation solutions designed specifically for small businesses seeking sustainable growth without chaos. Our integrated approach combines strategic thinking with hands-on execution to deliver measurable results.`,
   features: [
-    `Web Design & Development`,
-    `Digital Marketing`,
-    `Android & IOS Development`,
-    `Digital Business Development`,
-    `Web Design & Development`,
-    `Digital Marketing`,
+    `Digital Marketing Strategy & Execution`,
+    `Marketing CRM Implementation & Optimization`,
+    `Business Systems & Automation`,
+    `SEO & Content Marketing`,
+    `Social Media Management`,
+    `Workflow Automation & Analytics`,
   ]
 }
 const {

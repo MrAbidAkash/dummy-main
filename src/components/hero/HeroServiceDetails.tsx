@@ -10,13 +10,13 @@ interface DataType {
   features: string[];
 }
 const hero_contact: DataType = {
-  title: "Digital Product Design",
-  description: `Welcome to our digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digita`,
+  title: "Leads360 Services: Your Path to Scalable Growth and Digital Transformation",
+  description: `At Leads360, we are a dedicated digital transformation company committed to helping small businesses achieve sustainable growth without chaos. Our suite of services is meticulously designed to address the unique challenges you face, providing tailored strategies and cutting-edge tools to optimize your operations, enhance your online presence, and drive measurable results. We don't just offer services; we provide solutions that transform your business.`,
   features: [
-    `Design Welcome to our digital agency!`,
-    `Dev online. From website design`,
-    `Implementation evolving world of digital to driv`,
-    `Launch growth and reach your goals.`,
+    `Digital Marketing Strategy & Execution - SEO, Social Media, Content Marketing, PPC, and Email Marketing`,
+    `Marketing CRM Implementation & Optimization - Complete CRM setup, lead management, and sales pipeline optimization`,
+    `Business Systems & Automation - Workflow automation, data analytics, and customer experience optimization`,
+    `Scalable Growth Solutions - Strategic thinking with hands-on execution for sustainable business transformation`,
   ]
 }
 const { title, description, features } = hero_contact

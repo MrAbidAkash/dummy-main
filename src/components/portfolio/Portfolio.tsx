@@ -21,48 +21,47 @@ interface DataType {
 }
 
 const portfolio_data: DataType[] = [
-  // portfolio pages
   {
     id: 1,
-    category: "Social Media",
+    category: "Digital Marketing",
     img: portfolio_img_6,
-    title: "Plumbing Business Growth",
-    des: "Social Media Marketing / Lead Generation",
+    title: "TechStart Solutions Growth",
+    des: "SEO Optimization, Social Media Marketing / 150% traffic increase, 75% lead growth",
   },
   {
     id: 2,
-    category: "Facebook Ads",
+    category: "CRM Implementation",
     img: portfolio_img_7,
-    title: "Dental Practice Branding",
-    des: "Facebook Ads / Website Design",
+    title: "Professional Services CRM",
+    des: "CRM Implementation, Lead Management / Streamlined sales process, 60% efficiency gain",
   },
   {
     id: 3,
-    category: "CRM Setup",
+    category: "Business Automation",
     img: portfolio_img_8,
-    title: "Electrician Lead System",
-    des: "CRM Implementation / Automation",
+    title: "Manufacturing Process Optimization",
+    des: "Workflow Automation, Process Systems / 40% efficiency increase, reduced admin workload",
   },
   {
     id: 4,
-    category: "Email Marketing",
+    category: "Digital Marketing",
     img: portfolio_img_9,
-    title: "Physiotherapy Clinic",
-    des: "Email Marketing / Social Media",
+    title: "Healthcare Practice Expansion",
+    des: "Digital Marketing Strategy, Patient Acquisition / 200% ROI, sustainable growth",
   },
   {
     id: 5,
-    category: "Complete Package",
+    category: "Complete Transformation",
     img: portfolio_img_10,
-    title: "HVAC Business Scaling",
-    des: "Complete Digital Marketing",
+    title: "Local Handyman Business",
+    des: "Complete Digital Transformation / 3x ROI, Facebook ad funnel, CRM setup",
   },
   {
     id: 6,
-    category: "Web Development",
+    category: "CRM Implementation",
     img: portfolio_img_11,
-    title: "Landscaping Company",
-    des: "Website Design / SEO",
+    title: "Real Estate Agency Growth",
+    des: "CRM Setup, Sales Pipeline Automation / Lead nurturing system, predictable growth",
   },
 ];
 
@@ -97,8 +96,23 @@ const Portfolio = () => {
           <div className="cs_section_heading cs_style_1 cs_type_1">
             <div className="cs_section_heading_text">
               <h2 className="cs_section_title anim_text_writting">
-                Recent Client Success Stories
+                Leads360 Portfolio: A Showcase of Our Successful Growth Solutions
               </h2>
+              <p className="cs_section_subtitle">
+                Our Work: Transforming Businesses Through Strategic Digital Solutions
+              </p>
+              <div className="cs_portfolio_intro">
+                <p>
+                  Welcome to the Leads360 portfolio, where we showcase a selection of our most impactful projects. Each case study represents a unique challenge, a tailored solution, and a story of sustainable business growth. As a leading digital transformation company, we take pride in our ability to deliver measurable results that empower our clients to thrive in the digital landscape.
+                </p>
+                <p>
+                  Our portfolio is a testament to our commitment to excellence and our expertise in digital marketing, business optimization, and AI-driven strategies. As you explore our work, you will see how we have helped businesses across various industries overcome their growth hurdles and achieve their strategic objectives. Each project highlights our dedication to providing custom solutions that drive real-world impact.
+                </p>
+                <h3>Featured Projects: Real-World Examples of Growth Without Chaos</h3>
+                <p style={{ marginTop: '20px', fontStyle: 'italic' }}>
+                  Each project below follows our proven methodology: identifying the challenge, implementing our tailored solution, and delivering measurable results that enable businesses to scale without chaos.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -151,8 +165,8 @@ const Portfolio = () => {
           <div>
             <div className="cs_hero_btn_wrap text-center">
               <div className="cs_round_btn_wrap">
-                <a href="#" className="cs_hero_btn cs_round_btn btn-item">
-                  <span></span> Load More
+                <a href="/contact" className="cs_hero_btn cs_round_btn btn-item">
+                  <span></span> Start Your Project
                 </a>
               </div>
             </div>

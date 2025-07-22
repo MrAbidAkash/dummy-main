@@ -59,7 +59,7 @@ type copy_right_text_type = {
 
 const copy_right_text: copy_right_text_type = {
   copy_right: <>
-    Copyright {new Date().getFullYear()}, All Right reserved
+    © {new Date().getFullYear()} Leads360., All Right reserved
   </>
 }
 

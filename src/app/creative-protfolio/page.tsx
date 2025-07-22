@@ -12,6 +12,7 @@ import Testimonial from '@/components/testimonial/Testimonial';
 import BlogHomeOne from '@/components/blog/BlogHomeOne';
 import AboutHomeFour from '@/components/about/AboutHomeFour';
 import FooterOne from '@/layouts/footers/FooterOne';
+import PortfolioHomeOne from '@/components/portfolio/PortfolioHomeOne';
 
 
 
@@ -29,7 +30,7 @@ const index = () => {
           <main>
             <HeroHomeFour />
             <ServiceHomeFour />
-            <PortfolioHomeFour />
+            <PortfolioHomeOne />
             <Testimonial />
             <BlogHomeOne style_2={true} />
             <AboutHomeFour />

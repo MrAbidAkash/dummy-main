@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import React from "react";
 import Count from "../common/Count";
@@ -13,27 +13,21 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    count: 99,
-    title: `Research & Analyze`,
-    des: `Welcome to our digital agency We specialize in helping your business most`,
+    count: 95,
+    title: `Digital Marketing Expertise`,
+    des: `Comprehensive SEO, social media, content marketing, PPC, and email marketing strategies that drive qualified leads and measurable ROI for small businesses.`,
   },
   {
     id: 2,
-    count: 85,
-    title: `Wireframing`,
-    des: `Welcome to our digital agency We specialize in helping your business most`,
+    count: 90,
+    title: `CRM Implementation Success`,
+    des: `Expert setup and optimization of Marketing CRM systems with lead management automation, sales pipeline optimization, and seamless tool integration.`,
   },
   {
     id: 3,
-    count: 80,
-    title: `UI Design`,
-    des: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 4,
-    count: 99,
-    title: `Problem Solving`,
-    des: `Welcome to our digital agency We specialize in helping your business most`,
+    count: 92,
+    title: `Business Automation Efficiency`,
+    des: `Workflow automation and process optimization that eliminates chaos, enhances operational efficiency, and drives sustainable business growth.`,
   },
 ];
 
@@ -45,7 +39,7 @@ const ServiceTeam = () => {
           <div className="cs_section_heading cs_style_1">
             <div className="cs_section_heading_text">
               <h2 className="cs_section_title_2 anim_heading_title">
-                Skill & Specialist
+                Our Expertise & Success Metrics
               </h2>
             </div>
           </div>

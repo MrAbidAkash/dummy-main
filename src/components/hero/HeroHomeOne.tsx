@@ -15,8 +15,9 @@ const hero_slider: DataType[] = [
   {
     img: "/assets/img/hero_img_1.jpg",
     sub_title: "Leads360",
-    title: "Transform Your Business with Proven Digital Marketing",
-    des: `We help tradespeople, allied health professionals, and small businesses grow authentically through organic social media marketing and efficient business systems. Get more clients, save time, and scale your business with our tailored approach.`,
+    title:"Overcome Growth Pains: Your Solution for Scalable Business Expansion",
+
+    des: `At Leads360, we specialize in small business growth, understanding the unique challenges you face beyond just lead generation. Our focus is on achieving scalable growth without the chaos often associated with rapid expansion. We are your dedicated partner, a leading digital transformation company, providing tailored digital marketing solutions and business optimization strategies to overcome specific obstacles hindering your progress. Leads360 is the answer to your growth problems.`,
   },
   {
     img: "/assets/img/hero_img_2.jpg",
@@ -85,14 +86,16 @@ const HeroHomeOne = () => {
                     </svg>
                     {item.sub_title}
                   </div>
-                  <div className="cs_height_20 cs_height_lg_20"></div>
-                  <h1 className="cs_hero_title" style={{ fontSize: "60px" }}>
+                  <div className="cs_height_5 cs_height_lg_5"></div>
+                  <h1 className="cs_hero_title" style={{ fontSize: "40px" }}>
                     {item.title}
                   </h1>
-                  <div className="cs_height_20 cs_height_lg_20"></div>
+                  <div className="cs_height_0 cs_height_lg_0"></div>
                   <div className="cs_hero_text_in">
                     <div className="cs_hero_subtitle -mt-15">{item.des}</div>
-                    <div className="cs_height_20 cs_height_lg_20"></div>
+        
+
+                    <div className="cs_height_0 cs_height_lg_0"></div>
                     <div className="cs_hero_btn_wrap">
                       <div className="cs_round_btn_wrap">
                         <Link

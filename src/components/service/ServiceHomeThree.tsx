@@ -18,32 +18,24 @@ interface DataType {
 }
 
 const service_content: DataType = {
-  sub_title: "Services",
-  title: "Exploring the Evolution of Design Experiences",
+  sub_title: "Our Core Services",
+  title: "Driving Your Digital Success",
   service_data: [
     {
       id: 1,
-      title: "01 / UI/UX Design",
+      title: "01 / Digital Marketing Strategy & Execution",
     },
     {
       id: 2,
-      title: "02 / Branding Design",
+      title: "02 / Marketing CRM Implementation & Optimization",
     },
     {
       id: 3,
-      title: "03 / Marketing Asset",
-    },
-    {
-      id: 4,
-      title: "04 / Development",
-    },
-    {
-      id: 5,
-      title: "05 / Creative Art",
+      title: "03 / Business Systems & Automation",
     },
   ],
-  notice_title: `Creating a Strong Brand Identity Through The Design`,
-  notice_des: `Welcome to our digital agency! We spec ialize in helping businesses like yours succeed Well come to our digital agency We specialize in helping businesses.`,
+  notice_title: `Leads360 Services: Your Path to Scalable Growth`,
+  notice_des: `At Leads360, we are a dedicated digital transformation company committed to helping small businesses achieve sustainable growth without chaos.`,
 }
 const {
   sub_title,
@@ -76,7 +68,12 @@ const ServiceHomeThree = () => {
 
                 {service_data.map((item, i) =>
                   <li key={i}>
-                    <Link href="/service-details">
+                    <Link href={
+                      item.id === 1 ? "/service/social-media-marketing" :
+                      item.id === 2 ? "/service/crm-implementation" :
+                      item.id === 3 ? "/service/web-development-maintenance" :
+                      "/service-details"
+                    }>
                       <h3>{item.title}</h3>
                     </Link>
                   </li>

@@ -37,17 +37,16 @@ const WebDevelopmentMaintenance = () => {
                         fill="#101010"
                       />
                     </svg>
-                    Web Development & Maintenance
+                    Leads360 Services
                   </div>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <h1 className="cs_hero_title" style={{ fontSize: "60px" }}>
-                    Professional Websites That Convert Visitors Into Customers
+                   Business Systems & Automation
                   </h1>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <div className="cs_hero_text_in">
                     <div className="cs_hero_subtitle -mt-15">
-                      Get a professional, mobile-responsive website that works
-                      24/7 to attract customers and generate leads.
+                      Beyond marketing, we help you optimize your internal processes to eliminate chaos and enhance efficiency.
                     </div>
                     <div className="cs_height_20 cs_height_lg_20"></div>
                     <div className="cs_hero_btn_wrap">
@@ -57,7 +56,14 @@ const WebDevelopmentMaintenance = () => {
                           className="cs_hero_btn cs_round_btn btn-item"
                         >
                           <span></span>
-                          Get Your Website
+                          Get Started
+                        </Link>
+                        <Link
+                          href="#services"
+                          className="cs_hero_btn cs_round_btn btn-item m-3 transition"
+                        >
+                          <span></span>
+                          Learn More
                         </Link>
                       </div>
                     </div>
@@ -65,10 +71,64 @@ const WebDevelopmentMaintenance = () => {
                 </div>
               </div>
             </section>
+
+            {/* Services Section */}
+            <section
+              id="services"
+              className="cs_services_section cs_primary_bg"
+            >
+              <div className="cs_height_100 cs_height_lg_60"></div>
+              <div className="container">
+                <div className="cs_section_heading cs_style_1 cs_color_1">
+                  <div className="cs_section_heading_text">
+                    <h2 className="cs_section_title">
+                      Our Core Services: Driving Your Digital Success
+                    </h2>
+                  </div>
+                </div>
+                <div className="cs_height_50 cs_height_lg_30"></div>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="cs_service_details">
+                      <h3>3. Business Systems & Automation</h3>
+                      <p>
+                        Beyond marketing, we help you optimize your internal processes to eliminate chaos and enhance efficiency.
+                      </p>
+                      <p><strong>•	Workflow Automation:</strong> Identify bottlenecks and automate repetitive tasks across your business operations, freeing up valuable time and resources.</p>
+                      <p><strong>•	Data Analytics & Reporting:</strong> Gain actionable insights from your business data with custom dashboards and comprehensive reports. Make informed decisions that drive growth.</p>
+                      <p><strong>•	Customer Experience Optimization:</strong> Design and implement strategies to improve every touchpoint in the customer journey, fostering loyalty and positive brand perception.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="cs_height_100 cs_height_lg_60"></div>
+            </section>
+
+            {/* Why Choose Section */}
+            <section className="cs_why_choose_section">
+              <div className="cs_height_100 cs_height_lg_60"></div>
+              <div className="container">
+                <div className="cs_section_heading cs_style_1">
+                  <div className="cs_section_heading_text">
+                    <h2 className="cs_section_title">
+                      Why Choose Leads360 as Your Digital Transformation Partner?
+                    </h2>
+                    <p>
+                      Choosing Leads360 means partnering with a digital transformation company that truly understands the unique needs of small businesses. We combine strategic thinking with hands-on execution, delivering solutions that are not only innovative but also practical and results-driven. Our commitment is to provide you with the tools and expertise to achieve scalable growth without chaos, ensuring your business is future-ready.
+                    </p>
+                    <p>
+                      Ready to transform your business? Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="cs_height_100 cs_height_lg_60"></div>
+            </section>
+
             <CTA
-              title="Ready to Get Your Professional Website?"
-              subtitle="Join hundreds of businesses already generating more leads and sales with our professional website solutions."
-              buttonText="Start Your Website Project"
+              title="Ready to Transform Your Business?"
+              subtitle="Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success."
+              buttonText="Start Your Digital Transformation"
               className="cs_primary_bg"
             />
           </main>

@@ -24,33 +24,33 @@ interface DataType {
 const portfolio_slider: DataType[] = [
   {
     img: portfolio_img_1,
-    title: `Plumbing Business Growth`,
-    category: `Social Media Marketing / Lead Generation`,
+    title: `E-commerce Business Growth`,
+    category: `Digital Marketing Strategy / 150% Traffic Increase`,
   },
   {
     img: portfolio_img_2,
-    title: `Dental Practice Branding`,
-    category: `Facebook Ads / Website Design`,
+    title: `Professional Services Firm`,
+    category: `CRM Implementation / 75% Lead Growth`,
   },
   {
     img: portfolio_img_3,
-    title: `Electrician Lead System`,
-    category: `CRM Implementation / Automation`,
+    title: `Manufacturing Company`,
+    category: `Business Automation / 40% Efficiency Gain`,
   },
   {
     img: portfolio_img_4,
-    title: `Physiotherapy Clinic`,
-    category: `Email Marketing / Social Media`,
+    title: `Healthcare Practice`,
+    category: `Digital Marketing / 200% ROI`,
   },
   {
     img: portfolio_img_5,
-    title: `HVAC Business Scaling`,
-    category: `Complete Digital Marketing`,
+    title: `Tech Startup Scaling`,
+    category: `Complete Digital Transformation`,
   },
   {
     img: portfolio_img_6,
-    title: `Landscaping Company`,
-    category: `Website Design / SEO`,
+    title: `Real Estate Agency`,
+    category: `CRM & Sales Pipeline Optimization`,
   },
 ];
 
@@ -123,7 +123,7 @@ const PortfolioHomeOne = () => {
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Recent Client Success Stories
+                Successful Growth Solutions
               </h2>
             </div>
           </div>
@@ -144,7 +144,7 @@ const PortfolioHomeOne = () => {
             <SwiperSlide key={i} className="swiper-slide">
               <div className="cs_horizontal_scroll">
                 <Link
-                  href="/portfolio-details"
+                  href="/portfolio"
                   className="cs_portfolio cs_style_1"
                   ref={(el) => {
                     if (el) {

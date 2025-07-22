@@ -15,28 +15,20 @@ interface DataType {
 }
 
 const service_content: DataType = {
-  sub_title: "Our Services",
-  title: "Comprehensive Digital Services & Transformation",
+  sub_title: "Leads360 Services",
+  title: "Your Path to Scalable Growth & Digital Transformation",
   service_data: [
     {
       id: 1,
-      title: "UI/UX Design",
+      title: "Digital Marketing Strategy & Execution",
     },
     {
       id: 2,
-      title: "Branding Design",
+      title: "Marketing CRM Implementation & Optimization",
     },
     {
       id: 3,
-      title: "Marketing Asset",
-    },
-    {
-      id: 4,
-      title: "Development",
-    },
-    {
-      id: 5,
-      title: "Creative Art",
+      title: "Business Systems & Automation",
     },
   ]
 }

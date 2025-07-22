@@ -11,9 +11,9 @@ type DataType = {
 };
 const team_content: DataType = {
   sub_title: "Our Team",
-  title: "Digital Marketing Experts Who Drive Results",
+  title: "Meet the Experts Behind Your Growth",
 
-  title_2: "Meet Our Digital Marketing Experts",
+  title_2: "Our Team: The Architects of Your Digital Success",
 };
 const { sub_title, title, title_2 } = team_content;
 

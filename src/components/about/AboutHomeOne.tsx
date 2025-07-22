@@ -20,20 +20,19 @@ const about_slider: DataType[] = [
   {
     img: "/assets/img/about_img.jpg",
     sub_title: "Who We Are",
-    title: "Digital Marketing Experts for Small Business Growth",
-    des: `We're a team of seasoned digital marketers specializing in helping tradespeople, allied health professionals, and small businesses grow through organic social media marketing and Facebook Ads. We understand your industry challenges and create strategies that actually work.`,
-  },
+    title: "Unlock Your Business Potential: Data-Driven Growth Strategies" ,
+    des: `We reject one-size-fits-all approaches. Your business is distinct, and so are its growth hurdles. We meticulously analyze your challenges, crafting custom digital strategies that address the root causes of your growth limitations. Our expertise as a digital transformation company in digital marketing and business optimization ensures a clear, actionable path for you to scale effectively and efficiently, transforming your growth potential into reality.`,},
   {
     img: "/assets/img/about_img_2.jpg",
     sub_title: "What We Offer",
-    title: "Complete Marketing Solutions Starting at $650/month",
-    des: `Our comprehensive packages include social media management, content creation, Facebook Ads, website maintenance, email marketing, CRM setup, and business automation—all tailored to your specific business needs and goals.`,
+    title: "Take Our AI-Powered Growth Audit Quiz",
+    des: `In just a few minutes, our AI-powered growth audit quiz will precisely identify areas where your business can achieve significant, sustainable growth. Receive a personalized, data-driven report that not only assesses your current marketing and operational strengths but also highlights the exact hurdles preventing your next level of success. This isn't just an audit; it's the crucial first step towards a clear, actionable, and SEO-optimized growth strategy.`,
   },
   {
     img: "/assets/img/about_img_3.jpg",
     sub_title: "Our Approach",
-    title: "Custom Strategies That Drive Real Results",
-    des: `We don't believe in one-size-fits-all solutions. Every business gets a personalized growth strategy based on your industry, target audience, and business goals. From initial audit to ongoing optimization, we're with you every step of the way.`,
+    title: "Schedule Your Personalized Growth Strategy Session",
+    des: `Ready to move beyond guesswork and embrace predictable growth? Book a focused 30-minute growth strategy session with our experts. We'll delve into your unique challenges and aspirations, collaboratively outlining a custom roadmap designed to solve your specific growth problems. This isn't a sales pitch; it's a collaborative session to demonstrate precisely how Leads360, your trusted digital transformation company, can help you achieve scalable business growth without the chaos, leveraging AI insights and proven digital marketing tactics.`,
   },
 ];
 

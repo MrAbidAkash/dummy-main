@@ -8,6 +8,7 @@ import BrandHomeOne from '@/components/brand/BrandHomeOne';
 import MarqueeAreaHomeThree from '@/components/brand/MarqueeAreaHomeThree';
 import HeroHomeThree from '@/components/hero/HeroHomeThree';
 import JourneyHomeThree from '@/components/journey/JourneyHomeThree';
+import PortfolioHomeOne from '@/components/portfolio/PortfolioHomeOne';
 import PortfolioHomeThree from '@/components/portfolio/PortfolioHomeThree';
 import ServiceHomeThree from '@/components/service/ServiceHomeThree';
 import TeamHomeTwo from '@/components/team/TeamHomeTwo';
@@ -33,7 +34,7 @@ const index = () => {
             <JourneyHomeThree />
             <MarqueeAreaHomeThree />
             <ServiceHomeThree />
-            <PortfolioHomeThree />
+            <PortfolioHomeOne />
             <AwardsHomeOne />
             <Testimonial />
             <TeamHomeTwo  style_2={true} />

@@ -9,95 +9,6 @@ import Link from "next/link";
 import CTA from "@/components/common/CTA";
 
 const SocialMediaMarketing = () => {
-  const benefits = [
-    {
-      title: "Increased Brand Awareness",
-      description:
-        "Build recognition in your local community through consistent, engaging content that showcases your expertise and work quality.",
-      icon: "📈",
-    },
-    {
-      title: "More Qualified Leads",
-      description:
-        "Attract potential clients who are actively looking for your services through targeted content and community engagement.",
-      icon: "🎯",
-    },
-    {
-      title: "Customer Trust & Loyalty",
-      description:
-        "Build lasting relationships with your audience through authentic content and responsive community management.",
-      icon: "🤝",
-    },
-    {
-      title: "Cost-Effective Marketing",
-      description:
-        "Generate leads and build your brand without the high costs of traditional advertising methods.",
-      icon: "💰",
-    },
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Strategy Development",
-      description:
-        "We analyze your business, target audience, and competitors to create a customized social media strategy.",
-    },
-    {
-      step: "02",
-      title: "Content Creation",
-      description:
-        "Our team creates engaging, industry-specific content that resonates with your target audience.",
-    },
-    {
-      step: "03",
-      title: "Community Management",
-      description:
-        "We actively engage with your audience, respond to comments, and build meaningful relationships.",
-    },
-    {
-      step: "04",
-      title: "Performance Optimization",
-      description:
-        "Continuous monitoring and optimization to ensure maximum engagement and lead generation.",
-    },
-  ];
-
-  const platforms = [
-    {
-      name: "Facebook",
-      description:
-        "Perfect for reaching local customers and building community trust through posts, stories, and live videos.",
-      features: [
-        "Local targeting",
-        "Community groups",
-        "Customer reviews",
-        "Business page optimization",
-      ],
-    },
-    {
-      name: "Instagram",
-      description:
-        "Showcase your work with high-quality photos and videos, stories, and reels to attract visual-focused customers.",
-      features: [
-        "Visual storytelling",
-        "Stories & Reels",
-        "Hashtag strategy",
-        "IGTV content",
-      ],
-    },
-    {
-      name: "LinkedIn",
-      description:
-        "Establish thought leadership and connect with B2B clients through professional content and networking.",
-      features: [
-        "Professional networking",
-        "Thought leadership",
-        "B2B lead generation",
-        "Industry insights",
-      ],
-    },
-  ];
 
   return (
     <Wrapper>
@@ -131,20 +42,16 @@ const SocialMediaMarketing = () => {
                         fill="#101010"
                       />
                     </svg>
-                    Social Media Marketing
+                    Leads360 Services
                   </div>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <h1 className="cs_hero_title" style={{ fontSize: "60px" }}>
-                    Build Authentic Relationships & Grow Your Business
+                   Digital Marketing Strategy & Execution
                   </h1>
                   <div className="cs_height_20 cs_height_lg_20"></div>
                   <div className="cs_hero_text_in">
                     <div className="cs_hero_subtitle -mt-15">
-                      Transform your social media presence into a powerful lead
-                      generation tool. We help tradespeople and small businesses
-                      build authentic relationships with their local community
-                      through strategic content creation and community
-                      management.
+                      In today's competitive landscape, a robust digital marketing strategy is paramount. We develop and execute comprehensive plans that encompass
                     </div>
                     <div className="cs_height_20 cs_height_lg_20"></div>
                     <div className="cs_hero_btn_wrap">
@@ -157,7 +64,7 @@ const SocialMediaMarketing = () => {
                           Get Started
                         </Link>
                         <Link
-                          href="#process"
+                          href="#services"
                           className="cs_hero_btn cs_round_btn btn-item m-3 transition"
                         >
                           <span></span>
@@ -170,99 +77,56 @@ const SocialMediaMarketing = () => {
               </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className="cs_benefits_section">
-              <div className="cs_height_100 cs_height_lg_60"></div>
-              <div className="container">
-                <div className="cs_section_heading cs_style_1">
-                  <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">
-                      Why Choose Our Social Media Marketing?
-                    </div>
-                    <h2 className="cs_section_title">
-                      Proven Results for Local Businesses
-                    </h2>
-                  </div>
-                </div>
-                <div className="cs_height_50 cs_height_lg_30"></div>
-                <div className="row">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="col-lg-6 col-md-6">
-                      <div className="cs_benefit_card">
-                        <div className="cs_benefit_icon">{benefit.icon}</div>
-                        <h3 className="cs_benefit_title">{benefit.title}</h3>
-                        <p className="cs_benefit_description">
-                          {benefit.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="cs_height_100 cs_height_lg_60"></div>
-            </section>
-
-            {/* Process Section */}
-            <section id="process" className="cs_process_section cs_primary_bg">
+            {/* Services Section */}
+            <section
+              id="services"
+              className="cs_services_section cs_primary_bg"
+            >
               <div className="cs_height_100 cs_height_lg_60"></div>
               <div className="container">
                 <div className="cs_section_heading cs_style_1 cs_color_1">
                   <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">Our Process</div>
                     <h2 className="cs_section_title">
-                      How We Transform Your Social Media Presence
+                      Our Core Services: Driving Your Digital Success
                     </h2>
                   </div>
                 </div>
                 <div className="cs_height_50 cs_height_lg_30"></div>
                 <div className="row">
-                  {process.map((step, index) => (
-                    <div key={index} className="col-lg-6 col-md-6">
-                      <div className="cs_process_card">
-                        <div className="cs_process_number">{step.step}</div>
-                        <h3 className="cs_process_title">{step.title}</h3>
-                        <p className="cs_process_description">
-                          {step.description}
-                        </p>
-                      </div>
+                  <div className="col-lg-12">
+                    <div className="cs_service_details">
+                      <h3>1. Digital Marketing Strategy & Execution</h3>
+                      <p>
+                        In today's competitive landscape, a robust digital marketing strategy is paramount. We develop and execute comprehensive plans that encompass:
+                      </p>
+                      <p><strong>•	Search Engine Optimization (SEO):</strong> Improve your organic search rankings, increase website traffic, and attract qualified leads with our advanced SEO services. We focus on keyword research, on-page optimization, technical SEO, and local SEO to ensure maximum visibility.</p>
+                      <p><strong>•	Social Media Marketing:</strong> Build a strong brand presence, engage with your audience, and drive conversions across key social platforms. Our strategies include content creation, community management, and targeted advertising campaigns.</p>
+                      <p><strong>•	Content Marketing:</strong> Establish thought leadership and attract your ideal customers with valuable, relevant content. We create compelling blog posts, articles, videos, and infographics that resonate with your target audience.</p>
+                      <p><strong>•	Paid Advertising (PPC):</strong> Maximize your return on ad spend with expertly managed pay-per-click campaigns on Google, social media, and other platforms. We optimize for conversions and cost-efficiency.</p>
+                      <p><strong>•	Email Marketing:</strong> Nurture leads, build customer loyalty, and drive repeat business with automated and personalized email campaigns. From list building to conversion funnels, we cover it all.</p>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
               <div className="cs_height_100 cs_height_lg_60"></div>
             </section>
 
-            {/* Platforms Section */}
-            <section className="cs_platforms_section">
+            {/* Why Choose Section */}
+            <section className="cs_why_choose_section">
               <div className="cs_height_100 cs_height_lg_60"></div>
               <div className="container">
                 <div className="cs_section_heading cs_style_1">
                   <div className="cs_section_heading_text">
-                    <div className="cs_section_subtitle">
-                      Platforms We Manage
-                    </div>
                     <h2 className="cs_section_title">
-                      Strategic Presence Across All Major Platforms
+                      Why Choose Leads360 as Your Digital Transformation Partner?
                     </h2>
+                    <p>
+                      Choosing Leads360 means partnering with a digital transformation company that truly understands the unique needs of small businesses. We combine strategic thinking with hands-on execution, delivering solutions that are not only innovative but also practical and results-driven. Our commitment is to provide you with the tools and expertise to achieve scalable growth without chaos, ensuring your business is future-ready.
+                    </p>
+                    <p>
+                      Ready to transform your business? Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success.
+                    </p>
                   </div>
-                </div>
-                <div className="cs_height_50 cs_height_lg_30"></div>
-                <div className="row">
-                  {platforms.map((platform, index) => (
-                    <div key={index} className="col-lg-4 col-md-6">
-                      <div className="cs_platform_card">
-                        <h3 className="cs_platform_title">{platform.name}</h3>
-                        <p className="cs_platform_description">
-                          {platform.description}
-                        </p>
-                        <ul className="cs_platform_features">
-                          {platform.features.map((feature, featureIndex) => (
-                            <li key={featureIndex}>{feature}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
               <div className="cs_height_100 cs_height_lg_60"></div>
@@ -270,9 +134,9 @@ const SocialMediaMarketing = () => {
 
             {/* CTA Section */}
             <CTA
-              title="Ready to Transform Your Social Media Presence?"
-              subtitle="Join hundreds of businesses already getting more leads and building stronger relationships through our proven social media strategies."
-              buttonText="Start Your Social Media Strategy"
+              title="Ready to Transform Your Business?"
+              subtitle="Contact us today for a personalized consultation and discover how Leads360 can be your catalyst for sustained success."
+              buttonText="Start Your Digital Transformation"
               className="cs_primary_bg"
             />
           </main>

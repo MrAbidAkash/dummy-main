@@ -20,25 +20,21 @@ const Service = () => {
 
   const service_data: DataType[] = [
     {
-      id: "one",
-      title: "Understand",
-      description: `Welcome to our digital agency We specialize in helping your business most`,
+      id: "01",
+      title: "Digital Marketing Strategy & Execution",
+      description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and drive qualified leads.`,
     },
     {
-      id: "Two",
-      title: "Design",
-      description: `Welcome to our digital agency We specialize in helping your business most`,
+      id: "02",
+      title: "Marketing CRM Implementation & Optimization",
+      description: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations.`,
     },
     {
-      id: "Three",
-      title: "Development",
-      description: `Welcome to our digital agency We specialize in helping your business most`,
+      id: "03",
+      title: "Business Systems & Automation",
+      description: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency.`,
     },
-    {
-      id: "Four",
-      title: "Testing",
-      description: `Welcome to our digital agency We specialize in helping your business most`,
-    },
+    
   ];
 
   useEffect(() => {
@@ -210,7 +206,7 @@ const Service = () => {
                     className="cs_section_title anim_heading_title"
                     ref={headingRef}
                   >
-                    Our Working Process
+                    Our Core Services: Driving Your Digital Success
                   </h2>
                 </div>
               </div>

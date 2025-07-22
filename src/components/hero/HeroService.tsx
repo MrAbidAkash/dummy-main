@@ -15,28 +15,18 @@ interface DataType {
 const banner_data: DataType[] = [
   {
     id: 1,
-    title: `Social Media Marketing`,
-    description: `Build authentic audience relationships with value‑driven content and community management on Facebook, Instagram, and LinkedIn to drive engagement, referrals, and brand loyalty.`,
+    title: `Digital Marketing Strategy & Execution`,
+    description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and attract qualified leads with measurable ROI.`,
   },
   {
     id: 2,
-    title: `Web Development & Maintenance`,
-    description: `Design and maintain high‑performance, SEO‑friendly websites that convert visitors into customers, with ongoing updates, security patches, and performance optimizations.`,
+    title: `Marketing CRM Implementation & Optimization`,
+    description: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations and scalable growth.`,
   },
   {
     id: 3,
-    title: `CRM Implementation`,
-    description: `Streamline your workflows and client follow‑ups with a tailored CRM solution—automate appointment reminders, sales pipelines, and nurture sequences to boost retention and revenue.`,
-  },
-  {
-    id: 4,
-    title: `LinkedIn Authority & Lead Gen`,
-    description: `Establish B2B thought leadership and generate targeted leads through optimized LinkedIn profiles, content strategies, and outreach campaigns.`,
-  },
-  {
-    id: 5,
-    title: `Email Marketing`,
-    description: `Create and execute value‑driven email campaigns—newsletters, drip sequences, and promotional blasts—to nurture subscribers, increase open rates, and drive sales.`,
+    title: `Business Systems & Automation`,
+    description: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency across your business.`,
   },
 ];
 
@@ -160,7 +150,7 @@ const HeroService = () => {
                 ref={titleRef}
                 className="cs_section_title anim_word_writting"
               >
-                Transform Your Online Presence with Our Digital Agency Services
+                Leads360 Services: Your Path to Scalable Growth & Digital Transformation
               </h2>
             </div>
           </div>
