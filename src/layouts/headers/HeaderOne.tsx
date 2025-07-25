@@ -80,19 +80,19 @@ const menu_data: DataType[] = [
     has_dropdown: false,
     
   },
-
+ {
+    id: 4,
+    title: "Contact",
+    link: "/contact",
+    has_dropdown: false,
+  },
   {
     id: 5,
     title: "Blog",
     link: "/blog",
     has_dropdown: false
   },
-  {
-    id: 4,
-    title: "Contact",
-    link: "/contact",
-    has_dropdown: false,
-  },
+ 
   
 ];
 
