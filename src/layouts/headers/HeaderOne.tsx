@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 import UseSticky from "@/hooks/UseSticky";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -34,13 +35,52 @@ const menu_data: DataType[] = [
     link: "/about",
     has_dropdown: false,
   },
+  // {
+  // 	id: 3,
+  // 	title: "Pages",
+  // 	link: "/about",
+  // 	has_dropdown: true,
+  // 	sub_menu: [
+  // 		{
+  // 			id: 1,
+  // 			title: "About",
+  // 			link: "/about",
+  // 		},
+  // 		{
+  // 			id: 2,
+  // 			title: "Team",
+  // 			link: "/team",
+  // 		},
+  // 		{
+  // 			id: 3,
+  // 			title: "Team Details",
+  // 			link: "/team-details",
+  // 		},
+  // 		{
+  // 			id: 4,
+  // 			title: "Contact",
+  // 			link: "/contact",
+  // 		},
+  // 		{
+  // 			id: 5,
+  // 			title: "Faq",
+  // 			link: "/faq",
+  // 		},
+  // 		{
+  // 			id: 6,
+  // 			title: "Error",
+  // 			link: "/error",
+  // 		}
+  // 	]
+  // },
   {
     id: 3,
     title: "Services",
     link: "/service",
     has_dropdown: false,
+    
   },
-  {
+ {
     id: 4,
     title: "Contact",
     link: "/contact",
@@ -52,14 +92,26 @@ const menu_data: DataType[] = [
     link: "/blog",
     has_dropdown: false
   },
+ 
+  
 ];
 
 const HeaderOne = () => {
   const { sticky } = UseSticky();
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState<Boolean>(false);
   const handleActive = () => {
     setActive(!active);
+  };
+
+  const [navTitle, setNavTitle] = useState("");
+  //openMobileMenu
+  const openMobileMenu = (menu: string) => {
+    if (navTitle === menu) {
+      setNavTitle("");
+    } else {
+      setNavTitle(menu);
+    }
   };
 
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -103,17 +155,6 @@ const HeaderOne = () => {
     };
   }, [lastScrollTop]);
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 992);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   const ref = useRef(null);
 
   useGSAP(() => {
@@ -152,34 +193,59 @@ const HeaderOne = () => {
                 </Link>
               </div>
               <div className="cs_main_header_right">
-                {!isMobile && (
-                  <div className="cs_nav cs_medium">
-                    <ul className="cs_nav_list">
-                      {menu_data.map((item, i) => (
-                        <li key={i}>
-                          <Link href={item.link}>{item.title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {isMobile && (
-                  <div className="cs_toolbox">
-                    <span className="cs_icon_btn">
-                      <span className="cs_icon_btn_in" onClick={handleActive}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </span>
+                <div className="cs_nav cs_medium cs_desktop_nav">
+                  <ul className="cs_nav_list">
+                    {menu_data.map((item, i) => (
+                      <li
+                        key={i}
+                        className={`${item.has_dropdown ? "menu-item-has-children" : ""}`}
+                      >
+                        <Link href={item.link}>{item.title}</Link>
+                        {item.has_dropdown && item.sub_menu && (
+                          <ul>
+                            {item.sub_menu.map((sub_item, index) => (
+                              <li key={index}>
+                                <Link href={sub_item.link}>
+                                  {sub_item.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="cs_toolbox">
+                  <span className="cs_icon_btn cs_mobile_menu_toggle">
+                    <span className="cs_icon_btn_in" onClick={handleActive}>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
                     </span>
-                  </div>
-                )}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu */}
+      <div className={`cs_mobile_menu ${active ? "active" : ""}`}>
+        <button className="cs_mobile_menu_close" onClick={handleActive}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <MobileMenu
+          active={active}
+          navTitle={navTitle}
+          openMobileMenu={openMobileMenu}
+        />
+      </div>
 
       <div className={`cs_side_header ${active ? "active" : ""}`}>
         <button className="cs_close" onClick={handleActive}></button>
@@ -191,18 +257,45 @@ const HeaderOne = () => {
           <div className="row align-items-end">
             <div className="col-7">
               <div className="cs_box_one">
-                <div className="cs_nav_black_section cs_font_changes">
+                <div className="cs_nav_black_section cs_font_changes" style={{ fontSize: "14px" }}>
                   <ul>
                     {menu_data.map((item, i) => (
                       <li
                         key={i}
-                        className="cs_style_1"
+                        className={`menu-item-has-black-section cs_style_1 ${
+                          navTitle === item.title ? "active" : ""
+                        }`}
                       >
                         <Link href={item.link}>{item.title}</Link>
+                        {item.has_dropdown && (
+                          <>
+                            <ul
+                              style={{
+                                display:
+                                  navTitle === item.title ? "block" : "none",
+                              }}
+                            >
+                              {item?.sub_menu?.map((sub_item, index) => (
+                                <li key={index}>
+                                  <Link href={sub_item.link}>
+                                    {sub_item.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                            <span
+                              onClick={() => openMobileMenu(item.title)}
+                              className={`cs_munu_dropdown_toggle_1 ${
+                                navTitle === item.title ? "active" : ""
+                              }`}
+                            ></span>
+                          </>
+                        )}
                       </li>
                     ))}
                   </ul>
                 </div>
+                
               </div>
             </div>
             <div className="col-4 offset-1">
@@ -223,7 +316,7 @@ const HeaderOne = () => {
                     </svg>
                     <span className="ms-2">
                       Toronto, ON Canada <br />
-                              Digital Transformation Hub
+                      &nbsp; &nbsp; &nbsp; &nbsp; Digital Transformation Hub
                     </span>
                   </p>
 
@@ -285,6 +378,8 @@ const HeaderOne = () => {
                       <span className="cs_black">hello@leads360.com.au</span>
                     </a>
                   </h5>
+                  
+                  
                 </div>
               </div>
             </div>
