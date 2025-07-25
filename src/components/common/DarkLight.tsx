@@ -8,8 +8,10 @@ import brightnes from '@/assets/img/brightnes.svg';
 const DarkLight = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [activeMode, setActiveMode] = useState<string>('light'); 
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
+    setMounted(true);
     const storedMode = localStorage.getItem('mode');
     if (storedMode) {
       setActiveMode(storedMode);
@@ -17,7 +19,7 @@ const DarkLight = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (mounted && typeof window !== 'undefined') {
       if (activeMode === 'dark') {
         document.body.classList.add('dark');
       } else {
@@ -25,7 +27,7 @@ const DarkLight = () => {
       }
       localStorage.setItem('mode', activeMode);
     }
-  }, [activeMode]);
+  }, [activeMode, mounted]);
 
   const handleModeChange = (mode: string) => {
     setActiveMode(mode);
@@ -34,6 +36,11 @@ const DarkLight = () => {
   const openDarkLight = () => {
     setOpen(!open);
   };
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>

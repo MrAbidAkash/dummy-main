@@ -23,7 +23,8 @@ export default function RootLayout({
         <title>Leads360 - Digital Transformation Company for Small Businesses</title>
       </head>
 
-      <body>{children}</body>
+
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }

@@ -21,13 +21,18 @@ const Wrapper = ({ children }: any) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      ScrollSmoother.create({
-        smooth: 1.35,
-        effects: true,
-        smoothTouch: false,
-        normalizeScroll: false,
-        ignoreMobileResize: true,
-      });
+      // Add a small delay to ensure DOM is ready
+      const timer = setTimeout(() => {
+        ScrollSmoother.create({
+          smooth: 1.35,
+          effects: true,
+          smoothTouch: false,
+          normalizeScroll: false,
+          ignoreMobileResize: true,
+        });
+      }, 100);
+      
+      return () => clearTimeout(timer);
     }
   }, []);
 
