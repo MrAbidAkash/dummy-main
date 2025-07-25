@@ -16,7 +16,6 @@ const hero_contact: DataType = {
     `Digital Marketing Strategy & Execution - SEO, Social Media, Content Marketing, PPC, and Email Marketing`,
     `Marketing CRM Implementation & Optimization - Complete CRM setup, lead management, and sales pipeline optimization`,
     `Business Systems & Automation - Workflow automation, data analytics, and customer experience optimization`,
-    `Scalable Growth Solutions - Strategic thinking with hands-on execution for sustainable business transformation`,
   ]
 }
 const { title, description, features } = hero_contact
