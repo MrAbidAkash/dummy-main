@@ -81,7 +81,7 @@ const WebDevelopmentMaintenance = () => {
               <div className="container">
                 <div className="cs_section_heading cs_style_1 cs_color_1">
                   <div className="cs_section_heading_text">
-                    <h2 className="cs_section_title">
+                    <h2 className="cs_section_title text-white">
                       Our Core Services: Driving Your Digital Success
                     </h2>
                   </div>
@@ -89,14 +89,14 @@ const WebDevelopmentMaintenance = () => {
                 <div className="cs_height_50 cs_height_lg_30"></div>
                 <div className="row">
                   <div className="col-lg-12">
-                    <div className="cs_service_details">
-                      <h3>3. Business Systems & Automation</h3>
-                      <p>
+                    <div className="cs_service_details text-white">
+                      <h3 className="text-white">3. Business Systems & Automation</h3>
+                      <p className="text-white">
                         Beyond marketing, we help you optimize your internal processes to eliminate chaos and enhance efficiency.
                       </p>
-                      <p><strong>•	Workflow Automation:</strong> Identify bottlenecks and automate repetitive tasks across your business operations, freeing up valuable time and resources.</p>
-                      <p><strong>•	Data Analytics & Reporting:</strong> Gain actionable insights from your business data with custom dashboards and comprehensive reports. Make informed decisions that drive growth.</p>
-                      <p><strong>•	Customer Experience Optimization:</strong> Design and implement strategies to improve every touchpoint in the customer journey, fostering loyalty and positive brand perception.</p>
+                      <p className="text-white"><strong>•	Workflow Automation:</strong> Identify bottlenecks and automate repetitive tasks across your business operations, freeing up valuable time and resources.</p>
+                      <p className="text-white"><strong>•	Data Analytics & Reporting:</strong> Gain actionable insights from your business data with custom dashboards and comprehensive reports. Make informed decisions that drive growth.</p>
+                      <p className="text-white"><strong>•	Customer Experience Optimization:</strong> Design and implement strategies to improve every touchpoint in the customer journey, fostering loyalty and positive brand perception.</p>
                     </div>
                   </div>
                 </div>

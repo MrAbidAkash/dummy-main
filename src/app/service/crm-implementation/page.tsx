@@ -98,7 +98,7 @@ const CRMImplementation = () => {
               <div className="container">
                 <div className="cs_section_heading cs_style_1 cs_color_1">
                   <div className="cs_section_heading_text">
-                    <h2 className="cs_section_title">
+                    <h2 className="cs_section_title text-white">
                       2. Marketing CRM Implementation & Optimization
                     </h2>
                   </div>
@@ -106,12 +106,12 @@ const CRMImplementation = () => {
                 <div className="cs_height_50 cs_height_lg_30"></div>
                 <div className="row">
                   <div className="col-lg-12">
-                    <div className="cs_service_details">
-                      <p><strong>•	CRM System Setup & Customization:</strong> We help you select, implement, and customize the ideal Marketing CRM solution tailored to your specific business needs. This includes configuring workflows, user roles, and data fields to match your operational requirements.</p>
-                      <p><strong>•	Lead Management & Nurturing:</strong> Automate lead capture, scoring, and nurturing processes within your Marketing CRM. Ensure timely follow-ups and personalized communication to move leads efficiently through your sales funnel.</p>
-                      <p><strong>•	Sales Pipeline Management:</strong> Gain clear visibility into your sales pipeline, track opportunities, and forecast revenue with robust CRM functionalities. Empower your sales team with tools for effective deal management.</p>
-                      <p><strong>•	Customer Segmentation & Personalization:</strong> Leverage CRM data to segment your customer base and deliver highly personalized marketing messages, improving engagement and conversion rates.</p>
-                      <p><strong>•	Integration with Marketing Tools:</strong> Seamlessly integrate your Marketing CRM with other digital marketing tools (e.g., email platforms, analytics, social media) to create a unified and efficient ecosystem.</p>
+                    <div className="cs_service_details text-white">
+                      <p className="text-white"><strong>•	CRM System Setup & Customization:</strong> We help you select, implement, and customize the ideal Marketing CRM solution tailored to your specific business needs. This includes configuring workflows, user roles, and data fields to match your operational requirements.</p>
+                      <p className="text-white"><strong>•	Lead Management & Nurturing:</strong> Automate lead capture, scoring, and nurturing processes within your Marketing CRM. Ensure timely follow-ups and personalized communication to move leads efficiently through your sales funnel.</p>
+                      <p className="text-white"><strong>•	Sales Pipeline Management:</strong> Gain clear visibility into your sales pipeline, track opportunities, and forecast revenue with robust CRM functionalities. Empower your sales team with tools for effective deal management.</p>
+                      <p className="text-white"><strong>•	Customer Segmentation & Personalization:</strong> Leverage CRM data to segment your customer base and deliver highly personalized marketing messages, improving engagement and conversion rates.</p>
+                      <p className="text-white"><strong>•	Integration with Marketing Tools:</strong> Seamlessly integrate your Marketing CRM with other digital marketing tools (e.g., email platforms, analytics, social media) to create a unified and efficient ecosystem.</p>
                     </div>
                   </div>
                 </div>

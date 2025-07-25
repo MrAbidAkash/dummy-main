@@ -94,16 +94,16 @@ const SocialMediaMarketing = () => {
                 <div className="cs_height_50 cs_height_lg_30"></div>
                 <div className="row">
                   <div className="col-lg-12">
-                    <div className="cs_service_details">
-                      <h3>1. Digital Marketing Strategy & Execution</h3>
-                      <p>
+                    <div className="cs_service_details text-white">
+                      <h3 className="text-white">1. Digital Marketing Strategy & Execution</h3>
+                      <p className="text-white">
                         In today's competitive landscape, a robust digital marketing strategy is paramount. We develop and execute comprehensive plans that encompass:
                       </p>
-                      <p><strong>•	Search Engine Optimization (SEO):</strong> Improve your organic search rankings, increase website traffic, and attract qualified leads with our advanced SEO services. We focus on keyword research, on-page optimization, technical SEO, and local SEO to ensure maximum visibility.</p>
-                      <p><strong>•	Social Media Marketing:</strong> Build a strong brand presence, engage with your audience, and drive conversions across key social platforms. Our strategies include content creation, community management, and targeted advertising campaigns.</p>
-                      <p><strong>•	Content Marketing:</strong> Establish thought leadership and attract your ideal customers with valuable, relevant content. We create compelling blog posts, articles, videos, and infographics that resonate with your target audience.</p>
-                      <p><strong>•	Paid Advertising (PPC):</strong> Maximize your return on ad spend with expertly managed pay-per-click campaigns on Google, social media, and other platforms. We optimize for conversions and cost-efficiency.</p>
-                      <p><strong>•	Email Marketing:</strong> Nurture leads, build customer loyalty, and drive repeat business with automated and personalized email campaigns. From list building to conversion funnels, we cover it all.</p>
+                      <p className="text-white"><strong>•	Search Engine Optimization (SEO):</strong> Improve your organic search rankings, increase website traffic, and attract qualified leads with our advanced SEO services. We focus on keyword research, on-page optimization, technical SEO, and local SEO to ensure maximum visibility.</p>
+                      <p className="text-white"><strong>•	Social Media Marketing:</strong> Build a strong brand presence, engage with your audience, and drive conversions across key social platforms. Our strategies include content creation, community management, and targeted advertising campaigns.</p>
+                      <p className="text-white"><strong>•	Content Marketing:</strong> Establish thought leadership and attract your ideal customers with valuable, relevant content. We create compelling blog posts, articles, videos, and infographics that resonate with your target audience.</p>
+                      <p className="text-white"><strong>•	Paid Advertising (PPC):</strong> Maximize your return on ad spend with expertly managed pay-per-click campaigns on Google, social media, and other platforms. We optimize for conversions and cost-efficiency.</p>
+                      <p className="text-white"><strong>•	Email Marketing:</strong> Nurture leads, build customer loyalty, and drive repeat business with automated and personalized email campaigns. From list building to conversion funnels, we cover it all.</p>
                     </div>
                   </div>
                 </div>
