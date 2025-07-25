@@ -36,7 +36,7 @@ const TeamHomeTwo = ({ style_2, style_3 }: any) => {
             </div>
             <div className="cs_section_heading_right cs_btn_anim">
               <Link href="/team" className="cs_btn cs_style_1">
-                <span>View All Member</span>
+                <span>View All</span>
                 <svg
                   width="19"
                   height="13"
@@ -55,7 +55,7 @@ const TeamHomeTwo = ({ style_2, style_3 }: any) => {
           </div>
           <div className="cs_height_100 cs_height_lg_60"></div>
 
-          <div className="cs_team_section anim_blog">
+          {/*<div className="cs_team_section anim_blog">
             {team_data.slice(0, 4).map((item, i) => (
               <div key={i} className="cs_team_img">
                 <Link href="/team-details">
@@ -70,7 +70,7 @@ const TeamHomeTwo = ({ style_2, style_3 }: any) => {
                 </div>
               </div>
             ))}
-          </div>
+          </div>*/}
         </div>
       </section>
 

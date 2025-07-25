@@ -38,7 +38,7 @@ const index = () => {
             <MarqueeAreaHomeOne />
             <AboutHomeOne />
             <ServiceHomeOne />
-            <PortfolioHomeOne />
+          
             {/* <AwardsHomeOne /> */}
             <Testimonial />
             <FunFactHomeOne />
@@ -46,12 +46,12 @@ const index = () => {
             <BlogHomeOne />
             <FaqArea />
             <CTA
-              title="Ready to Start Growing Your Business?"
-              subtitle="Join hundreds of tradespeople and small business owners who are already getting more clients and saving time with our proven marketing strategies."
-              buttonText="Get Started Today"
+              title="Ready to Transform Your Business?"
+              subtitle="Join forward-thinking business owners who have eliminated chaos and achieved scalable growth with our proven digital marketing strategies, CRM optimization, and business automation solutions."
+              buttonText="Start Your Digital Transformation"
             />
             <SubscribeHomeOne />
-            <BrandHomeOne style_2={false} />
+          
           </main>
           <FooterOne />
         </div>
