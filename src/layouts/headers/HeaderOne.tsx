@@ -74,17 +74,26 @@ const menu_data: DataType[] = [
   // 	]
   // },
   {
-    id: 4,
+    id: 3,
     title: "Services",
     link: "/service",
     has_dropdown: false,
+    
   },
+
   {
     id: 5,
+    title: "Blog",
+    link: "/blog",
+    has_dropdown: false
+  },
+  {
+    id: 4,
     title: "Contact",
     link: "/contact",
     has_dropdown: false,
   },
+  
 ];
 
 const HeaderOne = () => {

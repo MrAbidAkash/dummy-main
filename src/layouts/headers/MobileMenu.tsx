@@ -69,57 +69,23 @@ const menu_data: DataType[] = [
   //   ]
   // },
   {
-    id: 4,
+    id: 3,
     title: "Services",
     link: "/service",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Digital Marketing Strategy & Execution",
-        link: "/service-details",
-      },
-      {
-        id: 2,
-        title: "Marketing CRM Implementation & Optimization",
-        link: "/service-details",
-      },
-      {
-        id: 3,
-        title: "Business Systems & Automation",
-        link: "/service-details",
-      },
-    ],
+    has_dropdown: false,
+    
   },
   {
     id: 5,
-    title: "Portfolio",
-    link: "/portfolio",
-    has_dropdown: false,
-  },
-  {
-    id: 6,
-    title: "Blog",
-    link: "/blog",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Blog",
-        link: "/blog",
-      },
-      {
-        id: 2,
-        title: "Blog Details",
-        link: "/blog-details",
-      },
-    ],
-  },
-  {
-    id: 7,
     title: "Contact",
     link: "/contact",
     has_dropdown: false,
+  },
+  {
+    id: 4,
+    title: "Blog",
+    link: "/blog",
+    has_dropdown: false
   },
 ];
 

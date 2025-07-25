@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -11,6 +12,7 @@ interface DataType {
   id: string;
   title: string;
   description: string;
+  link: string;
 }
 
 const Service = () => {
@@ -23,16 +25,19 @@ const Service = () => {
       id: "01",
       title: "Digital Marketing Strategy & Execution",
       description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and drive qualified leads.`,
+      link: "/service/social-media-marketing",
     },
     {
       id: "02",
       title: "Marketing CRM Implementation & Optimization",
       description: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations.`,
+      link: "/service/crm-implementation",
     },
     {
       id: "03",
       title: "Business Systems & Automation",
       description: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency.`,
+      link: "/service/web-development-maintenance",
     },
     
   ];
@@ -218,24 +223,25 @@ const Service = () => {
               <div className="cs_work cs_work_1">
                 <div className="cs_card_work cs_style_1 cs_color_1">
                   {service_data.map((item, i) => (
-                    <div
-                      key={i}
-                      className="cs_card"
-                      ref={(el) => { cardRefs.current[i] = el; }}
-                    >
-                      <div className="cs_card cs_style_1">
-                        <div className="cs_posagation">
-                          <div className="cs_work_style_1"></div>
-                          <div className="cs_work_style_2"></div>
+                    <Link key={i} href={item.link} className="cs_service_link">
+                      <div
+                        className="cs_card cs_service_card"
+                        ref={(el) => { cardRefs.current[i] = el; }}
+                      >
+                        <div className="cs_card cs_style_1">
+                          <div className="cs_posagation">
+                            <div className="cs_work_style_1"></div>
+                            <div className="cs_work_style_2"></div>
+                          </div>
+                          <div className="cs_stroke_number">
+                            <span>{item.id}</span>
+                          </div>
                         </div>
-                        <div className="cs_stroke_number">
-                          <span>{item.id}</span>
-                        </div>
-                      </div>
 
-                      <h6 className="cs_work_title">{item.title}</h6>
-                      <p className="cs_work_subtitle">{item.description}</p>
-                    </div>
+                        <h6 className="cs_work_title">{item.title}</h6>
+                        <p className="cs_work_subtitle">{item.description}</p>
+                      </div>
+                    </Link>
                   ))}
                 </div>
               </div>

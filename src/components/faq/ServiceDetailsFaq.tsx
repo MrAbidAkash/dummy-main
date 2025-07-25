@@ -39,9 +39,7 @@ const service_faq_content: DataType = {
     `Digital Marketing Strategy & Execution`,
     `Marketing CRM Implementation & Optimization`,
     `Business Systems & Automation`,
-    `SEO & Content Marketing`,
-    `Social Media Management`,
-    `Workflow Automation & Analytics`,
+    
   ]
 }
 const {

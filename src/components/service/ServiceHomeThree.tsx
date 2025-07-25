@@ -12,6 +12,7 @@ interface DataType {
   service_data: {
     id: number;
     title: string;
+    link: string;
   }[];
   notice_title: string;
   notice_des: string;
@@ -24,14 +25,17 @@ const service_content: DataType = {
     {
       id: 1,
       title: "01 / Digital Marketing Strategy & Execution",
+      link: "/service/social-media-marketing",
     },
     {
       id: 2,
       title: "02 / Marketing CRM Implementation & Optimization",
+      link: "/service/crm-implementation",
     },
     {
       id: 3,
       title: "03 / Business Systems & Automation",
+      link: "/service/web-development-maintenance",
     },
   ],
   notice_title: `Leads360 Services: Your Path to Scalable Growth`,
@@ -68,12 +72,7 @@ const ServiceHomeThree = () => {
 
                 {service_data.map((item, i) =>
                   <li key={i}>
-                    <Link href={
-                      item.id === 1 ? "/service/social-media-marketing" :
-                      item.id === 2 ? "/service/crm-implementation" :
-                      item.id === 3 ? "/service/web-development-maintenance" :
-                      "/service-details"
-                    }>
+                    <Link href={item.link}>
                       <h3>{item.title}</h3>
                     </Link>
                   </li>

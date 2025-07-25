@@ -36,13 +36,13 @@ const ServiceHomeFive = () => {
                 <div className="cs_post cs_style_2">
                   <div className="cs_post_info">
                     <h6 className="cs_post_title">
-                      <Link href="/service-details">{item.title}</Link>
+                      <Link href={item.link}>{item.title}</Link>
                     </h6>
                     <p className="cs_m0 cs_color_1">
                       {item.description}
                     </p>
                     <div className="cs_section_heading_right">
-                      <Link href="/service-details" className="cs_btn cs_style_1 cs_color_1">
+                      <Link href={item.link} className="cs_btn cs_style_1 cs_color_1">
                         <span>View More</span>
                         <svg width="19" height="13" viewBox="0 0 19 13" fill="none"
                           xmlns="http://www.w3.org/2000/svg">

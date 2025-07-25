@@ -17,3 +17,29 @@
 @import '../../public/assets/css/plugins/lightgallery.min.css';
 
 @import '../../public/assets/sass/style.scss';
+
+/* Custom Service Card Styles */
+.cs_service_link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  
+  .cs_service_card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      
+      .cs_work_title {
+        color: #1a2a6c;
+      }
+      
+      .cs_stroke_number span {
+        background-color: #1a2a6c;
+        color: white;
+      }
+    }
+  }
+}

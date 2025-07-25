@@ -11,6 +11,7 @@ interface DataType {
   service_data: {
     id: number;
     title: string;
+    link: string;
   }[];
 }
 
@@ -21,14 +22,17 @@ const service_content: DataType = {
     {
       id: 1,
       title: "Digital Marketing Strategy & Execution",
+      link: "/service/social-media-marketing",
     },
     {
       id: 2,
       title: "Marketing CRM Implementation & Optimization",
+      link: "/service/crm-implementation",
     },
     {
       id: 3,
       title: "Business Systems & Automation",
+      link: "/service/web-development-maintenance",
     },
   ]
 }
@@ -62,14 +66,14 @@ const ServiceHomeTwo = () => {
                       <div className="cs_card_right">
                         <div className="cs_card_right_in">
                           <h2 className="cs_card_title">
-                            <Link href="/service-details" className="cs_white_color">
+                            <Link href={item.link} className="cs_white_color">
                               <span>0{item.id} / </span>{item.title}
                             </Link>
                           </h2>
                         </div>
                       </div>
                       <div className="cs_card_link_wrap">
-                        <Link href="/service-details" className="cs_card_link cs_white_color">
+                        <Link href={item.link} className="cs_card_link cs_white_color">
                           <span>
                             <svg width="20" height="20" viewBox="0 0 30 30" fill="none"
                               xmlns="http://www.w3.org/2000/svg">

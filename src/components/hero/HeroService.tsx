@@ -10,6 +10,7 @@ interface DataType {
   id: number;
   title: string;
   description: string;
+  link: string;
 }
 
 const banner_data: DataType[] = [
@@ -17,16 +18,19 @@ const banner_data: DataType[] = [
     id: 1,
     title: `Digital Marketing Strategy & Execution`,
     description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and attract qualified leads with measurable ROI.`,
+    link: "/service/social-media-marketing",
   },
   {
     id: 2,
     title: `Marketing CRM Implementation & Optimization`,
     description: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations and scalable growth.`,
+    link: "/service/crm-implementation",
   },
   {
     id: 3,
     title: `Business Systems & Automation`,
     description: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency across your business.`,
+    link: "/service/web-development-maintenance",
   },
 ];
 
@@ -176,13 +180,13 @@ const HeroService = () => {
                 <div className="cs_card_right">
                   <div className="cs_card_right_in">
                     <h2 className="cs_card_title">
-                      <Link href="/service-details">{item.title}</Link>
+                      <Link href={item.link}>{item.title}</Link>
                     </h2>
                     <div className="cs_card_subtitle">{item.description}</div>
                   </div>
                 </div>
                 <div className="cs_card_link_wrap">
-                  <Link href="/service-details" className="cs_card_link">
+                  <Link href={item.link} className="cs_card_link">
                     <span>
                       <svg
                         width="30"
