@@ -22,17 +22,15 @@ interface DataType {
 }
 
 const footer_data: DataType = {
-  email: `contact@leads360.com`,
-  phone: `(800) 123-4567`,
-  location: `123 Growth Ave, Suite 400, Austin, TX 78701`,
+  email: `hello@leads360.com.au`,
+  phone: `+61421788649`,
+  location: `Toronto, ON Canada - Digital Transformation Hub`,
   footer_info: `Leads360 builds bespoke marketing & CRM systems tailored to your business goals. From organic social strategies to automated workflows, we help you grow efficiently—no one‑size‑fits‑all.`,
   links: [
     { title: `HOME`, link: "/" },
-    { title: `SERVICES`, link: "/services" },
-    { title: `ABOUT US`, link: "/about-us" },
-    { title: `BLOG`, link: "/blog" },
-    { title: `CONTACT US`, link: "/contact-us" },
-    { title: `SCHEDULE A CALL`, link: "/schedule-call" },
+    { title: `SERVICES`, link: "/service" },
+    { title: `ABOUT`, link: "/about" },
+    { title: `CONTACT`, link: "/contact" },
   ],
 };
 
