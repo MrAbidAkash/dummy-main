@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import MobileMenu from "./MobileMenu";
 import UseSticky from "@/hooks/UseSticky";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -35,66 +34,11 @@ const menu_data: DataType[] = [
     link: "/about",
     has_dropdown: false,
   },
-  // {
-  // 	id: 3,
-  // 	title: "Pages",
-  // 	link: "/about",
-  // 	has_dropdown: true,
-  // 	sub_menu: [
-  // 		{
-  // 			id: 1,
-  // 			title: "About",
-  // 			link: "/about",
-  // 		},
-  // 		{
-  // 			id: 2,
-  // 			title: "Team",
-  // 			link: "/team",
-  // 		},
-  // 		{
-  // 			id: 3,
-  // 			title: "Team Details",
-  // 			link: "/team-details",
-  // 		},
-  // 		{
-  // 			id: 4,
-  // 			title: "Contact",
-  // 			link: "/contact",
-  // 		},
-  // 		{
-  // 			id: 5,
-  // 			title: "Faq",
-  // 			link: "/faq",
-  // 		},
-  // 		{
-  // 			id: 6,
-  // 			title: "Error",
-  // 			link: "/error",
-  // 		}
-  // 	]
-  // },
   {
     id: 4,
     title: "Services",
     link: "/service",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Digital Marketing Strategy & Execution",
-        link: "/service-details",
-      },
-      {
-        id: 2,
-        title: "Marketing CRM Implementation & Optimization",
-        link: "/service-details",
-      },
-      {
-        id: 3,
-        title: "Business Systems & Automation",
-        link: "/service-details",
-      },
-    ],
+    has_dropdown: false,
   },
   {
     id: 5,
@@ -106,19 +50,7 @@ const menu_data: DataType[] = [
     id: 6,
     title: "Blog",
     link: "/blog",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Blog",
-        link: "/blog",
-      },
-      {
-        id: 2,
-        title: "Blog Details",
-        link: "/blog-details",
-      },
-    ],
+    has_dropdown: false,
   },
   {
     id: 7,
@@ -131,19 +63,9 @@ const menu_data: DataType[] = [
 const HeaderOne = () => {
   const { sticky } = UseSticky();
 
-  const [active, setActive] = useState<Boolean>(false);
+  const [active, setActive] = useState(false);
   const handleActive = () => {
     setActive(!active);
-  };
-
-  const [navTitle, setNavTitle] = useState("");
-  //openMobileMenu
-  const openMobileMenu = (menu: string) => {
-    if (navTitle === menu) {
-      setNavTitle("");
-    } else {
-      setNavTitle(menu);
-    }
   };
 
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -187,6 +109,17 @@ const HeaderOne = () => {
     };
   }, [lastScrollTop]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 992);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const ref = useRef(null);
 
   useGSAP(() => {
@@ -225,33 +158,20 @@ const HeaderOne = () => {
                 </Link>
               </div>
               <div className="cs_main_header_right">
-                <div className="cs_nav cs_medium">
-                  <ul className="cs_nav_list">
-                    {menu_data.map((item, i) => (
-                      <li
-                        key={i}
-                        className={`${item.has_dropdown ? "menu-item-has-children" : ""}`}
-                      >
-                        <Link href={item.link}>{item.title}</Link>
-                        {item.has_dropdown && item.sub_menu && (
-                          <ul>
-                            {item.sub_menu.map((sub_item, index) => (
-                              <li key={index}>
-                                <Link href={sub_item.link}>
-                                  {sub_item.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {!isMobile && (
+                  <div className="cs_nav cs_medium">
+                    <ul className="cs_nav_list">
+                      {menu_data.map((item, i) => (
+                        <li key={i}>
+                          <Link href={item.link}>{item.title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className="cs_toolbox">
                   <span className="cs_icon_btn">
                     <span className="cs_icon_btn_in" onClick={handleActive}>
-                      <span></span>
                       <span></span>
                       <span></span>
                       <span></span>
@@ -263,13 +183,6 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
-
-      {/* Mobile Menu */}
-      <MobileMenu
-        active={active}
-        navTitle={navTitle}
-        openMobileMenu={openMobileMenu}
-      />
 
       <div className={`cs_side_header ${active ? "active" : ""}`}>
         <button className="cs_close" onClick={handleActive}></button>
@@ -286,35 +199,9 @@ const HeaderOne = () => {
                     {menu_data.map((item, i) => (
                       <li
                         key={i}
-                        className={`menu-item-has-black-section cs_style_1 ${
-                          navTitle === item.title ? "active" : ""
-                        }`}
+                        className="cs_style_1"
                       >
                         <Link href={item.link}>{item.title}</Link>
-                        {item.has_dropdown && (
-                          <>
-                            <ul
-                              style={{
-                                display:
-                                  navTitle === item.title ? "block" : "none",
-                              }}
-                            >
-                              {item?.sub_menu?.map((sub_item, index) => (
-                                <li key={index}>
-                                  <Link href={sub_item.link}>
-                                    {sub_item.title}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                            <span
-                              onClick={() => openMobileMenu(item.title)}
-                              className={`cs_munu_dropdown_toggle_1 ${
-                                navTitle === item.title ? "active" : ""
-                              }`}
-                            ></span>
-                          </>
-                        )}
                       </li>
                     ))}
                   </ul>
@@ -339,7 +226,7 @@ const HeaderOne = () => {
                     </svg>
                     <span className="ms-2">
                       Toronto, ON Canada <br />
-                      &nbsp; &nbsp; &nbsp; &nbsp; Digital Transformation Hub
+                              Digital Transformation Hub
                     </span>
                   </p>
 
