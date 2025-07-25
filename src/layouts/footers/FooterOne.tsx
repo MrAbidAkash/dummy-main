@@ -24,7 +24,7 @@ interface DataType {
 const footer_data: DataType = {
   email: `hello@leads360.com.au`,
   phone: `+61421788649`,
-  location: `Toronto, ON Canada - Digital Transformation Hub`,
+  location: `142 Brisbane St, Australia`,
   footer_info: `Leads360 builds bespoke marketing & CRM systems tailored to your business goals. From organic social strategies to automated workflows, we help you grow efficiently—no one‑size‑fits‑all.`,
   links: [
     { title: `HOME`, link: "/" },

@@ -118,7 +118,7 @@ const ContactArea = () => {
   const contactItems = [
     {
       title: "Address",
-      subtitle: "El-Mahalla El-Kubra 37",
+      subtitle: "142 Brisbane St",
       href: "https://maps.google.com",
       svg: (
         <svg
@@ -137,8 +137,8 @@ const ContactArea = () => {
     },
     {
       title: "Phone",
-      subtitle: "(406) 555-0120",
-      href: "tel:+14065550120",
+      subtitle: "+61 421 788 649",
+      href: "tel:+61421788649",
       svg: (
         <svg
           width="18"
@@ -160,8 +160,8 @@ const ContactArea = () => {
     },
     {
       title: "Email",
-      subtitle: "Leads360@email.com",
-      href: "mailto:Leads360@email.com",
+      subtitle: "hello@leads360.com.au",
+      href: "mailto:hello@leads360.com.au",
       svg: (
         <svg
           width="18"
@@ -281,11 +281,16 @@ const ContactArea = () => {
 
             <div className="cs_contact_section_2">
               <div className="cs_google_map cs_bg">
-                <iframe
-                  ref={mapRef}
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14158.45182468396!2d153.01387334577637!3d-27.47012501753492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a045cf72031%3A0x502a35af3de9dd0!2sBrisbane%2C%20QLD%2C%20Australia!5e0!3m2!1sen!2sbd!4v1728955941234!5m2!1sen!2sbd" width="600" height="450" loading="lazy"
-                  allowFullScreen
-                />
+               <iframe 
+                 ref={mapRef}
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.6814401025517!2d153.05668277402606!3d-27.448036976332133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159a0341b25b5%3A0x22757f5c15c6e0ac!2s142%20Brisbane%20St%2C%20Bulimba%20QLD%204171%2C%20Australia!5e0!3m2!1sen!2s!4v1753444995092!5m2!1sen!2s" 
+                 width="600" 
+                 height="450" 
+                 style={{ border: 0 }} 
+                 allowFullScreen 
+                 loading="lazy" 
+                 referrerPolicy="no-referrer-when-downgrade"
+               ></iframe>
               </div>
 
               <div className="cs_height_50 cs_height_lg_50" />
