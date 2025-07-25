@@ -223,7 +223,7 @@ const Service = () => {
               <div className="cs_work cs_work_1">
                 <div className="cs_card_work cs_style_1 cs_color_1">
                   {service_data.map((item, i) => (
-                    <Link key={i} href={item.link} className="cs_service_link">
+                    <Link key={i} href={item.link} className="cs_service_card">
                       <div
                         className="cs_card cs_service_card"
                         ref={(el) => { cardRefs.current[i] = el; }}
