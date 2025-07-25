@@ -278,16 +278,7 @@ const HeaderOne = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="cs_toolbox mt-3" style={{ fontSize: "8px", transform: "scale(0.5)", width: "20px", height: "15px" }}>
-                    <span className="cs_icon_btn">
-                      <span className="cs_icon_btn_in">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </span>
-                    </span>
-                  </div>
+                
               </div>
             </div>
             <div className="col-4 offset-1">

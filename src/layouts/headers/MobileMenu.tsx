@@ -1,6 +1,7 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
+import { div } from "framer-motion/client";
 import gsap from "gsap";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
@@ -175,6 +176,18 @@ const MobileMenu = ({ active, navTitle, openMobileMenu }: any) => {
           </li>
         ))}
       </ul>
+      
+      <div className="cs_toolbox" style={{ fontSize: "12px" }}>
+        <span className="cs_icon_btn">
+          <span className="cs_icon_btn_in">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </span>
+      </div>
+      
     </>
   );
 };
