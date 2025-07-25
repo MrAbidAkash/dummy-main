@@ -207,7 +207,7 @@ const HeaderOne = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="cs_toolbox">
+                <div className="cs_toolbox" style={{ fontSize: "12px" }}>
                   <span className="cs_icon_btn">
                     <span className="cs_icon_btn_in" onClick={handleActive}>
                       <span></span>
@@ -240,7 +240,7 @@ const HeaderOne = () => {
           <div className="row align-items-end">
             <div className="col-7">
               <div className="cs_box_one">
-                <div className="cs_nav_black_section cs_font_changes">
+                <div className="cs_nav_black_section cs_font_changes" style={{ fontSize: "14px" }}>
                   <ul>
                     {menu_data.map((item, i) => (
                       <li
@@ -278,6 +278,16 @@ const HeaderOne = () => {
                     ))}
                   </ul>
                 </div>
+                <div className="cs_toolbox mt-3" style={{ fontSize: "8px", transform: "scale(0.5)", width: "20px", height: "15px" }}>
+                    <span className="cs_icon_btn">
+                      <span className="cs_icon_btn_in">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                    </span>
+                  </div>
               </div>
             </div>
             <div className="col-4 offset-1">
@@ -303,7 +313,7 @@ const HeaderOne = () => {
                   </p>
 
                   <h4 className="cs_phone_number">
-                    <a href="tel:(406)555-0120">
+                    <a href="tel:+61421788649">
                       <svg
                         width="35"
                         height="35"
@@ -324,7 +334,7 @@ const HeaderOne = () => {
                           fill="white"
                         ></path>
                       </svg>
-                      <span className="ms-2">(406)555-0120</span>
+                      <span className="ms-2">+61421788649</span>
                     </a>
                   </h4>
 
@@ -352,25 +362,16 @@ const HeaderOne = () => {
                   </ul>
 
                   <hr className="mt-2 me-5 mb-2" />
-                  <h2>
+                  <h5>
                     <a
-                      href="mailto:hello@leads360.ca"
+                      href="mailto:hello@leads360.com.au"
                       className="cs_primary_font cs_text_btn"
                     >
-                      <span className="cs_black">hello@leads360.ca</span>
+                      <span className="cs_black">hello@leads360.com.au</span>
                     </a>
-                  </h2>
+                  </h5>
                   
-                  <div className="cs_toolbox mt-3">
-                    <span className="cs_icon_btn">
-                      <span className="cs_icon_btn_in">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </span>
-                    </span>
-                  </div>
+                  
                 </div>
               </div>
             </div>
