@@ -16,9 +16,9 @@ interface DataType {
 const banner_data: DataType[] = [
   {
     id: 1,
-    title: `Digital Marketing Strategy & Execution`,
-    description: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and attract qualified leads with measurable ROI.`,
-    link: "/service/social-media-marketing",
+    title: `01. Voice AI for Business Calls`,
+    description: `Never miss a call. Never miss a lead.\nWe build empathetic voice bots that handle your inbound calls with natural conversation — qualifying enquiries, collecting details, and guiding people to the right next step.\n\n✅ Custom voice scripts (written with a human tone)\n✅ Real-time call triage and lead routing\n✅ Integrates with your CRM, calendar, or website forms\n✅ Perfect for tradies, clinics, agents, and busy front desks\n\nSave hours on admin, capture more leads, and give callers a better experience — even after hours.`,
+    link: "/service/voice-ai",
   },
   {
     id: 2,

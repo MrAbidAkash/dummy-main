@@ -17,8 +17,7 @@ interface DataType {
 
 const service_content: DataType = {
   sub_title: "Leads360 Services",
-  title: "Latest Digital Additions at Leads360 HQ
-Next-gen tools. Human-led. Built to scale your business.",
+  title: "Your Path to Scalable Growth & Digital Transformation",
   service_data: [
     {
       id: 1,

@@ -17,20 +17,20 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    title: `Digital Marketing Strategy & Execution`,
-    des: `Comprehensive SEO, social media marketing, content creation, PPC campaigns, and email marketing to maximize your online presence and attract qualified leads with measurable ROI.`,
+    title: `Voice AI for Business Calls`,
+    des: `Never miss a call. Never miss a lead.\n\nWe build empathetic voice bots that handle your inbound calls with natural conversation — qualifying enquiries, collecting details, and guiding people to the right next step.\n\n• Custom voice scripts (written with a human tone)\n• Real-time call triage and lead routing\n• Integrates with your CRM, calendar, or website forms\n• Perfect for tradies, clinics, agents, and busy front desks\n\nSave hours on admin, capture more leads, and give callers a better experience — even after hours.`,
     link: "/service/social-media-marketing",
   },
   {
     id: 2,
-    title: `Marketing CRM Implementation & Optimization`,
-    des: `Complete CRM setup, lead management automation, sales pipeline optimization, and seamless integration with marketing tools for streamlined operations and scalable growth.`,
+    title: `AI Chatbots for Website & Socials`,
+    des: `Your always-on assistant — trained on your business.\n\nOur chatbots aren't off-the-shelf. They're trained on your unique services, tone, FAQs, and workflows — so they handle enquiries like a real team member would. Whether it's on your website, Instagram, or Facebook, they respond instantly, guide customers, and hand over to your team when it matters.\n\n• Conversational tone that reflects your brand\n• Fully trained on your systems, services & processes\n• 24/7 responses across web and social platforms\n• Knows when to escalate or hand over to humans\n\nBecause in today's busy world, your customers deserve fast, accurate, and human-like support — even when you're offline.`,
     link: "/service/crm-implementation",
   },
   {
     id: 3,
-    title: `Business Systems & Automation`,
-    des: `Workflow automation, data analytics reporting, and customer experience optimization to eliminate chaos and enhance operational efficiency across your business.`,
+    title: `Connected Systems & Smart Integrations`,
+    des: `Get your software talking — so your business runs smoother.\n\nWe help you connect the tools you already use — like clinical platforms, booking apps, job management software (e.g. ServiceM8), CRMs, accounting systems, and calendars — so they all talk to each other and nothing slips through the cracks.\n\nNo more double entry. No more switching between tabs or chasing missing info. Just clean, automated workflows that save time, reduce admin, and keep your team and customers in sync.\n\n• Sync bookings, invoices, and customer details across platforms\n• Trigger marketing or reminder emails when new jobs or appointments are created\n• Link tools like Xero, MYOB, ServiceM8, Cliniko, GHL, Calendly, Google Sheets & more\n• Fully customised to your business — not generic plug-ins or templates\n\nYour tools should work together — not create more work for your team.`,
     link: "/service/web-development-maintenance",
   },
 ];
@@ -170,8 +170,7 @@ const ServiceHomeOne = () => {
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Latest Digital Additions at Leads360 HQ
-Next-gen tools. Human-led. Built to scale your business.
+                Latest Digital Additions at Leads360 HQ Next-gen tools. Human-led. Built to scale your business.
               </h2>
             </div>
             <div

@@ -15,8 +15,7 @@ interface DataType {
 
 const service_content = {
   title: "Leads360 Services",
-  des: "Latest Digital Additions at Leads360 HQ
-Next-gen tools. Human-led. Built to scale your business.",
+  des: "Your Path to Scalable Growth & Digital Transformation",
   service_data: [
     { id: 1, title: "Digital Marketing Strategy & Execution" },
     { id: 2, title: "Marketing CRM Implementation & Optimization" },
