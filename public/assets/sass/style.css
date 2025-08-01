@@ -2761,9 +2761,9 @@ label {
 .cs_swiper_controll {
   display: flex;
   align-items: center;
-  margin-top: -52px;
+  margin-top: -120px;
   position: relative;
-  top: -60px;
+  top: -90px;
   z-index: 2;
 }
 
@@ -6185,7 +6185,7 @@ label {
 24. About
 ----------------------------------------------------------------*/
 .cs_about.cs_style_1 {
-  padding: 140px 0;
+  padding: 30px 0;
   position: relative;
 }
 .cs_about.cs_style_1 .cs_about_bg {
@@ -6203,7 +6203,7 @@ label {
   width: 100%;
   max-width: 840px;
   background-color: var(--drak-color);
-  padding: 55px 200px 55px 0;
+  padding: 20px 200px 20px 0;
 }
 
 .swiper-slide .cs_about.cs_style_1 .cs_about_text {
