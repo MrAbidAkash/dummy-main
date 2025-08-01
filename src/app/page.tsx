@@ -10,6 +10,7 @@ import PortfolioHomeOne from "@/components/portfolio/PortfolioHomeOne";
 import AwardsHomeOne from "@/components/awards/AwardsHomeOne";
 import Testimonial from "@/components/testimonial/Testimonial";
 import FunFactHomeOne from "@/components/funfact/FunFactHomeOne";
+import TrustedByBusiness from "@/components/brand/TrustedByBusiness";
 import VideoHomeOne from "@/components/video/VideoHomeOne";
 import BlogHomeOne from "@/components/blog/BlogHomeOne";
 import SubscribeHomeOne from "@/components/subscribe/SubscribeHomeOne";
@@ -41,7 +42,7 @@ const index = () => {
           
             {/* <AwardsHomeOne /> */}
             <Testimonial />
-            <FunFactHomeOne />
+            <TrustedByBusiness />
             <VideoHomeOne setIsVideoOpen={setIsVideoOpen} />
             <BlogHomeOne />
             <FaqArea />
