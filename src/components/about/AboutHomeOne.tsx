@@ -20,21 +20,29 @@ const about_slider: DataType[] = [
   {
     img: "/assets/img/about_img.jpg",
     sub_title: "Who We Are",
-    title: "Unlock Your Business Potential: Data-Driven Growth Strategies" ,
-    des: `We reject one-size-fits-all approaches. Your business is distinct, and so are its growth hurdles. We meticulously analyze your challenges, crafting custom digital strategies that address the root causes of your growth limitations. Our expertise as a digital transformation company in digital marketing and business optimization ensures a clear, actionable path for you to scale effectively and efficiently, transforming your growth potential into reality.`,},
+    title: "Strategy. Execution. Growth. Nothing wasted. Everything working.",
+    des: `From marketing strategy to hands-on implementation — we help your business grow with clarity, systems, and results that last.`,
+  },
   {
     img: "/assets/img/about_img_2.jpg",
     sub_title: "What We Offer",
-    title: "Take Our AI-Powered Growth Audit Quiz",
-    des: `In just a few minutes, our AI-powered growth audit quiz will precisely identify areas where your business can achieve significant, sustainable growth. Receive a personalized, data-driven report that not only assesses your current marketing and operational strengths but also highlights the exact hurdles preventing your next level of success. This isn't just an audit; it's the crucial first step towards a clear, actionable, and SEO-optimized growth strategy.`,
+    title: "Sound familiar?",
+    des: `You're not alone — we help business owners and teams solve these exact problems.\n\n• "We're spending on ads… but not seeing results."\nYour traffic's coming in — but without the right systems, those clicks don't convert.\n\n• "We're missing calls, messages, and leads — daily."\nManual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.\n\n• "Posting on social media feels like a full-time job."\nWe plan, write, and post your content — so you stay consistent, visible, and in demand.\n\n• "Our team is stretched and nothing feels organised."\nWe set up CRM and automation workflows to streamline your operations and free up headspace.`,
   },
   {
     img: "/assets/img/about_img_3.jpg",
     sub_title: "Our Approach",
-    title: "Schedule Your Personalized Growth Strategy Session",
-    des: `Ready to move beyond guesswork and embrace predictable growth? Book a focused 30-minute growth strategy session with our experts. We'll delve into your unique challenges and aspirations, collaboratively outlining a custom roadmap designed to solve your specific growth problems. This isn't a sales pitch; it's a collaborative session to demonstrate precisely how Leads360, your trusted digital transformation company, can help you achieve scalable business growth without the chaos, leveraging AI insights and proven digital marketing tactics.`,
+    title: "What we build to help your business scale — fast.",
+    des: `Grouped services under outcomes:\n\nGet Found\n\nConversion-focused websites\nLocal SEO setup\nSocial media strategy & content\n\nConvert & Nurture\n\nCRM (Go High Level) setup\nAutomated email & SMS follow-ups\nLead capture forms + funnels\n\nScale with Systems\n\nAI call handling & chatbots\nTeam task automations\nJob tracking dashboards\nDone-for-you, no guesswork, all aligned with your growth goals.`,
+  },
+  {
+    img: "/assets/img/about_img_4.jpg",
+    sub_title: "Our Process",
+    title: "Here's how we make it simple — and effective.",
+    des: `Step-by-step process:\n\nWe map your growth strategy.\nTailored to your goals, your industry, and your capacity.\n\nWe build your marketing systems.\nWebsite. CRM. Content. Funnels. Automation. All working together.\n\nWe train your team (if needed).\nNo overwhelm. We make it easy to use and scale.\n\nWe track and optimise.\nData-led improvements to keep growing without the chaos.`,
   },
 ];
+
 
 const AboutHomeOne = () => {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
@@ -130,10 +138,93 @@ const AboutHomeOne = () => {
                         {item.sub_title}
                       </div>
                       <h2 className="cs_section_title">{item.title}</h2>
+                     
                     </div>
                   </div>
                   <div className="cs_height_40 cs_height_lg_30"></div>
-                  <p className="cs_m0">{item.des}</p>
+                  {index === 1 ? (
+                    <div className="cs_m0">
+                      <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>
+                        You're not alone — we help business owners and teams solve these exact problems.
+                      </p>
+                      <div style={{ marginTop: "30px" }}>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "We're spending on ads… but not seeing results."</p>
+                          <p>Your traffic's coming in — but without the right systems, those clicks don't convert.</p>
+                        </div>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "We're missing calls, messages, and leads — daily."</p>
+                          <p>Manual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.</p>
+                        </div>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "Posting on social media feels like a full-time job."</p>
+                          <p>We plan, write, and post your content — so you stay consistent, visible, and in demand.</p>
+                        </div>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "Our team is stretched and nothing feels organised."</p>
+                          <p>We set up CRM and automation workflows to streamline your operations and free up headspace.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : index === 2 ? (
+                    <div className="cs_m0">
+                      <div style={{ marginTop: "20px" }}>
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "15px" }}>Get Found</p>
+                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Conversion-focused websites</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Local SEO setup</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Social media strategy & content</li>
+                          </ul>
+                        </div>
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15",marginBottom: "15px" }}>Convert & Nurture</p>
+                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• CRM (Go High Level) setup</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Automated email & SMS follow-ups</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Lead capture forms + funnels</li>
+                          </ul>
+                        </div>
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "15px" }}>Scale with Systems</p>
+                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• AI call handling & chatbots</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Team task automations</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Job tracking dashboards</li>
+                          </ul>
+                        </div>
+                        <p style={{ marginTop: "20px", fontWeight: "500", fontSize: "16px" }}>
+                          Done-for-you, no guesswork, all aligned with your growth goals.
+                        </p>
+                      </div>
+                    </div>
+                  ) : index === 3 ? (
+                    <div className="cs_m0">
+                      <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>
+                        Step-by-step process:
+                      </p>
+                      <div style={{ marginTop: "30px" }}>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>1. We map your growth strategy.</p>
+                          <p style={{ paddingLeft: "15px" }}>Tailored to your goals, your industry, and your capacity.</p>
+                        </div>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>2. We build your marketing systems.</p>
+                          <p style={{ paddingLeft: "15px" }}>Website. CRM. Content. Funnels. Automation. All working together.</p>
+                        </div>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>3. We train your team (if needed).</p>
+                          <p style={{ paddingLeft: "15px" }}>No overwhelm. We make it easy to use and scale.</p>
+                        </div>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>4. We track and optimise.</p>
+                          <p style={{ paddingLeft: "15px" }}>Data-led improvements to keep growing without the chaos.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="cs_m0">{item.des}</p>
+                  )}
                 </div>
               </div>
             </div>
