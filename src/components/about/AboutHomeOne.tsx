@@ -19,25 +19,19 @@ interface DataType {
 const about_slider: DataType[] = [
   {
     img: "/assets/img/about_img.jpg",
-    sub_title: "Who We Are",
-    title: "Strategy. Execution. Growth. Nothing wasted. Everything working.",
-    des: `From marketing strategy to hands-on implementation — we help your business grow with clarity, systems, and results that last.`,
+    sub_title: "Sound familiar?",
+    title: "You're not alone — we help business owners and teams solve these exact problems.",
+    des: `\n• "We're spending on ads… but not seeing results."\nYour traffic's coming in — but without the right systems, those clicks don't convert.\n\n• "We're missing calls, messages, and leads — daily."\nManual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.\n\n• "Posting on social media feels like a full-time job."\nWe plan, write, and post your content — so you stay consistent, visible, and in demand.\n\n• "Our team is stretched and nothing feels organised."\nWe set up CRM and automation workflows to streamline your operations and free up headspace.`,
   },
   {
     img: "/assets/img/about_img_2.jpg",
-    sub_title: "What We Offer",
-    title: "Sound familiar?",
-    des: `You're not alone — we help business owners and teams solve these exact problems.\n\n• "We're spending on ads… but not seeing results."\nYour traffic's coming in — but without the right systems, those clicks don't convert.\n\n• "We're missing calls, messages, and leads — daily."\nManual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.\n\n• "Posting on social media feels like a full-time job."\nWe plan, write, and post your content — so you stay consistent, visible, and in demand.\n\n• "Our team is stretched and nothing feels organised."\nWe set up CRM and automation workflows to streamline your operations and free up headspace.`,
-  },
-  {
-    img: "/assets/img/about_img_3.jpg",
     sub_title: "Our Approach",
     title: "What we build to help your business scale — fast.",
     des: `Grouped services under outcomes:\n\nGet Found\n\nConversion-focused websites\nLocal SEO setup\nSocial media strategy & content\n\nConvert & Nurture\n\nCRM (Go High Level) setup\nAutomated email & SMS follow-ups\nLead capture forms + funnels\n\nScale with Systems\n\nAI call handling & chatbots\nTeam task automations\nJob tracking dashboards\nDone-for-you, no guesswork, all aligned with your growth goals.`,
   },
   {
-    img: "/assets/img/about_img_4.jpg",
-    sub_title: "Our Process",
+    img: "/assets/img/about_img_3.jpg",
+    sub_title: "Step-by-step Process",
     title: "Here's how we make it simple — and effective.",
     des: `Step-by-step process:\n\nWe map your growth strategy.\nTailored to your goals, your industry, and your capacity.\n\nWe build your marketing systems.\nWebsite. CRM. Content. Funnels. Automation. All working together.\n\nWe train your team (if needed).\nNo overwhelm. We make it easy to use and scale.\n\nWe track and optimise.\nData-led improvements to keep growing without the chaos.`,
   },
@@ -140,31 +134,31 @@ const AboutHomeOne = () => {
                      
                     </div>
                   </div>
-                  {index === 1 ? (
+                  {index === 0 ? (
                     <div className="cs_m0">
                       <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>
-                        You're not alone — we help business owners and teams solve these exact problems.
+                        
                       </p>
                       <div style={{ marginTop: "30px" }}>
                         <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "We're spending on ads… but not seeing results."</p>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>• "We're spending on ads… but not seeing results."</p>
                           <p>Your traffic's coming in — but without the right systems, those clicks don't convert.</p>
                         </div>
                         <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "We're missing calls, messages, and leads — daily."</p>
+                          <p style={{ fontWeight: "600", color: "#FECA15",  marginBottom: "5px" }}>• "We're missing calls, messages, and leads — daily."</p>
                           <p>Manual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.</p>
                         </div>
                         <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "Posting on social media feels like a full-time job."</p>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>• "Posting on social media feels like a full-time job."</p>
                           <p>We plan, write, and post your content — so you stay consistent, visible, and in demand.</p>
                         </div>
                         <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", marginBottom: "5px" }}>• "Our team is stretched and nothing feels organised."</p>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>• "Our team is stretched and nothing feels organised."</p>
                           <p>We set up CRM and automation workflows to streamline your operations and free up headspace.</p>
                         </div>
                       </div>
                     </div>
-                  ) : index === 2 ? (
+                  ) : index === 1 ? (
                     <div className="cs_m0">
                       <div style={{ marginTop: "20px" }}>
                         <div style={{ marginBottom: "30px" }}>
@@ -196,11 +190,9 @@ const AboutHomeOne = () => {
                         </p>
                       </div>
                     </div>
-                  ) : index === 3 ? (
+                  ) : index === 2 ? (
                     <div className="cs_m0">
-                      <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>
-                        Step-by-step process:
-                      </p>
+                     
                       <div style={{ marginTop: "30px" }}>
                         <div style={{ marginBottom: "25px" }}>
                           <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>1. We map your growth strategy.</p>
@@ -229,6 +221,7 @@ const AboutHomeOne = () => {
           </SwiperSlide>
         ))}
 
+       
         <div className="container">
           <div className="cs_swiper_controll">
             <div className="cs_pagination cs_style2 cs_primary_font"></div>
@@ -264,6 +257,7 @@ const AboutHomeOne = () => {
             </div>
           </div>
         </div>
+
       </Swiper>
     </>
   );

@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface DataType {
   img: string;
@@ -14,9 +14,9 @@ interface DataType {
 const hero_slider: DataType[] = [
   {
     img: "/assets/img/hero_img_1.jpg",
-    sub_title: "Leads360",
-    title: "Marketing and automation — done with strategy, built to scale.",
-    des: "From lead gen to systems, we take care of the hard stuff so your business grows on autopilot.",
+    title: "Strategy. Execution. Growth. Nothing wasted. Everything working.",
+    des: "From marketing strategy to hands-on implementation — we help your business grow with clarity, systems, and results that last.",
+    sub_title: ""
   },
 ];
 
@@ -66,23 +66,23 @@ const HeroHomeOne = () => {
                     {item.title}
                   </h1>
                   <div className="cs_hero_text_in" style={{ marginTop: "0" }}>
-                    <div className="cs_hero_subtitle" style={{ fontSize: "18px", lineHeight: "1.4" }}>{item.des}</div>
+                    <div className="cs_hero_subtitle" style={{ fontSize: "18px", lineHeight: "1.4", marginLeft: "80px", fontStyle: "italic" }}>{item.des}</div>
         
 
                     <div className="cs_height_15 cs_height_lg_15"></div>
                     <div className="cs_hero_btn_wrap">
-                      <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", gap: "20px" }}>
+                      <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", gap: "1.1em", marginLeft: "80px" }}>
                         <Link
                           href="/contact"
                           className="cs_hero_btn cs_round_btn btn-item"
                           style={{ 
-                            width: "90px", 
-                            height: "90px", 
-                            borderRadius: "45px",
+                            width: "5em", 
+                            height: "5em", 
+                            borderRadius: "2.5em",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            fontSize: "14px"
+                            fontSize: "0.78em"
                           }}
                         >
                           <span></span>
@@ -92,13 +92,13 @@ const HeroHomeOne = () => {
                           onClick={openModal}
                           className="cs_hero_btn cs_round_btn btn-item transition"
                           style={{ 
-                            width: "90px", 
-                            height: "90px", 
-                            borderRadius: "45px",
+                            width: "5em", 
+                            height: "5em", 
+                            borderRadius: "2.5em",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            fontSize: "14px"
+                            fontSize: "0.78em"
                           }}
                         >
                           <span></span>
