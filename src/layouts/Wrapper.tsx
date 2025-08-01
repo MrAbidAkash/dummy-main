@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { gsap } from 'gsap';
 
 import animationTitle from "@/utils/animationTitle";
-import MouseMove from "@/components/common/MouseMove";
+// MouseMove component removed to disable bubble effect
 import ScrollToTop from "@/components/common/ScrollToTop";
 
 import { scrollSmother } from "@/utils/scrollSmother";
@@ -45,7 +45,7 @@ const Wrapper = ({ children }: any) => {
 
 
   return <>
-    <MouseMove />
+    {/* MouseMove component removed to disable bubble effect */}
     {children}
     <ScrollToTop />
 

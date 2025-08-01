@@ -15,20 +15,8 @@ const hero_slider: DataType[] = [
   {
     img: "/assets/img/hero_img_1.jpg",
     sub_title: "Leads360",
-    title:"Marketing and automation — done with strategy, built to scale.",
-    des: `From lead gen to systems, we take care of the hard stuff so your business grows on autopilot.`,
-  },
-  {
-    img: "/assets/img/hero_img_2.jpg",
-    sub_title: "Free Marketing Audit",
-    title: "Get Your Personalized Growth Roadmap",
-    des: `Take our 5-minute audit to discover exactly where your marketing stands and get a custom action plan to attract more clients, increase bookings, and grow your revenue.`,
-  },
-  {
-    img: "/assets/img/hero_img_3.jpg",
-    sub_title: "Discovery Call",
-    title: "Book Your Strategy Session",
-    des: `Let's discuss your business goals and challenges. In 30 minutes, we'll create a custom roadmap showing you exactly how to attract more clients and scale your business—no fluff, just results.`,
+    title: "Marketing and automation — done with strategy, built to scale.",
+    des: "From lead gen to systems, we take care of the hard stuff so your business grows on autopilot.",
   },
 ];
 
@@ -62,51 +50,56 @@ const HeroHomeOne = () => {
           <SwiperSlide key={index} className="swiper-slide">
             <div
               className="cs_hero cs_style1 cs_center cs_parallax"
-              style={{ height: "110vh" }}
+              style={{ height: "50vh" }} /* Reduced from 110vh to a medium 50vh */
             >
               <div
                 className="cs_hero_bg cs_bg cs_parallax_bg"
                 style={{ backgroundImage: `url(${item.img})` }}
               ></div>
-              <div className="container" style={{ height: "70vh" }}>
-                <div className="cs_hero_text" style={{ fontSize: "medium" }}>
-                  <div className="cs_hero_mini_title">
-                    <svg
-                      width="134"
-                      height="12"
-                      viewBox="0 0 134 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M133.53 6.53033C133.823 6.23744 133.823 5.76256 133.53 5.46967L128.757 0.696699C128.464 0.403806 127.99 0.403806 127.697 0.696699C127.404 0.989593 127.404 1.46447 127.697 1.75736L131.939 6L127.697 10.2426C127.404 10.5355 127.404 11.0104 127.697 11.3033C127.99 11.5962 128.464 11.5962 128.757 11.3033L133.53 6.53033ZM0 6.75H133V5.25H0V6.75Z"
-                        fill="#101010"
-                      />
-                    </svg>
+              <div className="container" style={{ height: "45vh", maxWidth: "1000px" }}> {/* Reduced height and set max width */}
+                <div className="cs_hero_text" style={{ fontSize: "medium", padding: "0", maxWidth: "800px" }}>
+                  <div className="cs_hero_mini_title" style={{ fontSize: "16px" }}>
                     {item.sub_title}
                   </div>
-                  <div className="cs_height_5 cs_height_lg_5"></div>
-                  <h1 className="cs_hero_title" style={{ fontSize: "40px" }}>
+                  <div className="cs_height_2 cs_height_lg_2"></div>
+                  <h1 className="cs_hero_title" style={{ fontSize: "38px", lineHeight: "1.2", marginBottom: "10px" }}>
                     {item.title}
                   </h1>
-                  <div className="cs_height_0 cs_height_lg_0"></div>
-                  <div className="cs_hero_text_in">
-                    <div className="cs_hero_subtitle -mt-15">{item.des}</div>
+                  <div className="cs_hero_text_in" style={{ marginTop: "0" }}>
+                    <div className="cs_hero_subtitle" style={{ fontSize: "18px", lineHeight: "1.4" }}>{item.des}</div>
         
 
-                    <div className="cs_height_0 cs_height_lg_0"></div>
+                    <div className="cs_height_15 cs_height_lg_15"></div>
                     <div className="cs_hero_btn_wrap">
-                      <div className="cs_round_btn_wrap">
+                      <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", gap: "20px" }}>
                         <Link
                           href="/contact"
                           className="cs_hero_btn cs_round_btn btn-item"
+                          style={{ 
+                            width: "90px", 
+                            height: "90px", 
+                            borderRadius: "45px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: "14px"
+                          }}
                         >
                           <span></span>
                           Get Started
                         </Link>
                         <a
                           onClick={openModal}
-                          className="cs_hero_btn cs_round_btn btn-item m-3 transition"
+                          className="cs_hero_btn cs_round_btn btn-item transition"
+                          style={{ 
+                            width: "90px", 
+                            height: "90px", 
+                            borderRadius: "45px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: "14px"
+                          }}
                         >
                           <span></span>
                           Take a Quiz
