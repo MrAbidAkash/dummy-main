@@ -80,8 +80,8 @@ const SubscribeHomeOne = () => {
           <div className="cs_section_heading cs_style_1 cs_color_1 text-center">
             <div className="cs_section_heading_text">
               <h2 className="cs_section_title anim_text_upanddowns">
-                Stay Ahead With Our Top Notch <br />
-                Digital Services
+                Want actionable marketing tips? <br />
+                 Join our Leads360 club
               </h2>
             </div>
           </div>

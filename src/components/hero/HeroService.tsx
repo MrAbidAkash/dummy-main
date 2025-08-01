@@ -154,7 +154,8 @@ const HeroService = () => {
                 ref={titleRef}
                 className="cs_section_title anim_word_writting"
               >
-                Leads360 Services: Your Path to Scalable Growth & Digital Transformation
+                 Latest Digital Additions at Leads360 HQ
+                 Next-gen tools. Human-led. Built to scale your business.
               </h2>
             </div>
           </div>

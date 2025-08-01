@@ -170,7 +170,8 @@ const ServiceHomeOne = () => {
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Your Path to Scalable Growth & Digital Transformation
+                Latest Digital Additions at Leads360 HQ
+Next-gen tools. Human-led. Built to scale your business.
               </h2>
             </div>
             <div
