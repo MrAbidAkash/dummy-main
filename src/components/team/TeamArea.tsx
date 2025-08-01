@@ -6,8 +6,6 @@ import Link from "next/link";
 const TeamArea = () => {
   return (
     <>
-      <div className="cs_height_219 cs_height_lg_120"></div>
-
       <div className="container">
         <div className="cs_section_heading cs_style_1 cs_type_1">
           <div className="cs_section_heading_text">
@@ -34,7 +32,6 @@ const TeamArea = () => {
         </div>
       </div>
 
-      <div className="cs_height_100 cs_height_lg_60"></div>
       <section>
        {/* <div className="container">
           <div className="cs_team_section anim_div_ShowDowns">

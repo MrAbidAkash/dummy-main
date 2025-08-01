@@ -42,9 +42,7 @@ const { sub_title, title, service_data } = service_content
 const ServiceHomeTwo = () => {
   return (
     <>
-      <div className="cs_height_110"></div>
       <section className="cs_primary_bg">
-        <div className="cs_height_100 cs_height_lg_60"></div>
         <div className="container">
           <div className="cs_section_heading cs_style_1 cs_color_1 cs_type_1">
             <div className="cs_section_heading_text">
@@ -56,7 +54,6 @@ const ServiceHomeTwo = () => {
               </h2>
             </div>
           </div>
-          <div className="cs_height_100 cs_height_lg_50"></div>
           <div className="row cs_cr_pr cs_row_gap_150">
             <div className="col-md-6">
               <div className="anim_div_ShowLeftSide">
@@ -112,7 +109,6 @@ const ServiceHomeTwo = () => {
             </div>
           </div>
         </div>
-        <div className="cs_height_100 cs_height_lg_60"></div>
       </section>
     </>
   );

@@ -20,8 +20,6 @@ const { sub_title, title, title_2 } = team_content;
 const TeamHomeTwo = ({ style_2, style_3 }: any) => {
   return (
     <>
-      {style_2 ? null : <div className="cs_height_150 cs_height_lg_60"></div>}
-      {style_3 ? <div className="cs_height_150 cs_height_lg_30"></div> : null}
 
       <section>
         <div className="container">
@@ -53,7 +51,6 @@ const TeamHomeTwo = ({ style_2, style_3 }: any) => {
               </Link>
             </div>
           </div>
-          <div className="cs_height_100 cs_height_lg_60"></div>
 
           {/*<div className="cs_team_section anim_blog">
             {team_data.slice(0, 4).map((item, i) => (

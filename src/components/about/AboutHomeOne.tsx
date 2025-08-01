@@ -93,7 +93,6 @@ const AboutHomeOne = () => {
 
   return (
     <>
-      <div className="cs_height_130 cs_height_lg_60"></div>
       <Swiper
         loop={true}
         speed={1000}
@@ -141,7 +140,6 @@ const AboutHomeOne = () => {
                      
                     </div>
                   </div>
-                  <div className="cs_height_40 cs_height_lg_30"></div>
                   {index === 1 ? (
                     <div className="cs_m0">
                       <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>

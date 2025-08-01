@@ -62,16 +62,16 @@ const ServiceHomeOne = () => {
       tlHeading
         .from(subtitleRef.current, {
           opacity: 0,
-          y: 40,
-          duration: 0.8,
+          y: 20,
+          duration: 0.6,
           ease: "power2.out",
         })
         .from(
           titleRef.current,
           {
             opacity: 0,
-            y: 60,
-            duration: 0.9,
+            y: 30,
+            duration: 0.7,
             ease: "back.out(1.2)",
           },
           "-=0.3",
@@ -80,8 +80,8 @@ const ServiceHomeOne = () => {
           btnRef.current,
           {
             opacity: 0,
-            scale: 0.8,
-            duration: 0.7,
+            scale: 0.9,
+            duration: 0.5,
             ease: "elastic.out(1.2, 0.75)",
           },
           "-=0.2",
@@ -90,9 +90,9 @@ const ServiceHomeOne = () => {
       // Card animations with staggered entrance
       gsap.from(cardRefs.current, {
         opacity: 0,
-        y: 80,
-        duration: 0.9,
-        stagger: 0.15,
+        y: 40,
+        duration: 0.7,
+        stagger: 0.1,
         ease: "back.out(1.2)",
         scrollTrigger: {
           trigger: ".cs_card_1_list",
@@ -114,8 +114,8 @@ const ServiceHomeOne = () => {
 
         hoverTl
           .to(card, {
-            y: -10,
-            duration: 0.4,
+            y: -5,
+            duration: 0.3,
             ease: "power2.out",
           })
           .to(
@@ -129,8 +129,8 @@ const ServiceHomeOne = () => {
           .to(
             link,
             {
-              x: 10,
-              duration: 0.4,
+              x: 5,
+              duration: 0.3,
             },
             0,
           );
@@ -154,9 +154,7 @@ const ServiceHomeOne = () => {
 
   return (
     <div ref={containerRef}>
-      <div className="cs_height_150 cs_height_lg_60"></div>
       <section className="cs_primary_bg position-relative">
-        <div className="cs_height_150 cs_height_lg_60"></div>
         <div className="container">
           <div className="cs_section_heading cs_style_1 cs_type_1 cs_color_1">
             <div className="cs_section_heading_text">
@@ -180,8 +178,8 @@ const ServiceHomeOne = () => {
               <Link href="/service" className="cs_btn cs_style_1 cs_color_1">
                 <span>View Services</span>
                 <svg
-                  width="19"
-                  height="13"
+                  width="15"
+                  height="10"
                   viewBox="0 0 19 13"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +192,6 @@ const ServiceHomeOne = () => {
               </Link>
             </div>
           </div>
-          <div className="cs_height_50 cs_height_lg_10"></div>
           <div className="cs_card_1_list">
             {service_data.map((item, i) => (
               <div
@@ -226,8 +223,8 @@ const ServiceHomeOne = () => {
                   <Link href={item.link} className="cs_card_link">
                     <span>
                       <svg
-                        width="30"
-                        height="30"
+                        width="24"
+                        height="24"
                         viewBox="0 0 30 30"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -248,8 +245,8 @@ const ServiceHomeOne = () => {
                     </span>
                     <span>
                       <svg
-                        width="30"
-                        height="30"
+                        width="24"
+                        height="24"
                         viewBox="0 0 30 30"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +271,6 @@ const ServiceHomeOne = () => {
             ))}
           </div>
         </div>
-        <div className="cs_height_100 cs_height_lg_30"></div>
       </section>
     </div>
   );

@@ -115,7 +115,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="cs_height_385 cs_height_lg_120"></div>
           </div>
         </div>
         <div className="container">
