@@ -12,6 +12,8 @@
       {
         "frame-title": "off"
       }
-    ]
+    ],
+    "css-prefix-order": "off",
+    "compat-api/css": "off"
   }
 }

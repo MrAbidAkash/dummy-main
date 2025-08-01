@@ -22,21 +22,21 @@ interface DataType {
 const testimonial_data: DataType[] = [
   {
     img: avatar_img,
-    name: `Mike Johnson`,
-    location: `Local Electrician, Denver`,
-    des: `"Before Leads360, managing growth was chaotic - more calls meant more missed opportunities. Their CRM automation and Facebook ad strategy brought us 40% more qualified leads while streamlining our booking process. Now we grow without the stress."`,
+    name: `Julia Magesh`,
+    location: ``,
+    des: `"Santy from Leads360 is a marketing fairy. She over delivers and is very strategic in her social media campaigns. She built a great customer review management system for my husband's plumbing business. This has saved us so much time and built credibility."`,
   },
   {
     img: avatar_img,
-    name: `Dr. Sarah Chen`,
-    location: `Physiotherapy Clinic Owner`,
-    des: `"Leads360 transformed our patient acquisition from unpredictable to systematic. Their tailored digital marketing strategy filled our appointment books consistently, bringing us 60% more new patients in 6 months - all while reducing our administrative workload."`,
+    name: `John Kennedy`,
+    location: ``,
+    des: `"We engaged with Leads360 for digital marketing and social media management. Santy built our website and completed full SEO - we're now ranking on the first page of Google with increased traffic."`,
   },
   {
     img: avatar_img,
-    name: `Tom Williams`,
-    location: `Williams Plumbing Services`,
-    des: `"The challenge wasn't getting leads - it was managing sustainable growth. Leads360's custom approach optimized our entire customer journey, from initial contact to completed jobs. Revenue increased 50% while operational chaos decreased significantly."`,
+    name: `Derek B`,
+    location: `Local Guide`,
+    des: `"We engaged Santy and the Leads 360 team to help us set up email marketing campaigns and automations - I cannot speak highly enough of her expertise."`,
   },
 ];
 
@@ -212,20 +212,30 @@ const Testimonial = ({ style_service }: any) => {
 
         <div className="cs_height_150 cs_height_lg_60"></div>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-4">
-              <div ref={thumbRef}>
-                <Image src={testimonial_thumb} alt="" className="w-100" />
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
+              <div ref={thumbRef} className="text-center">
+                <Image 
+                  src={testimonial_thumb} 
+                  alt="Testimonials" 
+                  className="w-100" 
+                  style={{
+                    borderRadius: '15px', 
+                    maxWidth: '450px',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
+                  }}
+                />
               </div>
             </div>
-            <div className="col-lg-7 offset-lg-1">
+            <div className="col-lg-6 col-md-12 offset-lg-1">
               <div
                 ref={contentRef}
                 className={`cs_testimonial ${
                   style_service ? "cs_style_2" : "cs_style_1 cs_color_1"
                 }`}
+                style={{marginTop: '0px'}}
               >
-                <h2 className="cs_testimonial_title">
+                <h2 className="cs_testimonial_title" style={{textAlign: 'left', marginBottom: '30px', lineHeight: '1.2', fontSize: '48px'}}>
                   Client Success Stories: Real Results, Real Growth
                 </h2>
                 <Swiper
@@ -246,11 +256,18 @@ const Testimonial = ({ style_service }: any) => {
                           if (el) slideRefs.current[index] = el;
                         }}
                         className="cs_testimonial_box"
+                        style={{
+                          background: 'rgba(0,0,0,0.05)',
+                          borderRadius: '12px',
+                          padding: '25px',
+                          margin: '5px 0',
+                          border: '1px solid rgba(255,255,255,0.1)'
+                        }}
                       >
-                        <div className="cs_testimonial_quote_icon">
+                        <div className="cs_testimonial_quote_icon" style={{marginBottom: '20px'}}>
                           <svg
-                            width="61"
-                            height="44"
+                            width="45"
+                            height="32"
                             viewBox="0 0 61 44"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -265,19 +282,30 @@ const Testimonial = ({ style_service }: any) => {
                             />
                           </svg>
                         </div>
-                        <blockquote className="cs_testimonial_text">
+                        <blockquote className="cs_testimonial_text" style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '20px', fontStyle: 'italic'}}>
                           {item.des}
                         </blockquote>
-                        <div className="cs_testimonial_meta">
+                        <div className="cs_testimonial_meta" style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
                           <div className="cs_testimonial_avatar">
-                            <Image src={item.img} alt="Avatar" />
+                            <Image 
+                              src={item.img} 
+                              alt="Avatar" 
+                              width={60} 
+                              height={60}
+                              style={{
+                                borderRadius: '50%',
+                                objectFit: 'cover',
+                                border: '2px solid #FECA15',
+                                display: 'block'
+                              }}
+                            />
                           </div>
                           <div className="cs_testimonial_meta_right">
-                            <h3 className="cs_testimonial_avatar_name">
+                            <h3 className="cs_testimonial_avatar_name" style={{fontSize: '18px', fontWeight: '600', marginBottom: '4px'}}>
                               {item.name}
                             </h3>
-                            <div className="cs_testimonial_avatar_designation">
-                              {item.location}
+                            <div className="cs_testimonial_avatar_designation" style={{fontSize: '14px', opacity: '0.8'}}>
+                              {item.location || 'Client'}
                             </div>
                           </div>
                         </div>
@@ -285,7 +313,7 @@ const Testimonial = ({ style_service }: any) => {
                     </SwiperSlide>
                   ))}
 
-                  <div className="cs_pagination cs_style1"></div>
+                  <div className="cs_pagination cs_style1" style={{textAlign: 'center', marginTop: '30px'}}></div>
                 </Swiper>
               </div>
             </div>
