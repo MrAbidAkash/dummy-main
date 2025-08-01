@@ -19,7 +19,7 @@ interface DataType {
 const about_slider: DataType[] = [
   {
     img: "/assets/img/about_img.jpg",
-    sub_title: "Sound familiar?",
+    sub_title: "",
     title: "You're not alone — we help business owners and teams solve these exact problems.",
     des: `\n• "We're spending on ads… but not seeing results."\nYour traffic's coming in — but without the right systems, those clicks don't convert.\n\n• "We're missing calls, messages, and leads — daily."\nManual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.\n\n• "Posting on social media feels like a full-time job."\nWe plan, write, and post your content — so you stay consistent, visible, and in demand.\n\n• "Our team is stretched and nothing feels organised."\nWe set up CRM and automation workflows to streamline your operations and free up headspace.`,
   },
@@ -110,7 +110,7 @@ const AboutHomeOne = () => {
       >
         {about_slider.map((item, index) => (
           <SwiperSlide key={index} className="swiper-slide">
-            <div className="cs_about cs_style_1">
+            <div className="cs_about cs_style_1" style={{ padding: "60px 0" }}>
               <div
                 ref={(el) => {
                   if (el) sectionRefsRight.current[index] = el;
@@ -130,7 +130,7 @@ const AboutHomeOne = () => {
                       <div className="cs_section_subtitle">
                         {item.sub_title}
                       </div>
-                      <h2 className="cs_section_title">{item.title}</h2>
+                      <h2 className="cs_section_title" style={{ fontSize: "32px" }}>{item.title}</h2>
                      
                     </div>
                   </div>
@@ -160,32 +160,32 @@ const AboutHomeOne = () => {
                     </div>
                   ) : index === 1 ? (
                     <div className="cs_m0">
-                      <div style={{ marginTop: "20px" }}>
-                        <div style={{ marginBottom: "30px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "15px" }}>Get Found</p>
+                      <div style={{ marginTop: "10px" }}>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Get Found</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Conversion-focused websites</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Local SEO setup</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Social media strategy & content</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Conversion-focused websites</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Local SEO setup</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Social media strategy & content</li>
                           </ul>
                         </div>
-                        <div style={{ marginBottom: "30px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15",marginBottom: "15px" }}>Convert & Nurture</p>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15",marginBottom: "10px" }}>Convert & Nurture</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• CRM (Go High Level) setup</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Automated email & SMS follow-ups</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Lead capture forms + funnels</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• CRM (Go High Level) setup</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Automated email & SMS follow-ups</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Lead capture forms + funnels</li>
                           </ul>
                         </div>
-                        <div style={{ marginBottom: "30px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "15px" }}>Scale with Systems</p>
+                        <div style={{ marginBottom: "20px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Scale with Systems</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• AI call handling & chatbots</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Team task automations</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Job tracking dashboards</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• AI call handling & chatbots</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Team task automations</li>
+                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Job tracking dashboards</li>
                           </ul>
                         </div>
-                        <p style={{ marginTop: "20px", fontWeight: "500", fontSize: "16px" }}>
+                        <p style={{ marginTop: "15px", fontWeight: "500", fontSize: "16px" }}>
                           Done-for-you, no guesswork, all aligned with your growth goals.
                         </p>
                       </div>
@@ -223,7 +223,7 @@ const AboutHomeOne = () => {
 
        
         <div className="container">
-          <div className="cs_swiper_controll">
+          <div className="cs_swiper_controll" style={{ marginTop: "-60px", position: "relative", zIndex: "10" }}>
             <div className="cs_pagination cs_style2 cs_primary_font"></div>
             <div className="cs_swiper_navigation_wrap">
               <div

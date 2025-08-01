@@ -156,40 +156,24 @@ const ServiceHomeOne = () => {
     <div ref={containerRef}>
       <section className="cs_primary_bg position-relative">
         <div className="container">
+          <div className="cs_height_100 cs_height_lg_60"></div>
           <div className="cs_section_heading cs_style_1 cs_type_1 cs_color_1">
             <div className="cs_section_heading_text">
-              <div
-                ref={subtitleRef}
-                className="cs_section_subtitle anim_div_ShowZoom"
-              >
-                Leads360 Services
-              </div>
               <h2
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Latest Digital Additions at Leads360 HQ Next-gen tools. Human-led. Built to scale your business.
+                Latest Digital Additions at Leads360 HQ
               </h2>
-            </div>
-            <div
-              ref={btnRef as any} // Cast to avoid TypeScript warning
-              className="cs_section_heading_right cs_btn_anim"
-            >
-              <Link href="/service" className="cs_btn cs_style_1 cs_color_1">
-                <span>View Services</span>
-                <svg
-                  width="15"
-                  height="10"
-                  viewBox="0 0 19 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.5303 7.03033C18.8232 6.73744 18.8232 6.26256 18.5303 5.96967L13.7574 1.1967C13.4645 0.903806 12.9896 0.903806 12.6967 1.1967C12.4038 1.48959 12.4038 1.96447 12.6967 2.25736L16.9393 6.5L12.6967 10.7426C12.4038 11.0355 12.4038 11.5104 12.6967 11.8033C12.9896 12.0962 13.4645 12.0962 13.7574 11.8033L18.5303 7.03033ZM0 7.25H18V5.75H0V7.25Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </Link>
+              <p style={{ 
+                fontStyle: "italic", 
+                fontSize: "24px", 
+                color: "#e0e0e0", 
+                marginTop: "10px",
+                lineHeight: "1.3"
+              }}>
+                Next-gen tools. Human-led. Built to scale your business.
+              </p>
             </div>
           </div>
           <div className="cs_card_1_list">
