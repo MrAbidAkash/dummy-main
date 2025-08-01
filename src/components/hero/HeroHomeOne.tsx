@@ -15,8 +15,8 @@ const hero_slider: DataType[] = [
   {
     img: "/assets/img/hero_img_1.jpg",
     sub_title: "Leads360",
-    title:"Tired of chasing marketing advice that doesn't move the needle?",
-    des: `From strategy to execution — we help businesses grow with clarity and action.`,
+    title:"Marketing and automation — done with strategy, built to scale.",
+    des: `From lead gen to systems, we take care of the hard stuff so your business grows on autopilot.`,
   },
   {
     img: "/assets/img/hero_img_2.jpg",
