@@ -15,9 +15,8 @@ const hero_slider: DataType[] = [
   {
     img: "/assets/img/hero_img_1.jpg",
     sub_title: "Leads360",
-    title:"Overcome Growth Pains: Your Solution for Scalable Business Expansion",
-
-    des: `At Leads360, we specialize in small business growth, understanding the unique challenges you face beyond just lead generation. Our focus is on achieving scalable growth without the chaos often associated with rapid expansion. We are your dedicated partner, a leading digital transformation company, providing tailored digital marketing solutions and business optimization strategies to overcome specific obstacles hindering your progress. Leads360 is the answer to your growth problems.`,
+    title:"Tired of chasing marketing advice that doesn't move the needle?",
+    des: `From strategy to execution — we help businesses grow with clarity and action.`,
   },
   {
     img: "/assets/img/hero_img_2.jpg",
