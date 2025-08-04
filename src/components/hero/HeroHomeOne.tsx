@@ -42,7 +42,11 @@ const HeroHomeOne = () => {
       <Swiper
         loop={true}
         slidesPerView={1}
-        autoplay={{ delay: 3000 }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         pagination={{ clickable: true }}
         className="cs_slider cs_slider_1"
       >
@@ -50,7 +54,7 @@ const HeroHomeOne = () => {
           <SwiperSlide key={index} className="swiper-slide">
             <div
               className="cs_hero cs_style1 cs_center cs_parallax"
-              style={{ height: "50vh", position: "relative", overflow: "hidden" }} /* Added position and overflow for video */
+              style={{ height: "40vh", position: "relative", overflow: "hidden" }} /* Reduced height for better positioning */
             >
               <video
                 className="cs_hero_video"
@@ -83,7 +87,16 @@ const HeroHomeOne = () => {
                 backgroundColor: "rgba(0, 0, 0, 0.4)", // Dark overlay for better text readability
                 zIndex: "1"
               }}></div>
-              <div className="container" style={{ height: "45vh", maxWidth: "1000px", position: "relative", zIndex: "2" }}> {/* Added z-index to ensure content is above video */}
+              <div className="container" style={{ 
+                height: "35vh", 
+                maxWidth: "1000px", 
+                position: "relative", 
+                zIndex: "2",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                paddingTop: "20px"
+              }}> {/* Adjusted height and added centering */}
                 <style dangerouslySetInnerHTML={{
                   __html: `
                     @keyframes fadeInUp {
@@ -144,7 +157,12 @@ const HeroHomeOne = () => {
                     }
                   `
                 }} />
-                <div className="cs_hero_text" style={{ fontSize: "medium", padding: "10px", maxWidth: "800px" }}>
+                <div className="cs_hero_text" style={{ 
+                    fontSize: "medium", 
+                    padding: "10px", 
+                    maxWidth: "800px",
+                    marginTop: "-20px" 
+                  }}>
                   <div className="cs_hero_mini_title" style={{ fontSize: "16px", textAlign: "center" }}>
                     {item.sub_title}
                   </div>

@@ -1,0 +1,11 @@
+.secondTitle {
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+@media (max-width: 991px) {
+  .secondTitle {
+    white-space: normal;
+    word-break: break-word;
+  }
+}
