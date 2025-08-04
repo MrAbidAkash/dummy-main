@@ -122,10 +122,10 @@ const AboutHomeOne = () => {
                   }}
                   style={{ position: "relative" }}
                 >
-                  {/* Swiper Controls positioned within text area */}
-                  <div className="cs_swiper_controll" style={{ 
+                  {/* Swiper Controls positioned on both sides */}
+                  <div className="cs_swiper_navigation_container" style={{ 
                     position: "absolute", 
-                    left: "0", 
+                    left: "0",
                     right: "0",
                     top: "50%", 
                     transform: "translateY(-50%)", 
@@ -138,9 +138,9 @@ const AboutHomeOne = () => {
                     <style dangerouslySetInnerHTML={{
                       __html: `
                         .cs_swiper_button_prev, .cs_swiper_button_next {
-                          width: 50px;
-                          height: 50px;
-                          background: rgba(0, 0, 0, 0.3);
+                          width: 60px;
+                          height: 60px;
+                          background: rgba(254, 202, 21, 0.9);
                           border-radius: 50%;
                           display: flex;
                           align-items: center;
@@ -148,51 +148,79 @@ const AboutHomeOne = () => {
                           cursor: pointer;
                           transition: all 0.3s ease;
                           pointer-events: auto;
+                          border: 2px solid rgba(255, 255, 255, 0.2);
+                          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
                         }
                         .cs_swiper_button_prev:hover, .cs_swiper_button_next:hover {
-                          background: rgba(0, 0, 0, 0.6);
+                          background: rgba(254, 202, 21, 1);
                           transform: scale(1.1);
+                          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
                         }
                         .cs_swiper_button_prev svg, .cs_swiper_button_next svg {
-                          width: 24px;
-                          height: 24px;
-                          stroke: white;
+                          width: 28px;
+                          height: 28px;
+                          stroke: #000;
+                          stroke-width: 2.5;
+                        }
+                        .cs_swiper_button_prev {
+                          margin-left: -80px;
+                        }
+                        .cs_swiper_button_next {
+                          margin-right: 40px;
                         }
                         .cs_pagination {
                           position: absolute;
-                          bottom: -40px;
+                          bottom: -60px;
                           left: 50%;
                           transform: translateX(-50%);
                           display: flex;
-                          gap: 8px;
+                          gap: 12px;
                           pointer-events: auto;
                         }
                         .cs_pagination .swiper-pagination-bullet {
-                          width: 10px;
-                          height: 10px;
-                          background: rgba(255, 255, 255, 0.5);
+                          width: 12px;
+                          height: 12px;
+                          background: rgba(255, 255, 255, 0.4);
                           border-radius: 50%;
                           cursor: pointer;
                           transition: all 0.3s ease;
+                          border: 2px solid rgba(255, 255, 255, 0.6);
                         }
                         .cs_pagination .swiper-pagination-bullet-active {
                           background: #FECA15;
-                          transform: scale(1.2);
+                          transform: scale(1.3);
+                          border-color: #FECA15;
+                        }
+                        @media (max-width: 768px) {
+                          .cs_swiper_button_prev {
+                            margin-left: 20px !important;
+                          }
+                          .cs_swiper_button_next {
+                            margin-right: 20px !important;
+                          }
+                          .cs_swiper_button_prev, .cs_swiper_button_next {
+                            width: 50px !important;
+                            height: 50px !important;
+                          }
+                          .cs_swiper_button_prev svg, .cs_swiper_button_next svg {
+                            width: 24px !important;
+                            height: 24px !important;
+                          }
                         }
                       `
                     }} />
                     
-                    {/* Previous Button */}
+                    {/* Previous Button - Left Side */}
                     <div className="cs_swiper_button_prev">
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M11 5L4 12L11 19M4 12H20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                     
-                    {/* Next Button */}
+                    {/* Next Button - Right Side */}
                     <div className="cs_swiper_button_next">
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13 5L20 12L13 19M20 12H4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                   </div>
