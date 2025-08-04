@@ -84,20 +84,64 @@ const HeroHomeOne = () => {
                 zIndex: "1"
               }}></div>
               <div className="container" style={{ height: "45vh", maxWidth: "1000px", position: "relative", zIndex: "2" }}> {/* Added z-index to ensure content is above video */}
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    @keyframes fadeInUp {
+                      from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: translateY(0);
+                      }
+                    }
+                    
+                    @keyframes fadeInScale {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                    
+                    .cs_hero_title_animated {
+                      animation: fadeInScale 1.2s ease-out 0.3s both;
+                    }
+                    
+                    .cs_hero_tagline_animated {
+                      animation: fadeInUp 1s ease-out 0.6s both;
+                    }
+                    
+                    .cs_hero_subtitle_animated {
+                      animation: fadeInUp 1s ease-out 0.9s both;
+                    }
+                    
+                    .cs_hero_btn_animated {
+                      animation: fadeInUp 1s ease-out 1.2s both;
+                    }
+                  `
+                }} />
                 <div className="cs_hero_text" style={{ fontSize: "medium", padding: "10px", maxWidth: "800px" }}>
                   <div className="cs_hero_mini_title" style={{ fontSize: "16px", textAlign: "center" }}>
                     {item.sub_title}
                   </div>
                   <div className="cs_height_2 cs_height_lg_2"></div>
-                  <h1 className="cs_hero_title" style={{ fontSize: "38px", lineHeight: "1.2", marginBottom: "10px", textAlign: "center" }}>
+                  <h1 className="cs_hero_title cs_hero_title_animated" style={{ fontSize: "48px", lineHeight: "1.2", marginBottom: "10px", textAlign: "center" }}>
                     {item.title}
                   </h1>
+                  <div className="cs_hero_tagline cs_hero_tagline_animated" style={{ fontSize: "20px", fontStyle: "italic", textAlign: "center", marginBottom: "20px", color: "#FECA15" }}>
+                    From clicks to clients on autopilot.
+                  </div>
                   <div className="cs_hero_text_in" style={{ marginTop: "0" }}>
-                    <div className="cs_hero_subtitle" style={{ fontSize: "18px", lineHeight: "1.4", marginLeft: "80px", fontStyle: "italic" }}>{item.des}</div>
+                    <div className="cs_hero_subtitle cs_hero_subtitle_animated" style={{ fontSize: "18px", lineHeight: "1.4", marginLeft: "80px", fontStyle: "italic" }}>{item.des}</div>
         
 
                     <div className="cs_height_15 cs_height_lg_15"></div>
-                    <div className="cs_hero_btn_wrap">
+                    <div className="cs_hero_btn_wrap cs_hero_btn_animated">
                       <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", gap: "1.1em", marginLeft: "80px" }}>
                         <Link
                           href="/contact"

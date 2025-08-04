@@ -138,8 +138,8 @@ const AboutHomeOne = () => {
                     <style dangerouslySetInnerHTML={{
                       __html: `
                         .cs_swiper_button_prev, .cs_swiper_button_next {
-                          width: 60px;
-                          height: 60px;
+                          width: 50px;
+                          height: 50px;
                           background: rgba(254, 202, 21, 0.9);
                           border-radius: 50%;
                           display: flex;
@@ -157,13 +157,13 @@ const AboutHomeOne = () => {
                           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
                         }
                         .cs_swiper_button_prev svg, .cs_swiper_button_next svg {
-                          width: 28px;
-                          height: 28px;
+                          width: 24px;
+                          height: 24px;
                           stroke: #000;
                           stroke-width: 2.5;
                         }
                         .cs_swiper_button_prev {
-                          margin-left: -80px;
+                          margin-left: -70px;
                         }
                         .cs_swiper_button_next {
                           margin-right: 40px;
