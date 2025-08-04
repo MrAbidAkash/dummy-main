@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -41,6 +41,19 @@ const about_slider: DataType[] = [
 const AboutHomeOne = () => {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const sectionRefsRight = useRef<HTMLDivElement[]>([]);
+  const [isMobile, setIsMobile] = React.useState(false);
+  const [currentSlide, setCurrentSlide] = React.useState(1);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     sectionRefs.current.forEach((el) => {
@@ -90,10 +103,18 @@ const AboutHomeOne = () => {
       <Swiper
         loop={true}
         speed={1000}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         navigation={{
           nextEl: ".cs_swiper_button_next",
           prevEl: ".cs_swiper_button_prev",
+        }}
+        autoplay={isMobile ? {
+          delay: 4000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+        } : false}
+        onSlideChange={(swiper) => {
+          setCurrentSlide(swiper.realIndex + 1);
         }}
         className="cs_slider cs_slider_2"
       >
@@ -186,11 +207,34 @@ const AboutHomeOne = () => {
                         }
                         @media (max-width: 768px) {
                           .cs_swiper_button_prev, .cs_swiper_button_next {
-                            display: none !important;
+                           
+                          display: none !important;
                           }
+                          .cs_mobile_slide_indicator {
+                            display: block !important;
+                          }
+                        }
+                        .cs_mobile_slide_indicator {
+                          display: none;
+                          position: absolute;
+                          top: 20px;
+                          right: 20px;
+                          background: rgba(0, 0, 0, 0.7);
+                          color: #FECA15;
+                          padding: 8px 12px;
+                          border-radius: 20px;
+                          font-size: 14px;
+                          font-weight: 600;
+                          z-index: 20;
+                          pointer-events: none;
                         }
                       `
                     }} />
+                    
+                    {/* Mobile Slide Indicator */}
+                    <div className="cs_mobile_slide_indicator">
+                      {currentSlide} / {about_slider.length}
+                    </div>
                     
                     {/* Previous Button - Left Side */}
                     <div className="cs_swiper_button_prev">

@@ -133,6 +133,48 @@ const HeroHomeOne = () => {
                   <h1 className="cs_hero_title cs_hero_title_animated" style={{ fontSize: "48px", lineHeight: "1.2", marginBottom: "10px", textAlign: "center" }}>
                     {item.title}
                   </h1>
+                  <style dangerouslySetInnerHTML={{
+                    __html: `
+                      @media (max-width: 768px) {
+                        .cs_hero_title {
+                          font-size: 32px !important;
+                          line-height: 1.1 !important;
+                          padding: 0 10px !important;
+                          word-break: break-word !important;
+                        }
+                        .cs_hero_tagline {
+                          font-size: 16px !important;
+                          padding: 0 15px !important;
+                        }
+                        .cs_hero_subtitle {
+                          font-size: 16px !important;
+                          margin-left: 20px !important;
+                          margin-right: 20px !important;
+                          text-align: center !important;
+                        }
+                        .cs_round_btn_wrap {
+                          margin-left: 20px !important;
+                          justify-content: center !important;
+                        }
+                      }
+                      @media (max-width: 480px) {
+                        .cs_hero_title {
+                          font-size: 28px !important;
+                          line-height: 1.1 !important;
+                          padding: 0 15px !important;
+                        }
+                        .cs_hero_tagline {
+                          font-size: 14px !important;
+                          padding: 0 20px !important;
+                        }
+                        .cs_hero_subtitle {
+                          font-size: 14px !important;
+                          margin-left: 15px !important;
+                          margin-right: 15px !important;
+                        }
+                      }
+                    `
+                  }} />
                   <div className="cs_hero_tagline cs_hero_tagline_animated" style={{ fontSize: "20px", fontStyle: "italic", textAlign: "center", marginBottom: "20px", color: "#FECA15" }}>
                     From clicks to clients on autopilot.
                   </div>
