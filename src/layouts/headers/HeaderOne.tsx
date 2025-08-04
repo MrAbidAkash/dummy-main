@@ -234,8 +234,19 @@ const HeaderOne = () => {
       </header>
 
       {/* Mobile Menu */}
-      <div className={`cs_mobile_menu ${active ? "active" : ""}`}>
-        <button className="cs_mobile_menu_close" onClick={handleActive}>
+      <div className={`cs_mobile_menu ${active ? "active" : ""}`} style={{
+        backgroundColor: active ? '#000000' : 'transparent'
+      }}>
+        <button className="cs_mobile_menu_close" onClick={handleActive} style={{
+          color: 'white',
+          position: 'absolute',
+          top: '20px',
+          right: '20px',
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer',
+          zIndex: 10000
+        }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
