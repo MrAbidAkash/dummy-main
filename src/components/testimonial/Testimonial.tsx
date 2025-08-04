@@ -263,20 +263,6 @@ const Testimonial = ({ style_service }: any) => {
                           {item.des}
                         </blockquote>
                         <div className="cs_testimonial_meta" style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
-                          <div className="cs_testimonial_avatar">
-                            <Image 
-                              src={item.img} 
-                              alt="Avatar" 
-                              width={60} 
-                              height={60}
-                              style={{
-                                borderRadius: '50%',
-                                objectFit: 'cover',
-                                border: '2px solid #FECA15',
-                                display: 'block'
-                              }}
-                            />
-                          </div>
                           <div className="cs_testimonial_meta_right">
                             <h3 className="cs_testimonial_avatar_name" style={{fontSize: '18px', fontWeight: '600', marginBottom: '4px'}}>
                               {item.name}

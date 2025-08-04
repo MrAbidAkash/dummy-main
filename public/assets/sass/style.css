@@ -2659,7 +2659,7 @@ label {
   width: 84vw;
 }
 .cs_slider_3 .swiper-slide {
-  width: 420px;
+  width: 420px; 
 }
 .cs_slider_3 .swiper-slide:nth-child(odd) {
   margin-top: 45px;
