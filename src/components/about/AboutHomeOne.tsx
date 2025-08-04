@@ -217,13 +217,13 @@ const AboutHomeOne = () => {
                         .cs_mobile_slide_indicator {
                           display: none;
                           position: absolute;
-                          top: 20px;
-                          right: 20px;
+                          top: 10px;
+                          right: 15px;
                           background: rgba(0, 0, 0, 0.7);
                           color: #FECA15;
-                          padding: 8px 12px;
-                          border-radius: 20px;
-                          font-size: 14px;
+                          padding: 6px 10px;
+                          border-radius: 15px;
+                          font-size: 12px;
                           font-weight: 600;
                           z-index: 20;
                           pointer-events: none;
