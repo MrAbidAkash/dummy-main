@@ -168,7 +168,7 @@ const ServiceHomeOne = () => {
               <p style={{ 
                 fontStyle: "italic", 
                 fontSize: "24px", 
-                color: "#e0e0e0", 
+                color: "#FECA15",
                 marginTop: "10px",
                 lineHeight: "1.3"
               }}>

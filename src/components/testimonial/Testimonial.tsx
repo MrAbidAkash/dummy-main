@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import avatar_img from "@/assets/img/avatar_1.jpg";
-import testimonial_thumb from "@/assets/img/testimonial_thumb_1.jpg";
 import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -43,7 +42,6 @@ const testimonial_data: DataType[] = [
 const Testimonial = ({ style_service }: any) => {
   const shape1Ref = useRef<SVGSVGElement>(null);
   const shape2Ref = useRef<SVGSVGElement>(null);
-  const thumbRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<HTMLDivElement[]>([]);
 
@@ -52,7 +50,6 @@ const Testimonial = ({ style_service }: any) => {
     if (
       !shape1Ref.current ||
       !shape2Ref.current ||
-      !thumbRef.current ||
       !contentRef.current
     )
       return;
@@ -76,16 +73,6 @@ const Testimonial = ({ style_service }: any) => {
         "-=0.6",
       )
       .from(
-        thumbRef.current,
-        {
-          x: -200,
-          opacity: 0,
-          duration: 0.8,
-          ease: "elastic.out(1, 0.5)",
-        },
-        "-=0.4",
-      )
-      .from(
         contentRef.current,
         {
           x: 200,
@@ -93,7 +80,7 @@ const Testimonial = ({ style_service }: any) => {
           duration: 0.8,
           ease: "power3.out",
         },
-        "-=0.7",
+        "-=0.4",
       )
       .from(
         contentRef.current.querySelector(".cs_testimonial_title")!,
@@ -212,22 +199,15 @@ const Testimonial = ({ style_service }: any) => {
 
         <div className="cs_height_150 cs_height_lg_60"></div>
         <div className="container">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
-              <div ref={thumbRef} className="text-center">
-                <Image 
-                  src={testimonial_thumb} 
-                  alt="Testimonials" 
-                  className="w-100" 
-                  style={{
-                    borderRadius: '15px', 
-                    maxWidth: '450px',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
-                  }}
-                />
-              </div>
+          <div className="row">
+            <div className="col-lg-8 col-md-10">
+              <h2 className="cs_testimonial_title" style={{textAlign: 'left', marginBottom: '30px', lineHeight: '1.2', fontSize: '48px'}}>
+                Testimonials
+              </h2>
             </div>
-            <div className="col-lg-6 col-md-12 offset-lg-1">
+          </div>
+          <div className="row justify-content-center" style={{marginTop: '40px'}}>
+            <div className="col-lg-8 col-md-10">
               <div
                 ref={contentRef}
                 className={`cs_testimonial ${
@@ -235,9 +215,6 @@ const Testimonial = ({ style_service }: any) => {
                 }`}
                 style={{marginTop: '0px'}}
               >
-                <h2 className="cs_testimonial_title" style={{textAlign: 'left', marginBottom: '30px', lineHeight: '1.2', fontSize: '48px'}}>
-                  Client Success Stories: Real Results, Real Growth
-                </h2>
                 <Swiper
                   loop={true}
                   speed={1000}
@@ -260,7 +237,7 @@ const Testimonial = ({ style_service }: any) => {
                           background: 'rgba(0,0,0,0.05)',
                           borderRadius: '12px',
                           padding: '25px',
-                          margin: '5px 0',
+                          margin: '5px auto',
                           border: '1px solid rgba(255,255,255,0.1)'
                         }}
                       >
