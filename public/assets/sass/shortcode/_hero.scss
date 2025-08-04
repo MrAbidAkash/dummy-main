@@ -421,11 +421,12 @@
         gap: 20px;
         cs_hero_text .cs_hero_mini_details {
           padding-left: 0px;
+          font-size: 20px; // Increased from 16px
         }
       }
       .cs_hero_title.cs_hero_title_lg {
-        font-size: 100px;
-        line-height: 120px;
+        font-size: 120px; // Increased from 100px
+        line-height: 130px; // Increased from 120px
         background: linear-gradient(to right, #f14543, #fac739);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -525,10 +526,11 @@
     min-height: calc(100vh + 50px);
     .cs_hero_text {
       .cs_hero_title.cs_hero_title_lg {
-        font-size: 48px;
-        line-height: 60px;
+        font-size: 58px; // Increased from 48px
+        line-height: 70px; // Increased from 60px
         background: linear-gradient(to right, #f14543, #fac739);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
