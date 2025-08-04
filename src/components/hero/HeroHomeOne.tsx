@@ -137,10 +137,14 @@ const HeroHomeOne = () => {
                     __html: `
                       @media (max-width: 768px) {
                         .cs_hero_title {
-                          font-size: 32px !important;
+                          font-size: 28px !important;
                           line-height: 1.1 !important;
-                          padding: 0 10px !important;
-                          word-break: break-word !important;
+                          padding: 0 15px !important;
+                          word-break: keep-all !important;
+                          white-space: nowrap !important;
+                          overflow: hidden !important;
+                          text-overflow: ellipsis !important;
+                          max-width: 100% !important;
                         }
                         .cs_hero_tagline {
                           font-size: 16px !important;
@@ -159,9 +163,13 @@ const HeroHomeOne = () => {
                       }
                       @media (max-width: 480px) {
                         .cs_hero_title {
-                          font-size: 28px !important;
+                          font-size: 24px !important;
                           line-height: 1.1 !important;
-                          padding: 0 15px !important;
+                          padding: 0 20px !important;
+                          word-break: keep-all !important;
+                          white-space: nowrap !important;
+                          overflow: hidden !important;
+                          text-overflow: ellipsis !important;
                         }
                         .cs_hero_tagline {
                           font-size: 14px !important;
@@ -171,6 +179,12 @@ const HeroHomeOne = () => {
                           font-size: 14px !important;
                           margin-left: 15px !important;
                           margin-right: 15px !important;
+                        }
+                      }
+                      @media (max-width: 360px) {
+                        .cs_hero_title {
+                          font-size: 20px !important;
+                          padding: 0 25px !important;
                         }
                       }
                     `
