@@ -185,19 +185,8 @@ const AboutHomeOne = () => {
                           border-color: #FECA15;
                         }
                         @media (max-width: 768px) {
-                          .cs_swiper_button_prev {
-                            margin-left: 20px !important;
-                          }
-                          .cs_swiper_button_next {
-                            margin-right: 20px !important;
-                          }
                           .cs_swiper_button_prev, .cs_swiper_button_next {
-                            width: 50px !important;
-                            height: 50px !important;
-                          }
-                          .cs_swiper_button_prev svg, .cs_swiper_button_next svg {
-                            width: 24px !important;
-                            height: 24px !important;
+                            display: none !important;
                           }
                         }
                       `
