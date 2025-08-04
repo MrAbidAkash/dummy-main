@@ -21,7 +21,7 @@ interface DataType {
 const blog_data: DataType[] = [
   {
     id: 1,
-    img: "/assets/img/blog (1).jpg",
+    img: "/assets/img/blog (7).jpg",
     title: `What Is a CRM & Why Your Business Needs One`,
     des: `Discover how a Customer Relationship Management system can streamline your workflows, automate follow‑ups, and keep your clients coming back for more.`,
   },
@@ -248,9 +248,6 @@ const BlogHomeOne = ({ style_2, style_3 }: any) => {
           </Swiper>
         </div>
       </section>
-      {style_2 ? null : style_3 ? null : (
-        <div className="cs_height_150 cs_height_lg_60"></div>
-      )}
     </>
   );
 };
