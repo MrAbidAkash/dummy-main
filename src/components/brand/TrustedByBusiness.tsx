@@ -49,14 +49,18 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
         <div className="container">
         
           <div className={`cs_section_heading cs_style_1 cs_type_1 ${style_2 ? 'cs_color_1' : ''}`} style={{textAlign: 'left'}}>
-            <div className="cs_section_heading_text">
-              <h2 className="cs_section_title cs_fs_72 cs_fs_lg_46" style={{whiteSpace: 'nowrap'}}>
-                Real Businesses. 
-              </h2>
-              <h2 className="cs_section_title cs_fs_48 cs_fs_lg_32" style={{whiteSpace: 'nowrap', color: '', fontStyle: '', marginTop: '10px'}}>
-                Real Success. Real Growth.
-              </h2>
+                      
+            <div className={`cs_section_heading cs_style_1 cs_type_1 ${style_2 ? 'cs_color_1' : ''}`} style={{textAlign: 'left'}}>
+              <div className="cs_section_heading_text">
+                <h2 className="cs_section_title cs_fs_72 cs_fs_lg_46" style={{whiteSpace: 'nowrap'}}>
+                  Real Businesses. 
+                </h2>
+                <h2 className="cs_section_title cs_fs_48 cs_fs_lg_32" style={{whiteSpace: 'normal', color: '', fontStyle: '', marginTop: '10px'}}>
+                  Real Success. Real Growth.
+                </h2>
+              </div>
             </div>
+           
           </div>
           <div className="cs_height_100 cs_height_lg_60"></div>
           <div className="cs_moving_section_wrap cs_bold cs_moving_section_hover_push" style={{
