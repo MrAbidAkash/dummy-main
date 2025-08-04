@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import Image from "next/image";
 import gsap from "gsap";
@@ -182,10 +183,23 @@ const BlogHomeOne = ({ style_2, style_3 }: any) => {
             className="cs_height_100 cs_height_lg_60"
           ></div>
           <Swiper
+            modules={[Autoplay, Pagination]}
             loop={true}
             speed={1000}
             spaceBetween={30}
-            slidesPerView={"auto"}
+            slidesPerView={3}
+            autoHeight={false}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             pagination={{
               el: ".cs_pagination",
               clickable: true,
@@ -203,15 +217,30 @@ const BlogHomeOne = ({ style_2, style_3 }: any) => {
                     }
                   }}
                   className="cs_post cs_style_1"
+                  style={{ 
+                    height: '100%', 
+                    display: 'flex', 
+                    flexDirection: 'column' 
+                  }}
                 >
                   <Link href="/blog-details" className="cs_post_thumb">
                     <Image src={item.img} alt="image-here" width={400} height={267} />
                   </Link>
-                  <div className="cs_post_info">
-                    <h2 className="cs_post_title">
-                      <Link href="/blog-details">{item.title}</Link>
-                    </h2>
-                    <p className="cs_m0">{item.des}</p>
+                  <div 
+                    className="cs_post_info"
+                    style={{ 
+                      flex: '1', 
+                      display: 'flex', 
+                      flexDirection: 'column',
+                      justifyContent: 'space-between'
+                    }}
+                  >
+                    <div>
+                      <h2 className="cs_post_title">
+                        <Link href="/blog-details">{item.title}</Link>
+                      </h2>
+                      <p className="cs_m0">{item.des}</p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
