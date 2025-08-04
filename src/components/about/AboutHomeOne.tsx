@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -90,17 +90,10 @@ const AboutHomeOne = () => {
       <Swiper
         loop={true}
         speed={1000}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         navigation={{
           nextEl: ".cs_swiper_button_next",
           prevEl: ".cs_swiper_button_prev",
-        }}
-        pagination={{
-          el: ".cs_pagination",
-          clickable: true,
-          type: "fraction",
-
-          
         }}
         className="cs_slider cs_slider_2"
       >
@@ -224,9 +217,6 @@ const AboutHomeOne = () => {
                       </svg>
                     </div>
                   </div>
-                  
-                  {/* Pagination dots at bottom */}
-                  <div className="cs_pagination cs_style2 cs_primary_font"></div>
                   
                   <div className="cs_section_heading cs_style_1">
                     <div className="cs_section_heading_text">
