@@ -15,7 +15,7 @@ const hero_slider: DataType[] = [
   {
     video: "/assets/video/AZhoG8jnzKq124S_fIG0QQ-AZhoG8jnBsTz86_o5M4X-g.mp4", // Fixed: Using relative path from public folder
     title: "Strategy.Systems.Sales.",
-    des: "We solve growing pains for small to medium-sized businesses. Through custom systems and smart automations, we help you save time, cut costs, and scale smarter without burning out your team.",
+    des: "We solve growing pains for small to medium-sized businesses. Through custom systems and smart automations, we help you <span style='color: #FECA15; font-weight: 700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);'>save time, cut costs, and scale smarter</span> without burning out your team.",
     sub_title: ""
   },
 ];
@@ -296,7 +296,7 @@ const HeroHomeOne = () => {
                       color: "#E0E0E0",
                       textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
                       fontWeight: "400"
-                    }}>{item.des}</div>
+                    }} dangerouslySetInnerHTML={{ __html: item.des }}></div>
         
 
                     <div className="cs_height_15 cs_height_lg_15"></div>
