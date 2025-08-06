@@ -54,19 +54,19 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
             <div className={`cs_section_heading cs_style_1 cs_type_1 ${style_2 ? 'cs_color_1' : ''}`} style={{textAlign: 'left'}}>
               <div className="cs_section_heading_text">
                 <h2 className="cs_section_title cs_fs_72 cs_fs_lg_46" style={{
-                  whiteSpace: 'normal',
-                  wordBreak: 'break-word',
+                  whiteSpace: 'nowrap',
+                  wordBreak: 'keep-all',
                   lineHeight: '1.2',
-                  marginBottom: '10px'
+                  marginBottom: '5px'
                 }}>
-                  Real Businesses. 
+                  Trusted by Businesses
                 </h2>
                 <h2 className={`cs_section_title cs_fs_48 cs_fs_lg_32 ${styles.secondTitle}`} style={{
                   color: '',
-                  fontStyle: '',
-                  marginTop: '10px'
+                  fontStyle: 'normal',
+                  marginTop: '0px'
                 }}>
-                  Real Success. Real Growth.
+                  That Trust Systems
                 </h2>
               </div>
             </div>

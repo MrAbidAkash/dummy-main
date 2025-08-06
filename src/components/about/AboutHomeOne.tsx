@@ -19,21 +19,21 @@ interface DataType {
 const about_slider: DataType[] = [
   {
     img: "/assets/img/shutterstock_1797464674.jpg",
-    sub_title: "",
-    title: "You're not alone — we help business owners and teams solve these exact problems.",
-    des: `\n• "We're spending on ads… but not seeing results."\nYour traffic's coming in — but without the right systems, those clicks don't convert.\n\n• "We're missing calls, messages, and leads — daily."\nManual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.\n\n• "Posting on social media feels like a full-time job."\nWe plan, write, and post your content — so you stay consistent, visible, and in demand.\n\n• "Our team is stretched and nothing feels organised."\nWe set up CRM and automation workflows to streamline your operations and free up headspace.`,
+    sub_title: "Real business problems. Real solutions.",
+    title: "Heard These Before? We Have — and We Fix Them",
+    des: `"We're spending money on marketing… but not getting leads."\n"I keep missing calls, DMs, and emails — I just can't keep up."\n"I know we need follow-ups and reviews… but it never happens."\n"We post when we can… but there's no plan."\n"All our tools work… but none of them talk to each other."\n\nSound familiar?\n\nYou're not alone — and these problems don't fix themselves.\n\nWe help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.`,
   },
   {
     img: "/assets/img/shutterstock_1993438580.jpg",
-    sub_title: "Our Approach",
-    title: "What we build to help your business scale — fast.",
-    des: `Grouped services under outcomes:\n\nGet Found\n\nConversion-focused websites\nLocal SEO setup\nSocial media strategy & content\n\nConvert & Nurture\n\nCRM (Go High Level) setup\nAutomated email & SMS follow-ups\nLead capture forms + funnels\n\nScale with Systems\n\nAI call handling & chatbots\nTeam task automations\nJob tracking dashboards\nDone-for-you, no guesswork, all aligned with your growth goals.`,
+    sub_title: "How It Looks in Context",
+    title: "Here's What We Build to Fix That.",
+    des: `Convert & Nurture\n\nSo leads don't go cold — even when you're busy\n\nCRM systems to manage leads and clients\nEmail + SMS automation\nOnline booking and calendar tools\nReview requests + rebooking flows\n\nWhy this matters:\n\nMost small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.\n\nBut real growth comes from having a multi-channel strategy, a lead-ready website, and automated follow-ups that work even when you're off the clock.\n\nScale with Systems\n\nSo your business grows without the chaos\n\nVoice AI to handle missed calls\nWebsite + social media chatbots\nSmart automation workflows\nTool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)`,
   },
   {
     img: "/assets/img/shutterstock_2586106271.jpg",
-    sub_title: "Step-by-step Process",
-    title: "Here's how we make it simple — and effective.",
-    des: `Step-by-step process:\n\nWe map your growth strategy.\nTailored to your goals, your industry, and your capacity.\n\nWe build your marketing systems.\nWebsite. CRM. Content. Funnels. Automation. All working together.\n\nWe train your team (if needed).\nNo overwhelm. We make it easy to use and scale.\n\nWe track and optimise.\nData-led improvements to keep growing without the chaos.`,
+    sub_title: "Why Leads360",
+    title: "Because you don't need another tool — you need a system.",
+    des: `We make your website, socials, CRM and tools work together\nWe build everything around how you already work\nWe remove admin and help you show up consistently online\nWe don't just hand over templates — we implement the entire system\nWe're focused on time-saving, money-saving, and actual business growth\nWant to stop dropping leads, missing follow-ups, or manually doing everything?\n\nLet's fix that.\n\n[Book a Free Strategy Call]`,
   },
 ];
 
@@ -254,23 +254,14 @@ const AboutHomeOne = () => {
                   <div className="cs_section_heading cs_style_1">
                     <div className="cs_section_heading_text">
                       <div 
-                        className={`cs_section_subtitle ${index === 0 ? 'no-bullet' : ''}`}
+                        className={`cs_section_subtitle ${index === 0 ? '' : ''}`}
                         style={{
                           ...(index === 0 && {
-                            paddingLeft: '0',
+                            paddingLeft: '20px',
                             position: 'relative'
                           })
                         }}
                       >
-                        {index === 0 && (
-                          <style dangerouslySetInnerHTML={{
-                            __html: `
-                              .cs_section_subtitle.no-bullet::before {
-                                display: none !important;
-                              }
-                            `
-                          }} />
-                        )}
                         {item.sub_title}
                       </div>
                       <h2 className="cs_section_title" style={{ fontSize: "32px" }}>{item.title}</h2>
@@ -279,79 +270,142 @@ const AboutHomeOne = () => {
                   </div>
                   {index === 0 ? (
                     <div className="cs_m0">
-                      <p style={{ marginBottom: "20px", fontSize: "18px", fontWeight: "500" }}>
-                        
-                      </p>
                       <div style={{ marginTop: "30px" }}>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>"We're spending on ads… but not seeing results."</p>
-                          <p>Your traffic's coming in — but without the right systems, those clicks don't convert.</p>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"We're spending money on marketing… but not getting leads."</p>
                         </div>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", color: "#FECA15",  marginBottom: "5px" }}>"We're missing calls, messages, and leads — daily."</p>
-                          <p>Manual follow-ups just don't cut it. We automate lead capture, replies, and bookings — so no opportunity slips through.</p>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"I keep missing calls, DMs, and emails — I just can't keep up."</p>
                         </div>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>"Posting on social media feels like a full-time job."</p>
-                          <p>We plan, write, and post your content — so you stay consistent, visible, and in demand.</p>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"I know we need follow-ups and reviews… but it never happens."</p>
                         </div>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "5px" }}>"Our team is stretched and nothing feels organised."</p>
-                          <p>We set up CRM and automation workflows to streamline your operations and free up headspace.</p>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"We post when we can… but there's no plan."</p>
                         </div>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"All our tools work… but none of them talk to each other."</p>
+                        </div>
+                        
+                        <p style={{ 
+                          fontSize: "18px", 
+                          fontWeight: "600", 
+                          marginTop: "30px", 
+                          marginBottom: "20px",
+                          color: "var(--heading-color)"
+                        }}>
+                          Sound familiar?
+                        </p>
+                        
+                        <p style={{ 
+                          fontSize: "16px", 
+                          marginBottom: "15px",
+                          color: "var(--body-color)"
+                        }}>
+                          You're not alone — and these problems don't fix themselves.
+                        </p>
+                        
+                        <p style={{ 
+                          fontSize: "18px", 
+                          fontWeight: "500",
+                          color: "var(--heading-color)"
+                        }}>
+                          We help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.
+                        </p>
                       </div>
                     </div>
                   ) : index === 1 ? (
                     <div className="cs_m0">
                       <div style={{ marginTop: "10px" }}>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Get Found</p>
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "8px" }}>Convert & Nurture</p>
+                          <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "16px", color: "var(--body-color)" }}>So leads don't go cold — even when you're busy</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Conversion-focused websites</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Local SEO setup</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Social media strategy & content</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• CRM systems to manage leads and clients</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Email + SMS automation</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Online booking and calendar tools</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Review requests + rebooking flows</li>
                           </ul>
                         </div>
+                        
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "16px", color: "#FECA15", marginBottom: "10px" }}>Why this matters:</p>
+                          <p style={{ marginBottom: "15px", fontSize: "15px", lineHeight: "1.6" }}>Most small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.</p>
+                          <p style={{ fontSize: "15px", lineHeight: "1.6" }}>But real growth comes from having a multi-channel strategy, a lead-ready website, and automated follow-ups that work even when you're off the clock.</p>
+                        </div>
+
                         <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15",marginBottom: "10px" }}>Convert & Nurture</p>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "8px" }}>Scale with Systems</p>
+                          <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "16px", color: "var(--body-color)" }}>So your business grows without the chaos</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• CRM (Go High Level) setup</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Automated email & SMS follow-ups</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Lead capture forms + funnels</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Voice AI to handle missed calls</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Website + social media chatbots</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Smart automation workflows</li>
+                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Tool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)</li>
                           </ul>
                         </div>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Scale with Systems</p>
-                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• AI call handling & chatbots</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Team task automations</li>
-                            <li style={{ marginBottom: "6px", paddingLeft: "15px", position: "relative" }}>• Job tracking dashboards</li>
-                          </ul>
-                        </div>
-                        <p style={{ marginTop: "15px", fontWeight: "500", fontSize: "16px" }}>
-                          Done-for-you, no guesswork, all aligned with your growth goals.
-                        </p>
                       </div>
                     </div>
                   ) : index === 2 ? (
                     <div className="cs_m0">
-                     
                       <div style={{ marginTop: "30px" }}>
-                        <div style={{ marginBottom: "25px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}> We map your growth strategy.</p>
-                          <p style={{ paddingLeft: "15px" }}>Tailored to your goals, your industry, and your capacity.</p>
+                        <div style={{ marginBottom: "20px" }}>
+                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
+                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We make your website, socials, CRM and tools work together</li>
+                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We build everything around how you already work</li>
+                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We remove admin and help you show up consistently online</li>
+                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We don't just hand over templates — we implement the entire system</li>
+                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We're focused on time-saving, money-saving, and actual business growth</li>
+                          </ul>
                         </div>
-                        <div style={{ marginBottom: "25px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}> We build your marketing systems.</p>
-                          <p style={{ paddingLeft: "15px" }}>Website. CRM. Content. Funnels. Automation. All working together.</p>
-                        </div>
-                        <div style={{ marginBottom: "25px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}> We train your team (if needed).</p>
-                          <p style={{ paddingLeft: "15px" }}>No overwhelm. We make it easy to use and scale.</p>
-                        </div>
-                        <div style={{ marginBottom: "25px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}> We track and optimise.</p>
-                          <p style={{ paddingLeft: "15px" }}>Data-led improvements to keep growing without the chaos.</p>
+                        
+                        <div style={{ marginTop: "35px", marginBottom: "25px" }}>
+                          <p style={{ 
+                            fontSize: "18px", 
+                            fontWeight: "600", 
+                            marginBottom: "20px",
+                            color: "var(--heading-color)"
+                          }}>
+                            Want to stop dropping leads, missing follow-ups, or manually doing everything?
+                          </p>
+                          
+                          <p style={{ 
+                            fontSize: "20px", 
+                            fontWeight: "600",
+                            color: "#FECA15",
+                            marginBottom: "25px"
+                          }}>
+                            Let's fix that.
+                          </p>
+                          
+                          <div style={{ textAlign: "center", marginTop: "30px" }}>
+                            <a 
+                              href="/contact" 
+                              style={{
+                                display: "inline-block",
+                                background: "#FECA15",
+                                color: "#000",
+                                padding: "15px 30px",
+                                borderRadius: "25px",
+                                fontWeight: "600",
+                                fontSize: "16px",
+                                textDecoration: "none",
+                                transition: "all 0.3s ease",
+                                border: "2px solid #FECA15",
+                                cursor: "pointer"
+                              }}
+                              onMouseOver={(e) => {
+                                e.currentTarget.style.background = "transparent";
+                                e.currentTarget.style.color = "#FECA15";
+                              }}
+                              onMouseOut={(e) => {
+                                e.currentTarget.style.background = "#FECA15";
+                                e.currentTarget.style.color = "#000";
+                              }}
+                            >
+                              Book a Free Strategy Call
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -15,7 +15,7 @@ const hero_slider: DataType[] = [
   {
     video: "/assets/video/AZhoG8jnzKq124S_fIG0QQ-AZhoG8jnBsTz86_o5M4X-g.mp4", // Fixed: Using relative path from public folder
     title: "Strategy.Systems.Sales.",
-    des: "From marketing strategy to hands-on implementation — we help your business grow with clarity, systems, and results that last.",
+    des: "We solve growing pains for small to medium-sized businesses. Through custom systems and smart automations, we help you save time, cut costs, and scale without burning out your team.",
     sub_title: ""
   },
 ];
@@ -285,7 +285,7 @@ const HeroHomeOne = () => {
                     textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
                     fontWeight: "500"
                   }}>
-                    From clicks to clients on autopilot.
+                  
                   </div>
                   <div className="cs_hero_text_in" style={{ marginTop: "0" }}>
                     <div className="cs_hero_subtitle cs_hero_subtitle_animated" style={{ 

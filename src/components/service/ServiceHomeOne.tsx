@@ -17,20 +17,20 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    title: `Voice AI for Business Calls`,
-    des: `Never miss a call. Never miss a lead.\n\nWe build empathetic voice bots that handle your inbound calls with natural conversation — qualifying enquiries, collecting details, and guiding people to the right next step.\n\n• Custom voice scripts (written with a human tone)\n• Real-time call triage and lead routing\n• Integrates with your CRM, calendar, or website forms\n• Perfect for tradies, clinics, agents, and busy front desks\n\nSave hours on admin, capture more leads, and give callers a better experience — even after hours.`,
+    title: `AI Voice Bot (for Calls or Website)`,
+    des: `Missed calls? Overloaded front desk? We've got that covered.\n\nOur AI voice bot answers inbound calls or web enquiries with a natural, friendly tone — trained on your business process. It books jobs, collects key info, and hands over to your team only when needed.\n\nA virtual assistant that actually understands your business — and works 24/7 without the wage bill.\n\n• Trained on your services & scripts\n• Handles basic triage, quotes, and bookings\n• Integrates with your CRM and forms\n• Custom-built flows for different enquiry types`,
     link: "/service/social-media-marketing",
   },
   {
     id: 2,
-    title: `AI Chatbots for Website & Socials`,
-    des: `Your always-on assistant — trained on your business.\n\nOur chatbots aren't off-the-shelf. They're trained on your unique services, tone, FAQs, and workflows — so they handle enquiries like a real team member would. Whether it's on your website, Instagram, or Facebook, they respond instantly, guide customers, and hand over to your team when it matters.\n\n• Conversational tone that reflects your brand\n• Fully trained on your systems, services & processes\n• 24/7 responses across web and social platforms\n• Knows when to escalate or hand over to humans\n\nBecause in today's busy world, your customers deserve fast, accurate, and human-like support — even when you're offline.`,
+    title: `AI Chatbot (for Website & Socials)`,
+    des: `Busy inbox? Leads slipping through? Let's fix that.\n\nOur chatbots respond to web visitors and social media DMs instantly — answering FAQs, collecting info, and triggering next steps based on how you handle enquiries. Built to sound human, not robotic.\n\nSo while you're on the tools or with a client, your leads are still being looked after.\n\n• Available 24/7 across Instagram, Facebook & website\n• Built with your tone, FAQs, and workflows\n• Smart escalation to humans when needed\n• Fully synced with your CRM`,
     link: "/service/crm-implementation",
   },
   {
     id: 3,
-    title: `Connected Systems & Smart Integrations`,
-    des: `Get your software talking — so your business runs smoother.\n\nWe help you connect the tools you already use — like clinical platforms, booking apps, job management software (e.g. ServiceM8), CRMs, accounting systems, and calendars — so they all talk to each other and nothing slips through the cracks.\n\nNo more double entry. No more switching between tabs or chasing missing info. Just clean, automated workflows that save time, reduce admin, and keep your team and customers in sync.\n\n• Sync bookings, invoices, and customer details across platforms\n• Trigger marketing or reminder emails when new jobs or appointments are created\n• Link tools like Xero, MYOB, ServiceM8, Cliniko, GHL, Calendly, Google Sheets & more\n• Fully customised to your business — not generic plug-ins or templates\n\nYour tools should work together — not create more work for your team.`,
+    title: `AI Workflows & Integrations`,
+    des: `Too many tools? Not enough time? Let's connect the dots.\n\nWe build custom workflows that automate your daily tasks — from email follow-ups to job tracking, invoicing, and review requests. And we connect your favourite tools (like ServiceM8, Cliniko, Xero, Google Calendar, GHL) so everything talks to each other.\n\nNo more double handling. No more missed steps. Just systems that keep up with your growth.\n\n• Automates admin without losing the human touch\n• Fully customised to how you work\n• Reduces errors, delays, and unnecessary back-and-forth\n• Designed for busy teams with big goals`,
     link: "/service/web-development-maintenance",
   },
 ];
@@ -106,7 +106,7 @@ const ServiceHomeOne = () => {
       cardRefs.current.forEach((card, index) => {
         if (!card) return;
 
-        const link = card.querySelector(".cs_card_link");
+        const button = card.querySelector(".cs_card_link");
         const number = card.querySelector(".cs_card_number");
 
         // Create hover timeline
@@ -127,7 +127,7 @@ const ServiceHomeOne = () => {
             0,
           )
           .to(
-            link,
+            button,
             {
               x: 5,
               duration: 0.3,
@@ -163,16 +163,26 @@ const ServiceHomeOne = () => {
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Latest Digital Additions at Leads360 HQ
+                Leads360 HQ Digital Additions
               </h2>
               <p style={{ 
                 fontStyle: "italic", 
-                fontSize: "24px", 
+                fontSize: "20px", 
                 color: "#FECA15",
                 marginTop: "10px",
-                lineHeight: "1.3"
+                lineHeight: "1.4",
+                marginBottom: "20px"
               }}>
-                Next-gen tools. Human-led. Built to scale your business.
+                Solving growing pains with smart, human-led AI systems.
+              </p>
+              <p style={{ 
+                fontSize: "16px", 
+                color: "var(--body-color)",
+                lineHeight: "1.6",
+                maxWidth: "800px",
+                margin: "0 auto"
+              }}>
+                We don't use AI for the sake of it. Every digital addition we build is designed to reduce stress, eliminate repetitive tasks, and create better customer experiences — so you can focus on growing without the usual chaos.
               </p>
             </div>
           </div>
@@ -204,51 +214,39 @@ const ServiceHomeOne = () => {
                   </div>
                 </div>
                 <div className="cs_card_link_wrap">
-                  <Link href={item.link} className="cs_card_link">
-                    <span>
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0.340728 29.2063C0.722095 29.5875 1.34043 29.5875 1.72188 29.2063L29.0656 1.8625C29.4469 1.48106 29.4469 0.862698 29.0656 0.481253C28.6842 0.100002 28.0658 0.100002 27.6844 0.481253L0.340728 27.825C-0.0406592 28.2064 -0.0406592 28.8248 0.340728 29.2063Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M28.375 26.5625C28.9143 26.5625 29.3516 26.1252 29.3516 25.5859V1.17188C29.3516 0.632618 28.9143 0.195312 28.375 0.195312H3.96094C3.42168 0.195312 2.98438 0.632618 2.98438 1.17188C2.98438 1.71113 3.42168 2.14844 3.96094 2.14844H27.3984V25.5859C27.3984 26.1252 27.8357 26.5625 28.375 26.5625Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </span>
-                    <span>
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0.340728 29.2063C0.722095 29.5875 1.34043 29.5875 1.72188 29.2063L29.0656 1.8625C29.4469 1.48106 29.4469 0.862698 29.0656 0.481253C28.6842 0.100002 28.0658 0.100002 27.6844 0.481253L0.340728 27.825C-0.0406592 28.2064 -0.0406592 28.8248 0.340728 29.2063Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M28.375 26.5625C28.9143 26.5625 29.3516 26.1252 29.3516 25.5859V1.17188C29.3516 0.632618 28.9143 0.195312 28.375 0.195312H3.96094C3.42168 0.195312 2.98438 0.632618 2.98438 1.17188C2.98438 1.71113 3.42168 2.14844 3.96094 2.14844H27.3984V25.5859C27.3984 26.1252 27.8357 26.5625 28.375 26.5625Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </span>
+                  <Link 
+                    href={item.link}
+                    className="cs_card_link"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: "#FECA15",
+                      color: "#000",
+                      padding: "12px 24px",
+                      borderRadius: "25px",
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      textDecoration: "none",
+                      transition: "all 0.3s ease",
+                      border: "2px solid #FECA15",
+                      minWidth: "180px",
+                      height: "auto",
+                      whiteSpace: "nowrap",
+                      lineHeight: "1.2",
+                      textAlign: "center",
+                      boxSizing: "border-box"
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.color = "#FECA15";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.background = "#FECA15";
+                      e.currentTarget.style.color = "#000";
+                    }}
+                  >
+                    {i === 0 ? "See It in Action →" : i === 1 ? "Explore Chatbots →" : "Discover AI Workflows →"}
                   </Link>
                 </div>
               </div>
