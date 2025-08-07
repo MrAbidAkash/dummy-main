@@ -25,8 +25,8 @@ const about_slider: DataType[] = [
   },
   {
     img: "/assets/img/shutterstock_1993438580.jpg",
-    sub_title: "How It Looks in Context",
-    title: "Here's What We Build to Fix That.",
+    sub_title: "Our proven solutions in action.",
+    title: "How We Fix It with GoHighLevel CRM",
     des: `Convert & Nurture\n\nSo leads don't go cold — even when you're busy\n\nCRM systems to manage leads and clients\nEmail + SMS automation\nOnline booking and calendar tools\nReview requests + rebooking flows\n\nWhy this matters:\n\nMost small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.\n\nBut real growth comes from having a multi-channel strategy, a lead-ready website, and automated follow-ups that work even when you're off the clock.\n\nScale with Systems\n\nSo your business grows without the chaos\n\nVoice AI to handle missed calls\nWebsite + social media chatbots\nSmart automation workflows\nTool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)`,
   },
   {
@@ -37,7 +37,6 @@ const about_slider: DataType[] = [
   },
 ];
 
-
 const AboutHomeOne = () => {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const sectionRefsRight = useRef<HTMLDivElement[]>([]);
@@ -45,52 +44,23 @@ const AboutHomeOne = () => {
   const [currentSlide, setCurrentSlide] = React.useState(1);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    sectionRefs.current.forEach((el) => {
+    sectionRefs.current.forEach((el, index) => {
       if (!el) return;
 
       gsap.fromTo(
         el,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
-    });
-  }, []);
-  useEffect(() => {
-    sectionRefsRight.current.forEach((el) => {
-      if (!el) return;
-
-      gsap.fromTo(
-        el,
-        { opacity: 0, x: 50 },
+        { opacity: 0, x: 0, y: 30 },
         {
           opacity: 1,
           x: 0,
-          delay: 0.5,
-          duration: 1,
+          y: 0,
+          duration: 0.8,
+          delay: index * 0.1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 80%",
+            start: "top 85%",
+            end: "bottom 15%",
             toggleActions: "play none none reverse",
           },
         },
@@ -99,173 +69,87 @@ const AboutHomeOne = () => {
   }, []);
 
   return (
-    <>
-      <Swiper
-        loop={true}
-        speed={1000}
-        modules={[Navigation, Autoplay]}
-        navigation={{
-          nextEl: ".cs_swiper_button_next",
-          prevEl: ".cs_swiper_button_prev",
-        }}
-        autoplay={isMobile ? {
-          delay: 4000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        } : false}
-        onSlideChange={(swiper) => {
-          setCurrentSlide(swiper.realIndex + 1);
-        }}
-        className="cs_slider cs_slider_2"
-      >
-        {about_slider.map((item, index) => (
-          <SwiperSlide key={index} className="swiper-slide">
-            <div className="cs_about cs_style_1" style={{ padding: "60px 0", position: "relative" }}>
-              <div
-                ref={(el) => {
-                  if (el) sectionRefsRight.current[index] = el;
-                }}
-                className="cs_about_bg cs_bg"
-                style={{ backgroundImage: `url(${item.img})` }}
-              ></div>
-              <div className="container" style={{ position: "relative" }}>
+    <div className="cs_about_sections">
+      {about_data.map((item, index) => (
+        <div key={index} className="cs_about cs_style_1" style={{ 
+          padding: "80px 0", 
+          position: "relative",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center"
+        }}>
+          <div
+            className="cs_about_bg cs_bg"
+            style={{ 
+              backgroundImage: `url(${item.img})`,
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "100%",
+              height: "100%",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              zIndex: "1"
+            }}
+          ></div>
+          <div 
+            className="cs_about_overlay"
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              zIndex: "2"
+            }}
+          ></div>
+          <div className="container" style={{ 
+            position: "relative", 
+            zIndex: "3",
+            width: "100%",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 15px"
+          }}>
+            <div className="row" style={{ display: "flex", justifyContent: "center" }}>
+              <div className="col-lg-10 col-md-12">
                 <div
-                  className="cs_about_text"
+                  className="cs_about_text_box"
                   ref={(el) => {
                     if (el) sectionRefs.current[index] = el;
                   }}
-                  style={{ position: "relative" }}
+                  style={{ 
+                    backgroundColor: "#2a2a2a",
+                    padding: "60px 50px",
+                    borderRadius: "15px",
+                    border: "1px solid #2a2a2a",
+                    backdropFilter: "blur(10px)",
+                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
                 >
-                  {/* Swiper Controls positioned on both sides */}
-                  <div className="cs_swiper_navigation_container" style={{ 
-                    position: "absolute", 
-                    left: "0",
-                    right: "0",
-                    top: "50%", 
-                    transform: "translateY(-50%)", 
-                    zIndex: "10",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    pointerEvents: "none"
-                  }}>
-                    <style dangerouslySetInnerHTML={{
-                      __html: `
-                        .cs_swiper_button_prev, .cs_swiper_button_next {
-                          width: 50px;
-                          height: 50px;
-                          background: rgba(254, 202, 21, 0.9);
-                          border-radius: 50%;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          cursor: pointer;
-                          transition: all 0.3s ease;
-                          pointer-events: auto;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                        }
-                        .cs_swiper_button_prev:hover, .cs_swiper_button_next:hover {
-                          background: rgba(254, 202, 21, 1);
-                          transform: scale(1.1);
-                          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-                        }
-                        .cs_swiper_button_prev svg, .cs_swiper_button_next svg {
-                          width: 24px;
-                          height: 24px;
-                          stroke: #000;
-                          stroke-width: 2.5;
-                        }
-                        .cs_swiper_button_prev {
-                          margin-left: -70px;
-                        }
-                        .cs_swiper_button_next {
-                          margin-right: 40px;
-                        }
-                        .cs_pagination {
-                          position: absolute;
-                          bottom: -60px;
-                          left: 50%;
-                          transform: translateX(-50%);
-                          display: flex;
-                          gap: 12px;
-                          pointer-events: auto;
-                        }
-                        .cs_pagination .swiper-pagination-bullet {
-                          width: 12px;
-                          height: 12px;
-                          background: rgba(255, 255, 255, 0.4);
-                          border-radius: 50%;
-                          cursor: pointer;
-                          transition: all 0.3s ease;
-                          border: 2px solid rgba(255, 255, 255, 0.6);
-                        }
-                        .cs_pagination .swiper-pagination-bullet-active {
-                          background: #FECA15;
-                          transform: scale(1.3);
-                          border-color: #FECA15;
-                        }
-                        @media (max-width: 768px) {
-                          .cs_swiper_button_prev, .cs_swiper_button_next {
-                           
-                          display: none !important;
-                          }
-                          .cs_mobile_slide_indicator {
-                            display: block !important;
-                          }
-                        }
-                        .cs_mobile_slide_indicator {
-                          display: none;
-                          position: absolute;
-                          top: 10px;
-                          right: 15px;
-                          background: rgba(0, 0, 0, 0.7);
-                          color: #FECA15;
-                          padding: 6px 10px;
-                          border-radius: 15px;
-                          font-size: 12px;
-                          font-weight: 600;
-                          z-index: 20;
-                          pointer-events: none;
-                        }
-                      `
-                    }} />
-                    
-                    {/* Mobile Slide Indicator */}
-                    <div className="cs_mobile_slide_indicator">
-                      {currentSlide} / {about_slider.length}
-                    </div>
-                    
-                    {/* Previous Button - Left Side */}
-                    <div className="cs_swiper_button_prev">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 5L4 12L11 19M4 12H20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    
-                    {/* Next Button - Right Side */}
-                    <div className="cs_swiper_button_next">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 5L20 12L13 19M20 12H4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  
                   <div className="cs_section_heading cs_style_1">
                     <div className="cs_section_heading_text">
                       <div 
-                        className={`cs_section_subtitle ${index === 0 ? '' : ''}`}
+                        className="cs_section_subtitle"
                         style={{
-                          ...(index === 0 && {
-                            paddingLeft: '20px',
-                            position: 'relative'
-                          })
+                          color: "#FECA15",
+                          fontSize: "16px",
+                          fontWeight: "500",
+                          marginBottom: "15px"
                         }}
                       >
                         {item.sub_title}
                       </div>
-                      <h2 className="cs_section_title" style={{ fontSize: "32px" }}>{item.title}</h2>
-                     
+                      <h2 className="cs_section_title" style={{ 
+                        fontSize: "42px", 
+                        marginBottom: "40px",
+                        color: "var(--heading-color)"
+                      }}>
+                        {item.title}
+                      </h2>
                     </div>
                   </div>
                   {index === 0 ? (
@@ -310,7 +194,7 @@ const AboutHomeOne = () => {
                           fontWeight: "500",
                           color: "var(--heading-color)"
                         }}>
-                          We help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.
+                          We help small, medium, and large business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.
                         </p>
                       </div>
                     </div>
@@ -415,11 +299,73 @@ const AboutHomeOne = () => {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-
-      </Swiper>
-    </>
+          </div>
+        </div>
+      ))}
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .cs_about_sections {
+            position: relative;
+            overflow-x: hidden;
+            width: 100%;
+          }
+          
+          .cs_about {
+            scroll-margin-top: 80px;
+          }
+          
+          .cs_about_text_box {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+          }
+          
+          .container {
+            overflow-x: hidden;
+          }
+          
+          .row {
+            margin: 0;
+          }
+          
+          @media (max-width: 768px) {
+            .cs_section_title {
+              font-size: 28px !important;
+            }
+            
+            .cs_about {
+              padding: 60px 0 !important;
+              min-height: auto !important;
+            }
+            
+            .cs_about_text_box {
+              padding: 40px 30px !important;
+              margin: 0 10px;
+            }
+            
+            .container {
+              padding: 0 20px !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .cs_section_title {
+              font-size: 24px !important;
+            }
+            
+            .cs_about {
+              padding: 40px 0 !important;
+            }
+            
+            .cs_about_text_box {
+              padding: 30px 20px !important;
+              margin: 0 5px;
+            }
+          }
+        `
+      }} />
+    </div>
   );
 };
 
