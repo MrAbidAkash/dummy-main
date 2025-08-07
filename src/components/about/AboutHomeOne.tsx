@@ -14,9 +14,8 @@ interface DataType {
   title: string;
   des: string;
 }
-[];
 
-const about_slider: DataType[] = [
+const about_data: DataType[] = [
   {
     img: "/assets/img/shutterstock_1797464674.jpg",
     sub_title: "Real business problems. Real solutions.",
