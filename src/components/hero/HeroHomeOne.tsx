@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 
 interface DataType {
@@ -14,29 +13,13 @@ interface DataType {
 const hero_slider: DataType[] = [
   {
     video: "/assets/video/AZhoG8jnzKq124S_fIG0QQ-AZhoG8jnBsTz86_o5M4X-g.mp4", // Fixed: Using relative path from public folder
-    title: "Strategy.Systems.Sales.",
-    des: "We solve growing pains for small to medium-sized businesses. Through custom systems and smart automations, we help you <span style='color: #FECA15; font-weight: 700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);'>save time, cut costs, and scale smarter</span> without burning out your team.",
+    title: "Grow Your Service-Based Business Without Chaos",
+    des: "From tradies to allied health professionals and service-based enterprises, Leads360 understands the challenges of service businesses across Australia and helps you <span style='color: #FECA15; font-weight: 700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);'>scale smarter</span>.",
     sub_title: ""
   },
 ];
 
 const HeroHomeOne = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  // Listen for a message from the iframe to close the modal
-  useEffect(() => {
-    const handleMessage = (e: MessageEvent) => {
-      if (e.data === "quizCompleted") {
-        closeModal();
-      }
-    };
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, []);
-
   return (
     <>
       <Swiper
@@ -291,7 +274,7 @@ const HeroHomeOne = () => {
                     <div className="cs_hero_subtitle cs_hero_subtitle_animated" style={{ 
                       fontSize: "18px", 
                       lineHeight: "1.4", 
-                      marginLeft: "80px", 
+                      marginLeft: "40px", 
                       fontStyle: "italic",
                       color: "#E0E0E0",
                       textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
@@ -301,7 +284,7 @@ const HeroHomeOne = () => {
 
                     <div className="cs_height_15 cs_height_lg_15"></div>
                     <div className="cs_hero_btn_wrap cs_hero_btn_animated">
-                      <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", gap: "1.1em", marginLeft: "80px" }}>
+                      <div className="cs_round_btn_wrap" style={{ display: "flex", justifyContent: "flex-start", marginLeft: "40px" }}>
                         <Link
                           href="/contact"
                           className="cs_hero_btn cs_round_btn btn-item"
@@ -323,31 +306,8 @@ const HeroHomeOne = () => {
                           }}
                         >
                           <span style={{ backgroundColor: "#000000" }}></span>
-                          Get Started
+                          Book a Free Demo
                         </Link>
-                        <a
-                          onClick={openModal}
-                          className="cs_hero_btn cs_round_btn btn-item transition"
-                          style={{ 
-                            width: "5em", 
-                            height: "5em", 
-                            borderRadius: "2.5em",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: "0.78em",
-                            backgroundColor: "transparent",
-                            color: "#FFFFFF",
-                            border: "2px solid #FFFFFF",
-                            fontWeight: "600",
-                            cursor: "pointer",
-                            transition: "all 0.3s ease",
-                            boxShadow: "0 4px 15px rgba(255, 255, 255, 0.2)"
-                          }}
-                        >
-                          <span style={{ backgroundColor: "#FFFFFF" }}></span>
-                          Take a Quiz
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -358,23 +318,6 @@ const HeroHomeOne = () => {
         ))}
         <div className="cs_pagination cs_style1"></div>
       </Swiper>
-
-      {isModalOpen && (
-        <div className="quiz-modal-overlay">
-          <div className="quiz-modal">
-            <button onClick={closeModal} className="quiz-modal-close">
-              ×
-            </button>
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/survey/1oVdNNnntGfeRatbS6Cn"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              title="Quiz"
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 };
