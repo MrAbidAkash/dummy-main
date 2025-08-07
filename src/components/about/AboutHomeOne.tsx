@@ -1,20 +1,14 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
 interface DataType {
   img: string;
   sub_title: string;
   title: string;
   des: string;
 }
-
 const about_data: DataType[] = [
   {
     img: "/assets/img/shutterstock_1797464674.jpg",
@@ -35,17 +29,11 @@ const about_data: DataType[] = [
     des: `We make your website, socials, CRM and tools work together\nWe build everything around how you already work\nWe remove admin and help you show up consistently online\nWe don't just hand over templates — we implement the entire system\nWe're focused on time-saving, money-saving, and actual business growth\nWant to stop dropping leads, missing follow-ups, or manually doing everything?\n\nLet's fix that.\n\n[Book a Free Strategy Call]`,
   },
 ];
-
 const AboutHomeOne = () => {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
-  const sectionRefsRight = useRef<HTMLDivElement[]>([]);
-  const [isMobile, setIsMobile] = React.useState(false);
-  const [currentSlide, setCurrentSlide] = React.useState(1);
-
   useEffect(() => {
     sectionRefs.current.forEach((el, index) => {
       if (!el) return;
-
       gsap.fromTo(
         el,
         { opacity: 0, x: 0, y: 30 },
@@ -66,12 +54,11 @@ const AboutHomeOne = () => {
       );
     });
   }, []);
-
   return (
     <div className="cs_about_sections">
       {about_data.map((item, index) => (
-        <div key={index} className="cs_about cs_style_1" style={{ 
-          padding: "80px 0", 
+        <div key={index} className="cs_about cs_style_1" style={{
+          padding: "80px 0",
           position: "relative",
           minHeight: "100vh",
           display: "flex",
@@ -79,7 +66,7 @@ const AboutHomeOne = () => {
         }}>
           <div
             className="cs_about_bg cs_bg"
-            style={{ 
+            style={{
               backgroundImage: `url(${item.img})`,
               position: "absolute",
               top: "0",
@@ -91,7 +78,7 @@ const AboutHomeOne = () => {
               zIndex: "1"
             }}
           ></div>
-          <div 
+          <div
             className="cs_about_overlay"
             style={{
               position: "absolute",
@@ -103,8 +90,8 @@ const AboutHomeOne = () => {
               zIndex: "2"
             }}
           ></div>
-          <div className="container" style={{ 
-            position: "relative", 
+          <div className="container" style={{
+            position: "relative",
             zIndex: "3",
             width: "100%",
             maxWidth: "1200px",
@@ -118,7 +105,7 @@ const AboutHomeOne = () => {
                   ref={(el) => {
                     if (el) sectionRefs.current[index] = el;
                   }}
-                  style={{ 
+                  style={{
                     backgroundColor: "#2a2a2a",
                     padding: "60px 50px",
                     borderRadius: "15px",
@@ -131,7 +118,7 @@ const AboutHomeOne = () => {
                 >
                   <div className="cs_section_heading cs_style_1">
                     <div className="cs_section_heading_text">
-                      <div 
+                      <div
                         className="cs_section_subtitle"
                         style={{
                           color: "#FECA15",
@@ -142,8 +129,8 @@ const AboutHomeOne = () => {
                       >
                         {item.sub_title}
                       </div>
-                      <h2 className="cs_section_title" style={{ 
-                        fontSize: "42px", 
+                      <h2 className="cs_section_title" style={{
+                        fontSize: "42px",
                         marginBottom: "40px",
                         color: "var(--heading-color)"
                       }}>
@@ -169,27 +156,27 @@ const AboutHomeOne = () => {
                         <div style={{ marginBottom: "25px" }}>
                           <p style={{ fontWeight: "600", color: "#FECA15", marginBottom: "8px" }}>"All our tools work… but none of them talk to each other."</p>
                         </div>
-                        
-                        <p style={{ 
-                          fontSize: "18px", 
-                          fontWeight: "600", 
-                          marginTop: "30px", 
+                       
+                        <p style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          marginTop: "30px",
                           marginBottom: "20px",
                           color: "var(--heading-color)"
                         }}>
                           Sound familiar?
                         </p>
-                        
-                        <p style={{ 
-                          fontSize: "16px", 
+                       
+                        <p style={{
+                          fontSize: "16px",
                           marginBottom: "15px",
                           color: "var(--body-color)"
                         }}>
                           You're not alone — and these problems don't fix themselves.
                         </p>
-                        
-                        <p style={{ 
-                          fontSize: "18px", 
+                       
+                        <p style={{
+                          fontSize: "18px",
                           fontWeight: "500",
                           color: "var(--heading-color)"
                         }}>
@@ -210,13 +197,12 @@ const AboutHomeOne = () => {
                             <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Review requests + rebooking flows</li>
                           </ul>
                         </div>
-                        
+                       
                         <div style={{ marginBottom: "30px" }}>
                           <p style={{ fontWeight: "600", fontSize: "16px", color: "#FECA15", marginBottom: "10px" }}>Why this matters:</p>
                           <p style={{ marginBottom: "15px", fontSize: "15px", lineHeight: "1.6" }}>Most small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.</p>
                           <p style={{ fontSize: "15px", lineHeight: "1.6" }}>But real growth comes from having a multi-channel strategy, a lead-ready website, and automated follow-ups that work even when you're off the clock.</p>
                         </div>
-
                         <div style={{ marginBottom: "20px" }}>
                           <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "8px" }}>Scale with Systems</p>
                           <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "16px", color: "var(--body-color)" }}>So your business grows without the chaos</p>
@@ -241,29 +227,29 @@ const AboutHomeOne = () => {
                             <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We're focused on time-saving, money-saving, and actual business growth</li>
                           </ul>
                         </div>
-                        
+                       
                         <div style={{ marginTop: "35px", marginBottom: "25px" }}>
-                          <p style={{ 
-                            fontSize: "18px", 
-                            fontWeight: "600", 
+                          <p style={{
+                            fontSize: "18px",
+                            fontWeight: "600",
                             marginBottom: "20px",
                             color: "var(--heading-color)"
                           }}>
                             Want to stop dropping leads, missing follow-ups, or manually doing everything?
                           </p>
-                          
-                          <p style={{ 
-                            fontSize: "20px", 
+                         
+                          <p style={{
+                            fontSize: "20px",
                             fontWeight: "600",
                             color: "#FECA15",
                             marginBottom: "25px"
                           }}>
                             Let's fix that.
                           </p>
-                          
+                         
                           <div style={{ textAlign: "center", marginTop: "30px" }}>
-                            <a 
-                              href="/contact" 
+                            <a
+                              href="/contact"
                               style={{
                                 display: "inline-block",
                                 background: "#FECA15",
@@ -301,71 +287,9 @@ const AboutHomeOne = () => {
           </div>
         </div>
       ))}
+     
       
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .cs_about_sections {
-            position: relative;
-            overflow-x: hidden;
-            width: 100%;
-          }
-          
-          .cs_about {
-            scroll-margin-top: 80px;
-          }
-          
-          .cs_about_text_box {
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            perspective: 1000px;
-          }
-          
-          .container {
-            overflow-x: hidden;
-          }
-          
-          .row {
-            margin: 0;
-          }
-          
-          @media (max-width: 768px) {
-            .cs_section_title {
-              font-size: 28px !important;
-            }
-            
-            .cs_about {
-              padding: 60px 0 !important;
-              min-height: auto !important;
-            }
-            
-            .cs_about_text_box {
-              padding: 40px 30px !important;
-              margin: 0 10px;
-            }
-            
-            .container {
-              padding: 0 20px !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .cs_section_title {
-              font-size: 24px !important;
-            }
-            
-            .cs_about {
-              padding: 40px 0 !important;
-            }
-            
-            .cs_about_text_box {
-              padding: 30px 20px !important;
-              margin: 0 5px;
-            }
-          }
-        `
-      }} />
     </div>
   );
 };
-
 export default AboutHomeOne;
