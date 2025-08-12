@@ -202,7 +202,7 @@ const Testimonial = ({ style_service }: any) => {
           <div className="row">
             <div className="col-lg-8 col-md-10">
               <h2 className="cs_testimonial_title" style={{textAlign: 'left', marginBottom: '30px', lineHeight: '1.2', fontSize: '48px'}}>
-                Testimonials
+                Trusted by Services Businesses for Proven Systems
               </h2>
             </div>
           </div>

@@ -186,31 +186,31 @@ const AboutHomeOne = () => {
                     </div>
                   ) : index === 1 ? (
                     <div className="cs_m0">
-                      <div style={{ marginTop: "10px" }}>
-                        <div style={{ marginBottom: "30px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "8px" }}>Convert & Nurture</p>
-                          <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "16px", color: "var(--body-color)" }}>So leads don't go cold — even when you're busy</p>
+                      <div style={{ marginBlockStart: "10px" }}>
+                        <div style={{ marginBlockEnd: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBlockEnd: "8px" }}>Convert & Nurture</p>
+                          <p style={{ fontStyle: "italic", marginBlockEnd: "15px", fontSize: "16px", color: "var(--body-color)" }}>So leads don't go cold — even when you're busy</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• CRM systems to manage leads and clients</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Email + SMS automation</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Online booking and calendar tools</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Review requests + rebooking flows</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• CRM systems to manage leads and clients</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Email + SMS automation</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Online booking and calendar tools</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Review requests + rebooking flows</li>
                           </ul>
                         </div>
                        
-                        <div style={{ marginBottom: "30px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "16px", color: "#FECA15", marginBottom: "10px" }}>Why this matters:</p>
-                          <p style={{ marginBottom: "15px", fontSize: "15px", lineHeight: "1.6" }}>Most small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.</p>
+                        <div style={{ marginBlockEnd: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "16px", color: "#FECA15", marginBlockEnd: "10px" }}>Why this matters:</p>
+                          <p style={{ marginBlockEnd: "15px", fontSize: "15px", lineHeight: "1.6" }}>Most small businesses rely too heavily on one platform — usually Instagram or word-of-mouth.</p>
                           <p style={{ fontSize: "15px", lineHeight: "1.6" }}>But real growth comes from having a multi-channel strategy, a lead-ready website, and automated follow-ups that work even when you're off the clock.</p>
                         </div>
-                        <div style={{ marginBottom: "20px" }}>
-                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "8px" }}>Scale with Systems</p>
-                          <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "16px", color: "var(--body-color)" }}>So your business grows without the chaos</p>
+                        <div style={{ marginBlockEnd: "20px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBlockEnd: "8px" }}>Scale with Systems</p>
+                          <p style={{ fontStyle: "italic", marginBlockEnd: "15px", fontSize: "16px", color: "var(--body-color)" }}>So your business grows without the chaos</p>
                           <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Voice AI to handle missed calls</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Website + social media chatbots</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Smart automation workflows</li>
-                            <li style={{ marginBottom: "8px", paddingLeft: "15px", position: "relative" }}>• Tool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Voice AI to handle missed calls</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Website + social media chatbots</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Smart automation workflows</li>
+                            <li style={{ marginBlockEnd: "8px", paddingInlineStart: "15px", position: "relative" }}>• Tool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)</li>
                           </ul>
                         </div>
                       </div>
@@ -218,14 +218,32 @@ const AboutHomeOne = () => {
                   ) : index === 2 ? (
                     <div className="cs_m0">
                       <div style={{ marginTop: "30px" }}>
-                        <div style={{ marginBottom: "20px" }}>
-                          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We make your website, socials, CRM and tools work together</li>
-                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We build everything around how you already work</li>
-                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We remove admin and help you show up consistently online</li>
-                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We don't just hand over templates — we implement the entire system</li>
-                            <li style={{ marginBottom: "15px", paddingLeft: "15px", position: "relative", fontSize: "16px", fontWeight: "500" }}>• We're focused on time-saving, money-saving, and actual business growth</li>
-                          </ul>
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Results That Drive Growth:</p>
+                          <p style={{ fontSize: "16px", lineHeight: "1.6", marginBottom: "15px", color: "var(--body-color)" }}>
+                            At Leads360, we're obsessed with delivering measurable outcomes. Our custom GoHighLevel CRM solutions save service-based businesses 10-15 hours weekly, cut operational costs by up to 20%, and drive 25% revenue growth through effective lead tracking. For example, a plumbing business saved 15 hours weekly and boosted bookings by 25%, while a physiotherapy clinic increased rebookings by 20% with our automated workflows.
+                          </p>
+                        </div>
+
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Always Ahead of the Curve:</p>
+                          <p style={{ fontSize: "16px", lineHeight: "1.6", marginBottom: "15px", color: "var(--body-color)" }}>
+                            We stay updated with the latest CRM technologies, integrating cutting-edge AI voice bots and chatbots to keep your service business competitive. Our team continuously adapts to new trends, ensuring your systems are future-proofed for growth across Australia.
+                          </p>
+                        </div>
+
+                        <div style={{ marginBottom: "25px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Honoring Tradition, Embracing Innovation:</p>
+                          <p style={{ fontSize: "16px", lineHeight: "1.6", marginBottom: "15px", color: "var(--body-color)" }}>
+                            We respect the traditions that make your service business unique—whether it's the personal touch of a tradie's customer service or a clinician's patient care. Our GHL CRM enhances these strengths with modern automation, maintaining the human connection while streamlining operations.
+                          </p>
+                        </div>
+
+                        <div style={{ marginBottom: "30px" }}>
+                          <p style={{ fontWeight: "600", fontSize: "18px", color: "#FECA15", marginBottom: "10px" }}>Partners in Your Business Environment:</p>
+                          <p style={{ fontSize: "16px", lineHeight: "1.6", marginBottom: "20px", color: "var(--body-color)" }}>
+                            We understand the Australian service industry's challenges, from tradies juggling jobs to allied health professionals managing client care. Leads360 builds systems that honor your business environment, aligning teams and tools to scale without chaos.
+                          </p>
                         </div>
                        
                         <div style={{ marginTop: "35px", marginBottom: "25px" }}>

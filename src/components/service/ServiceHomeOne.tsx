@@ -12,26 +12,25 @@ interface DataType {
   des: string;
   link: string;
 }
-[];
 
 const service_data: DataType[] = [
   {
     id: 1,
-    title: `AI Voice Bot (for Calls or Website)`,
-    des: `Missed calls? Overloaded front desk? We've got that covered.\n\nOur AI voice bot answers inbound calls or web enquiries with a natural, friendly tone — trained on your business process. It books jobs, collects key info, and hands over to your team only when needed.\n\nA virtual assistant that actually understands your business — and works 24/7 without the wage bill.\n\n• Trained on your services & scripts\n• Handles basic triage, quotes, and bookings\n• Integrates with your CRM and forms\n• Custom-built flows for different enquiry types`,
-    link: "/service/social-media-marketing",
+    title: `Your Challenges? We Get It.`,
+    des: `"I keep missing calls, DMs, and emails — I just can't keep up."\n\nLeads slip through, stalling your service business growth.\n\n"I know we need follow-ups and reviews... but it never happens."\n\nManual tasks eat time, leaving no room for consistent client nurturing.\n\n"All our tools work... but none of them talk to each other."\n\nDisconnected systems create chaos, slowing down your service business.`,
+    link: "/contact",
   },
   {
     id: 2,
-    title: `AI Chatbot (for Website & Socials)`,
-    des: `Busy inbox? Leads slipping through? Let's fix that.\n\nOur chatbots respond to web visitors and social media DMs instantly — answering FAQs, collecting info, and triggering next steps based on how you handle enquiries. Built to sound human, not robotic.\n\nSo while you're on the tools or with a client, your leads are still being looked after.\n\n• Available 24/7 across Instagram, Facebook & website\n• Built with your tone, FAQs, and workflows\n• Smart escalation to humans when needed\n• Fully synced with your CRM`,
-    link: "/service/crm-implementation",
+    title: `How We Fix It with GoHighLevel CRM`,
+    des: `Convert & Nurture\n\n• GoHighLevel CRM tracks leads from web, social, and calls in one place\n• Email + SMS automation for follow-ups and rebooking\n• Online booking tools for instant scheduling\n• Review requests to build credibility across Australia\n\nScale with Systems\n\n• AI voice bots handle missed calls for tradies and clinicians\n• Website + social media chatbots respond 24/7\n• Automation workflows reduce admin chaos\n• Integrations with Xero, Cliniko, ServiceM8, and Calendly`,
+    link: "/contact",
   },
   {
     id: 3,
-    title: `AI Workflows & Integrations`,
-    des: `Too many tools? Not enough time? Let's connect the dots.\n\nWe build custom workflows that automate your daily tasks — from email follow-ups to job tracking, invoicing, and review requests. And we connect your favourite tools (like ServiceM8, Cliniko, Xero, Google Calendar, GHL) so everything talks to each other.\n\nNo more double handling. No more missed steps. Just systems that keep up with your growth.\n\n• Automates admin without losing the human touch\n• Fully customised to how you work\n• Reduces errors, delays, and unnecessary back-and-forth\n• Designed for busy teams with big goals`,
-    link: "/service/web-development-maintenance",
+    title: `Why Choose Leads360 for Your Service Business?`,
+    des: `Results That Drive Growth: At Leads360, we're obsessed with delivering measurable outcomes. Our custom GoHighLevel CRM solutions save service-based businesses 10-15 hours weekly, cut operational costs by up to 20%, and drive 25% revenue growth through effective lead tracking.\n\nAlways Ahead of the Curve: We stay updated with the latest CRM technologies, integrating cutting-edge AI voice bots and chatbots to keep your service business competitive.\n\nHonoring Tradition, Embracing Innovation: We respect the traditions that make your service business unique — whether it's the personal touch of a tradie's customer service or a clinician's patient care.\n\nJoin the many service-based businesses across Australia who trust Leads360 to transform chaos into growth.`,
+    link: "/contact",
   },
 ];
 
@@ -163,7 +162,7 @@ const ServiceHomeOne = () => {
                 ref={titleRef}
                 className="cs_section_title anim_heading_title"
               >
-                Leads360 HQ Digital Additions
+                Service Business Solutions That Actually Work
               </h2>
               <p style={{ 
                 fontStyle: "italic", 
@@ -173,7 +172,7 @@ const ServiceHomeOne = () => {
                 lineHeight: "1.4",
                 marginBottom: "20px"
               }}>
-                Solving growing pains with smart, human-led AI systems.
+                From chaos to growth — we understand your daily challenges.
               </p>
               <p style={{ 
                 fontSize: "16px", 
@@ -182,7 +181,7 @@ const ServiceHomeOne = () => {
                 maxWidth: "800px",
                 margin: "0 auto"
               }}>
-                We don't use AI for the sake of it. Every digital addition we build is designed to reduce stress, eliminate repetitive tasks, and create better customer experiences — so you can focus on growing without the usual chaos.
+                Whether you're a tradie, allied health professional, or service-based enterprise across Australia, we build GoHighLevel CRM systems that solve real problems and drive measurable results.
               </p>
             </div>
           </div>
@@ -246,7 +245,7 @@ const ServiceHomeOne = () => {
                       e.currentTarget.style.color = "#000";
                     }}
                   >
-                    {i === 0 ? "See It in Action →" : i === 1 ? "Explore Chatbots →" : "Discover AI Workflows →"}
+                    {i === 0 ? "Understand Your Challenges →" : i === 1 ? "See Our Solutions →" : "Choose Leads360 →"}
                   </Link>
                 </div>
               </div>
