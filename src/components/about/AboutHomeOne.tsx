@@ -12,21 +12,19 @@ interface DataType {
   title: string;
   des: string;
   features?: string[];
-  highlights?: { title: string; description: string }[];
+  highlights?: { title: string; description: string; features?: string[] }[];
 }
 
 const about_data: DataType[] = [
   {
     img: "/assets/img/shutterstock_1797464674.jpg",
     sub_title: "Real business problems. Real solutions.",
-    title: "Heard These Before? We Have — and We Fix Them",
+    title: "Your Challenges? We Get It.",
     des: "You're not alone — and these problems don't fix themselves. We help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.",
     features: [
-      "We're spending money on marketing… but not getting leads.",
-      "I keep missing calls, DMs, and emails — I just can't keep up.",
-      "I know we need follow-ups and reviews… but it never happens.",
-      "We post when we can… but there's no plan.",
-      "All our tools work… but none of them talk to each other."
+      "\"I keep missing calls, DMs, and emails — I just can't keep up.\"\n\nLeads slip through, stalling your service business growth.",
+      "\"I know we need follow-ups and reviews... but it never happens.\"\n\nManual tasks eat time, leaving no room for consistent client nurturing.",
+      "\"All our tools work... but none of them talk to each other.\"\n\nDisconnected systems create chaos, slowing down your service business."
     ]
   },
   {
@@ -37,49 +35,48 @@ const about_data: DataType[] = [
     highlights: [
       {
         title: "Convert & Nurture",
-        description: "So leads don't go cold — even when you're busy"
+        description: "So leads don't go cold — even when you're busy",
+        features: [
+          "GoHighLevel CRM tracks leads from web, social, and calls in one place",
+          "Email + SMS automation for follow-ups and rebooking",
+          "Online booking tools for instant scheduling",
+          "Review requests to build credibility across Australia"
+        ]
       },
       {
         title: "Scale with Systems", 
-        description: "So your business grows without the chaos"
+        description: "So your business grows without the chaos",
+        features: [
+          "AI voice bots handle missed calls for tradies and clinicians",
+          "Website + social media chatbots respond 24/7",
+          "Automation workflows reduce admin chaos",
+          "Integrations with Xero, Cliniko, ServiceM8, and Calendly"
+        ]
       }
-    ],
-    features: [
-      "CRM systems to manage leads and clients",
-      "Email + SMS automation", 
-      "Online booking and calendar tools",
-      "Review requests + rebooking flows",
-      "Voice AI to handle missed calls",
-      "Website + social media chatbots",
-      "Smart automation workflows",
-      "Tool integrations (Xero, ServiceM8, GHL, Cliniko, Calendars etc.)"
     ]
   },
   {
     img: "/assets/img/shutterstock_2586106271.jpg",
-    sub_title: "Why Leads360",
-    title: "Because you don't need another tool — you need a system.",
-    des: "We're obsessed with delivering measurable outcomes. Our custom GoHighLevel CRM solutions save service-based businesses 10-15 hours weekly, cut operational costs by up to 20%, and drive 25% revenue growth.",
+    sub_title: "Why Leads360?",
+    title: "Why Choose Leads360 for Your Service Business?",
+    des: "Join the many service-based businesses across Australia who trust Leads360 to transform chaos into growth.",
     highlights: [
       {
         title: "Results That Drive Growth",
-        description: "Save 10-15 hours weekly, cut costs by 20%, boost revenue by 25%"
+        description: "At Leads360, we're obsessed with delivering measurable outcomes. Our custom GoHighLevel CRM solutions save service-based businesses 10–15 hours weekly, cut operational costs by up to 20%, and drive 25% revenue growth through effective lead tracking. For example, a plumbing business saved 15 hours weekly and boosted bookings by 25%, while a physiotherapy clinic increased rebookings by 20% with our automated workflows."
       },
       {
-        title: "Always Ahead of the Curve", 
-        description: "Latest CRM technologies with AI voice bots and chatbots"
+        title: "Always Ahead of the Curve",
+        description: "We stay updated with the latest CRM technologies, integrating cutting-edge AI voice bots and chatbots to keep your service business competitive. Our team continuously adapts to new trends, ensuring your systems are future-proofed for growth across Australia."
       },
       {
         title: "Honoring Tradition, Embracing Innovation",
-        description: "Enhance your strengths with modern automation"
+        description: "We respect the traditions that make your service business unique—whether it's the personal touch of a tradie's customer service or a clinician's patient care. Our GHL CRM enhances these strengths with modern automation, maintaining the human connection while streamlining operations."
+      },
+      {
+        title: "Partners in Your Business Environment",
+        description: "We understand the Australian service industry's challenges, from tradies juggling jobs to allied health professionals managing client care. Leads360 builds systems that honor your business environment, aligning teams and tools to scale without chaos."
       }
-    ],
-    features: [
-      "Make your website, socials, CRM and tools work together",
-      "Build everything around how you already work", 
-      "Remove admin and help you show up consistently online",
-      "Implement the entire system, not just templates",
-      "Focus on time-saving, money-saving, and actual business growth"
     ]
   },
 ];
@@ -210,44 +207,34 @@ const AboutHomeOne = () => {
                   }}>
                     {highlight.description}
                   </p>
+                  {highlight.features && (
+                    <div style={{ marginTop: "15px" }}>
+                      {highlight.features.map((feature, featureIdx) => (
+                        <div key={featureIdx} style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "10px",
+                          marginBottom: "8px"
+                        }}>
+                          <span style={{
+                            fontSize: "16px",
+                            color: "#FECA15",
+                            marginTop: "2px"
+                          }}>•</span>
+                          <p style={{
+                            fontSize: "15px",
+                            color: "#E5E5E5",
+                            margin: "0",
+                            lineHeight: "1.4"
+                          }}>
+                            {feature}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
-            </div>
-
-            <div className="features-grid">
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "15px"
-              }}>
-                {item.features?.map((feature, idx) => (
-                  <div key={idx} style={{
-                    background: "rgba(254, 202, 21, 0.1)",
-                    padding: "15px 20px",
-                    borderRadius: "8px",
-                    border: "1px solid rgba(254, 202, 21, 0.3)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "12px"
-                  }}>
-                    <span style={{
-                      width: "8px",
-                      height: "8px",
-                      background: "#FECA15",
-                      borderRadius: "50%",
-                      flexShrink: 0
-                    }}></span>
-                    <p style={{
-                      fontSize: "15px",
-                      color: "#E5E5E5",
-                      margin: "0",
-                      fontWeight: "500"
-                    }}>
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         );
@@ -261,153 +248,47 @@ const AboutHomeOne = () => {
                 fontWeight: "500",
                 marginBottom: "35px",
                 color: "#E5E5E5",
-                lineHeight: "1.6"
+                lineHeight: "1.6",
+                textAlign: "center"
               }}>
                 {item.des}
               </p>
             </div>
 
-            <div className="highlights-grid">
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: "20px",
-                marginBottom: "30px"
-              }}>
-                {item.highlights?.map((highlight, idx) => (
-                  <div key={idx} style={{
-                    background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)",
-                    padding: "25px",
-                    borderRadius: "15px",
-                    border: "1px solid #333",
-                    borderTop: "3px solid #FECA15",
-                    boxShadow: "0 8px 25px rgba(0, 0, 0, 0.4)",
-                    transition: "transform 0.3s ease"
-                  }}>
-                    <h4 style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#FECA15",
-                      marginBottom: "12px"
-                    }}>
-                      {highlight.title}
-                    </h4>
-                    <p style={{
-                      fontSize: "15px",
-                      color: "#B0B0B0",
-                      margin: "0",
-                      lineHeight: "1.5"
-                    }}>
-                      {highlight.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="features-list">
-              <h4 style={{
-                fontSize: "20px",
-                fontWeight: "600",
-                color: "#FECA15",
-                marginBottom: "20px",
-                textAlign: "center"
-              }}>
-                What We Deliver
-              </h4>
-              <div style={{
-                display: "grid",
-                gap: "12px",
-                marginBottom: "35px"
-              }}>
-                {item.features?.map((feature, idx) => (
-                  <div key={idx} style={{
-                    background: "rgba(254, 202, 21, 0.05)",
-                    padding: "18px 25px",
-                    borderRadius: "10px",
-                    border: "1px solid rgba(254, 202, 21, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "15px"
-                  }}>
-                    <span style={{
-                      width: "6px",
-                      height: "6px",
-                      background: "#FECA15",
-                      borderRadius: "50%",
-                      flexShrink: 0
-                    }}></span>
-                    <p style={{
-                      fontSize: "16px",
-                      color: "#E5E5E5",
-                      margin: "0",
-                      fontWeight: "500"
-                    }}>
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="cta-section">
-              <div style={{
-                textAlign: "center",
-                background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)",
-                padding: "30px",
-                borderRadius: "20px",
-                border: "2px solid #FECA15",
-                boxShadow: "0 10px 30px rgba(254, 202, 21, 0.1)"
-              }}>
-                <p style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  marginBottom: "15px",
-                  color: "#E5E5E5"
+            <div className="highlights-section">
+              {item.highlights?.map((highlight, idx) => (
+                <div key={idx} style={{
+                  background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)",
+                  padding: "30px",
+                  borderRadius: "15px",
+                  border: "1px solid #333",
+                  borderLeft: "4px solid #FECA15",
+                  marginBottom: "25px",
+                  boxShadow: "0 8px 25px rgba(0, 0, 0, 0.4)",
+                  transition: "transform 0.3s ease"
                 }}>
-                  Want to stop dropping leads, missing follow-ups, or manually doing everything?
-                </p>
-                
-                <p style={{
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  color: "#FECA15",
-                  marginBottom: "25px"
-                }}>
-                  Let's fix that.
-                </p>
-                
-                <a
-                  href="/contact"
-                  style={{
-                    display: "inline-block",
-                    background: "linear-gradient(135deg, #FECA15 0%, #FFD700 100%)",
-                    color: "#000",
-                    padding: "18px 35px",
-                    borderRadius: "30px",
+                  <h4 style={{
+                    fontSize: "22px",
                     fontWeight: "600",
-                    fontSize: "18px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                    border: "none",
-                    cursor: "pointer",
-                    boxShadow: "0 8px 25px rgba(254, 202, 21, 0.3)",
-                    textTransform: "uppercase",
-                    letterSpacing: "1px"
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 12px 35px rgba(254, 202, 21, 0.4)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 8px 25px rgba(254, 202, 21, 0.3)";
-                  }}
-                >
-                  Book a Free Strategy Call
-                </a>
-              </div>
+                    color: "#FECA15",
+                    marginBottom: "15px"
+                  }}>
+                    {highlight.title}
+                  </h4>
+                  <p style={{
+                    fontSize: "16px",
+                    color: "#E5E5E5",
+                    margin: "0",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {highlight.description}
+                  </p>
+                </div>
+              ))}
             </div>
+
+            
           </div>
         );
 

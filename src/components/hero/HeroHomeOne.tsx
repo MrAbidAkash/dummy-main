@@ -150,9 +150,9 @@ const HeroHomeOne = () => {
                 <h1
                   className="cs_hero_title cs_hero_title_animated"
                   style={{
-                    fontSize: "48px",
+                    fontSize: "56px",
                     lineHeight: "1.2",
-                    marginBottom: "20px",
+                    marginBottom: "25px",
                     background: "linear-gradient(135deg, #FECA15 0%, #FFD700 50%, #FFA500 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -167,7 +167,7 @@ const HeroHomeOne = () => {
                 <div
                   className="cs_hero_subtitle cs_hero_subtitle_animated"
                   style={{
-                    fontSize: "18px",
+                    fontSize: "20px",
                     lineHeight: "1.5",
                     color: "#E0E0E0",
                     textShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
@@ -186,13 +186,13 @@ const HeroHomeOne = () => {
                       href="/contact"
                       className="cs_hero_btn cs_round_btn btn-item"
                       style={{
-                        width: "200px",
-                        height: "60px",
-                        borderRadius: "30px",
+                        width: "220px",
+                        height: "65px",
+                        borderRadius: "32px",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        fontSize: "18px",
+                        fontSize: "19px",
                         backgroundColor: "#FECA15",
                         color: "#000000",
                         border: "2px solid #FECA15",

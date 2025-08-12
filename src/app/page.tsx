@@ -5,7 +5,6 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 import HeroHomeOne from "@/components/hero/HeroHomeOne";
 import AboutHomeOne from "@/components/about/AboutHomeOne";
 import WhoWeWorkFor from "@/components/common/WhoWeWorkFor";
-import ServiceHomeOne from "@/components/service/ServiceHomeOne";
 import MarqueeAreaHomeOne from "@/components/brand/MarqueeAreaHomeOne";
 import PortfolioHomeOne from "@/components/portfolio/PortfolioHomeOne";
 import AwardsHomeOne from "@/components/awards/AwardsHomeOne";
@@ -37,24 +36,23 @@ const index = () => {
         <div id="smooth-content">
           <main>
             <HeroHomeOne />
-            <MarqueeAreaHomeOne />
+            {/* <MarqueeAreaHomeOne /> */}
             <WhoWeWorkFor />
             <AboutHomeOne />
-            <ServiceHomeOne />
-          
+            {/* <ServiceHomeOne /> */}
             {/* <AwardsHomeOne /> */}
             <Testimonial />
-            <TrustedByBusiness />
-            <VideoHomeOne setIsVideoOpen={setIsVideoOpen} />
-            <BlogHomeOne />
-            <FaqArea />
+            {/* <TrustedByBusiness /> */}
+            {/* <VideoHomeOne setIsVideoOpen={setIsVideoOpen} /> */}
+            {/* <BlogHomeOne /> */}
+            {/* <FaqArea /> */}
             <CTA
               title="Ready to Transform Your Business?"
               subtitle="Join forward-thinking business owners who have eliminated chaos and achieved scalable growth with our proven digital marketing strategies, CRM optimization, and business automation solutions."
               buttonText="Start Your Digital Transformation"
             />
-            <SubscribeHomeOne />
-          
+            {/* <SubscribeHomeOne /> */}
+
           </main>
           <FooterOne />
         </div>
