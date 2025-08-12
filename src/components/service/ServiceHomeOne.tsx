@@ -16,21 +16,27 @@ interface DataType {
 const service_data: DataType[] = [
   {
     id: 1,
-    title: `Your Challenges? We Get It.`,
-    des: `"I keep missing calls, DMs, and emails — I just can't keep up."\n\nLeads slip through, stalling your service business growth.\n\n"I know we need follow-ups and reviews... but it never happens."\n\nManual tasks eat time, leaving no room for consistent client nurturing.\n\n"All our tools work... but none of them talk to each other."\n\nDisconnected systems create chaos, slowing down your service business.`,
-    link: "/contact",
+    title: `CRM`,
+    des: `Comprehensive Customer Relationship Management solutions to streamline your business processes. Track leads, manage customer interactions, and automate follow-ups to boost conversion rates and enhance customer satisfaction.`,
+    link: "/service/crm",
   },
   {
     id: 2,
-    title: `How We Fix It with GoHighLevel CRM`,
-    des: `Convert & Nurture\n\n• GoHighLevel CRM tracks leads from web, social, and calls in one place\n• Email + SMS automation for follow-ups and rebooking\n• Online booking tools for instant scheduling\n• Review requests to build credibility across Australia\n\nScale with Systems\n\n• AI voice bots handle missed calls for tradies and clinicians\n• Website + social media chatbots respond 24/7\n• Automation workflows reduce admin chaos\n• Integrations with Xero, Cliniko, ServiceM8, and Calendly`,
-    link: "/contact",
+    title: `AI Solutions`,
+    des: `Cutting-edge artificial intelligence tools to transform your business operations. From AI chatbots and voice assistants to intelligent automation and predictive analytics, harness the power of AI to stay ahead of the competition.`,
+    link: "/service/ai-solutions",
   },
   {
     id: 3,
-    title: `Why Choose Leads360 for Your Service Business?`,
-    des: `Results That Drive Growth: At Leads360, we're obsessed with delivering measurable outcomes. Our custom GoHighLevel CRM solutions save service-based businesses 10-15 hours weekly, cut operational costs by up to 20%, and drive 25% revenue growth through effective lead tracking.\n\nAlways Ahead of the Curve: We stay updated with the latest CRM technologies, integrating cutting-edge AI voice bots and chatbots to keep your service business competitive.\n\nHonoring Tradition, Embracing Innovation: We respect the traditions that make your service business unique — whether it's the personal touch of a tradie's customer service or a clinician's patient care.\n\nJoin the many service-based businesses across Australia who trust Leads360 to transform chaos into growth.`,
-    link: "/contact",
+    title: `Digital Packages`,
+    des: `Complete digital transformation packages tailored to your business needs. Includes website development, digital marketing strategies, social media management, and online presence optimization to maximize your digital footprint.`,
+    link: "/service/digital-packages",
+  },
+  {
+    id: 4,
+    title: `Custom`,
+    des: `Bespoke solutions designed specifically for your unique business requirements. Our team works closely with you to understand your challenges and create tailored solutions that perfectly fit your workflow and objectives.`,
+    link: "/service/custom",
   },
 ];
 
@@ -245,7 +251,7 @@ const ServiceHomeOne = () => {
                       e.currentTarget.style.color = "#000";
                     }}
                   >
-                    {i === 0 ? "Understand Your Challenges →" : i === 1 ? "See Our Solutions →" : "Choose Leads360 →"}
+                    Learn More →
                   </Link>
                 </div>
               </div>
