@@ -332,64 +332,96 @@ const DigitalMarketingStrategy = () => {
 
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
-                  gap: '30px',
-                  marginTop: '60px'
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: '25px',
+                  marginTop: '60px',
+                  maxWidth: '1400px',
+                  margin: '60px auto 0'
                 }}>
                   {/* Starter Package */}
                   <div style={{
                     background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
                     borderRadius: '24px',
-                    padding: '45px 35px',
+                    padding: '35px 25px',
                     border: '2px solid rgba(255,193,7,0.15)',
                     backdropFilter: 'blur(15px)',
                     boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    minHeight: '480px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    textAlign: 'center'
                   }}>
                     {/* Package badge */}
                     <div style={{
                       position: 'absolute',
-                      top: '20px',
-                      right: '20px',
+                      top: '15px',
+                      right: '15px',
                       background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
                       color: '#1a1a1a',
-                      padding: '8px 16px',
-                      borderRadius: '20px',
-                      fontSize: '12px',
+                      padding: '6px 12px',
+                      borderRadius: '15px',
+                      fontSize: '11px',
                       fontWeight: '600',
                       textTransform: 'uppercase',
                       letterSpacing: '0.5px'
                     }}>
                       Popular
                     </div>
+
+                    {/* Icon */}
+                    <div style={{
+                      width: '80px',
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 25px',
+                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                    }}>
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    </div>
                     
                     <h3 style={{
-                      fontSize: '28px',
+                      fontSize: '24px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '15px'
                     }}>
-                      Starter Package
+                      Small Businesses (1-5)
                     </h3>
                     <p style={{
                       fontSize: '16px',
+                      color: '#FFC107',
+                      marginBottom: '20px',
+                      fontWeight: '500'
+                    }}>
+                      Starter Package
+                    </p>
+                    <p style={{
+                      fontSize: '14px',
                       color: '#ffffff',
-                      lineHeight: '1.7',
-                      marginBottom: '25px',
-                      opacity: 0.9
+                      lineHeight: '1.6',
+                      marginBottom: '20px',
+                      opacity: 0.9,
+                      flex: 1
                     }}>
                       Ideal for small businesses (1–5). Includes website build, basic SEO, email marketing setup, and GHL CRM integration for lead tracking.
                     </p>
                     <div style={{
-                      fontSize: '18px',
+                      fontSize: '16px',
                       fontWeight: '600',
                       color: '#FFC107',
                       marginBottom: '10px',
-                      padding: '15px 20px',
+                      padding: '12px 15px',
                       background: 'rgba(255,193,7,0.1)',
-                      borderRadius: '12px',
+                      borderRadius: '10px',
                       textAlign: 'center'
                     }}>
                       Save 10 hours/week and boost leads by 15%.
@@ -400,26 +432,30 @@ const DigitalMarketingStrategy = () => {
                   <div style={{
                     background: 'linear-gradient(145deg, rgba(255,193,7,0.08) 0%, rgba(255,213,79,0.03) 100%)',
                     borderRadius: '24px',
-                    padding: '45px 35px',
+                    padding: '35px 25px',
                     border: '2px solid rgba(255,193,7,0.3)',
                     backdropFilter: 'blur(15px)',
                     boxShadow: '0 25px 50px rgba(255,193,7,0.2), inset 0 1px 0 rgba(255,255,255,0.2)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
                     overflow: 'hidden',
-                    transform: 'scale(1.05)'
+                    transform: 'scale(1.05)',
+                    minHeight: '480px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    textAlign: 'center'
                   }}>
                     {/* Featured badge */}
                     <div style={{
                       position: 'absolute',
-                      top: '-10px',
+                      top: '-8px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                       background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
                       color: '#1a1a1a',
-                      padding: '12px 24px',
-                      borderRadius: '20px',
-                      fontSize: '14px',
+                      padding: '10px 20px',
+                      borderRadius: '15px',
+                      fontSize: '12px',
                       fontWeight: '700',
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
@@ -427,33 +463,58 @@ const DigitalMarketingStrategy = () => {
                     }}>
                       Most Popular
                     </div>
+
+                    {/* Icon */}
+                    <div style={{
+                      width: '80px',
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '15px auto 25px',
+                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                    }}>
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99l-2.54 3.38v5.63h2v8h2v-8h2zm-7.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-6H10l-2.54-7.63A1.5 1.5 0 0 0 6.04 8H3.5c-.8 0-1.54.37-2.01.99L.95 11.37v5.63h2v6h2v-6h2z"/>
+                      </svg>
+                    </div>
                     
                     <h3 style={{
-                      fontSize: '28px',
+                      fontSize: '24px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px',
-                      marginTop: '15px'
+                      marginBottom: '15px'
                     }}>
-                      Pro Package
+                      Medium Businesses (5-20)
                     </h3>
                     <p style={{
                       fontSize: '16px',
+                      color: '#FFC107',
+                      marginBottom: '20px',
+                      fontWeight: '500'
+                    }}>
+                      Pro Package
+                    </p>
+                    <p style={{
+                      fontSize: '14px',
                       color: '#ffffff',
-                      lineHeight: '1.7',
-                      marginBottom: '25px',
-                      opacity: 0.95
+                      lineHeight: '1.6',
+                      marginBottom: '20px',
+                      opacity: 0.95,
+                      flex: 1
                     }}>
                       For medium businesses (5–20). Adds Google and Facebook ads management, advanced email marketing, and complex automations with GHL CRM.
                     </p>
                     <div style={{
-                      fontSize: '18px',
+                      fontSize: '16px',
                       fontWeight: '600',
                       color: '#1a1a1a',
                       marginBottom: '10px',
-                      padding: '15px 20px',
+                      padding: '12px 15px',
                       background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                      borderRadius: '12px',
+                      borderRadius: '10px',
                       textAlign: 'center',
                       boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
                     }}>
@@ -465,24 +526,28 @@ const DigitalMarketingStrategy = () => {
                   <div style={{
                     background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
                     borderRadius: '24px',
-                    padding: '45px 35px',
+                    padding: '35px 25px',
                     border: '2px solid rgba(255,193,7,0.15)',
                     backdropFilter: 'blur(15px)',
                     boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    minHeight: '480px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    textAlign: 'center'
                   }}>
                     {/* Package badge */}
                     <div style={{
                       position: 'absolute',
-                      top: '20px',
-                      right: '20px',
+                      top: '15px',
+                      right: '15px',
                       background: 'linear-gradient(135deg, rgba(255,193,7,0.2) 0%, rgba(255,213,79,0.1) 100%)',
                       color: '#FFC107',
-                      padding: '8px 16px',
-                      borderRadius: '20px',
-                      fontSize: '12px',
+                      padding: '6px 12px',
+                      borderRadius: '15px',
+                      fontSize: '11px',
                       fontWeight: '600',
                       textTransform: 'uppercase',
                       letterSpacing: '0.5px',
@@ -490,32 +555,58 @@ const DigitalMarketingStrategy = () => {
                     }}>
                       Premium
                     </div>
+
+                    {/* Icon */}
+                    <div style={{
+                      width: '80px',
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 25px',
+                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                    }}>
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                      </svg>
+                    </div>
                     
                     <h3 style={{
-                      fontSize: '28px',
+                      fontSize: '24px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '15px'
                     }}>
-                      Enterprise Package
+                      Large Businesses (20+)
                     </h3>
                     <p style={{
                       fontSize: '16px',
+                      color: '#FFC107',
+                      marginBottom: '20px',
+                      fontWeight: '500'
+                    }}>
+                      Enterprise Package
+                    </p>
+                    <p style={{
+                      fontSize: '14px',
                       color: '#ffffff',
-                      lineHeight: '1.7',
-                      marginBottom: '25px',
-                      opacity: 0.9
+                      lineHeight: '1.6',
+                      marginBottom: '20px',
+                      opacity: 0.9,
+                      flex: 1
                     }}>
                       For large businesses (20+). Full custom website, SEO optimization, multi-channel ads (Google, Facebook), and advanced GHL CRM automations.
                     </p>
                     <div style={{
-                      fontSize: '18px',
+                      fontSize: '16px',
                       fontWeight: '600',
                       color: '#FFC107',
                       marginBottom: '10px',
-                      padding: '15px 20px',
+                      padding: '12px 15px',
                       background: 'rgba(255,193,7,0.1)',
-                      borderRadius: '12px',
+                      borderRadius: '10px',
                       textAlign: 'center'
                     }}>
                       Drive 25% revenue growth with tailored strategies.
