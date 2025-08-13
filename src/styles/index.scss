@@ -106,3 +106,335 @@
     font-size: 18px;
   }
 }
+
+// Custom styles for About page
+.cs_ternary_color {
+  color: #ffffff !important;
+}
+
+// Ensure all text in about page is white
+p {
+  color: #ffffff;
+}
+
+// Override any gray text colors
+.text-muted,
+.cs_text_muted,
+.cs_secondary_color {
+  color: #ffffff !important;
+}
+
+.cs_team_card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.cs_team_img_wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.cs_trust_card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  h4 {
+    color: #ffd700;
+    font-weight: 700;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
+.cs_blockquote {
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+  padding: 25px 30px;
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 15px 15px 0;
+  position: relative;
+  backdrop-filter: blur(10px);
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: serif;
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ffffff;
+  }
+}
+
+.cs_contact_form {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+
+  .cs_form_field {
+    width: 100%;
+    padding: 18px 25px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--cs-white);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.3s ease;
+    }
+
+    &:focus::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  textarea.cs_form_field {
+    resize: vertical;
+    min-height: 140px;
+    font-family: inherit;
+  }
+}
+
+.cs_placeholder_img {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .text-muted {
+    color: #ffffff !important;
+    font-weight: 500;
+  }
+}
+
+// Enhanced section styling
+.cs_section_title {
+  position: relative;
+  color: #ffd700;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffd700;
+    border-radius: 2px;
+  }
+}
+
+.cs_section_title_2 {
+  color: #ffd700;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 2px;
+  }
+}
+
+// Button enhancements
+.cs_btn {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  color: #ffffff !important;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  span {
+    color: #ffffff !important;
+  }
+}
+
+// Animated backgrounds
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.cs_primary_bg {
+  position: relative;
+  background: #1a1a1a;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 171, 0, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+// Mission section special styling
+.mission-section {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffc107' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+}
+
+// Team section cards grid enhancement
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+// Founder section special layout
+.founder-section {
+  .cs_team_img_wrapper {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      background: #ffc107;
+      border-radius: 15px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+  }
+}
+
+// Special results section styling (like in the image)
+.results-section {
+  position: relative;
+  background: #1a1a1a;
+  border-left: 6px solid #ffd700;
+  padding: 40px;
+  margin: 40px 0;
+  border-radius: 0 15px 15px 0;
+
+  h3 {
+    color: #ffd700;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+// Responsive enhancements
+@media (max-width: 768px) {
+  .cs_team_card {
+    padding: 20px;
+  }
+  
+  .cs_trust_card {
+    margin-bottom: 20px;
+  }
+  
+  .cs_contact_form {
+    padding: 25px;
+  }
+
+  .results-section {
+    padding: 25px;
+    border-left-width: 4px;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}

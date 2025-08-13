@@ -42,10 +42,10 @@ const index = () => {
             {/* <ServiceHomeOne /> */}
             {/* <AwardsHomeOne /> */}
             <Testimonial />
-            {/* <TrustedByBusiness /> */}
-            {/* <VideoHomeOne setIsVideoOpen={setIsVideoOpen} /> */}
-            {/* <BlogHomeOne /> */}
-            {/* <FaqArea /> */}
+            <TrustedByBusiness />
+            <VideoHomeOne setIsVideoOpen={setIsVideoOpen} />
+            <BlogHomeOne />
+             <FaqArea /> 
             <CTA
               title="Ready to Transform Your Business?"
               subtitle="Join forward-thinking business owners who have eliminated chaos and achieved scalable growth with our proven digital marketing strategies, CRM optimization, and business automation solutions."

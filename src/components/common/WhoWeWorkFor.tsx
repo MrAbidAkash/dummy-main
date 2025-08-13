@@ -37,10 +37,9 @@ const WhoWeWorkFor = () => {
   return (
     <section
       style={{
-        padding: "80px 0 20px 0",
-        backgroundColor: "var(--drak-color)",
+        padding: "80px 0 100px 0",
+        backgroundColor: "#2a2a2a",
         position: "relative",
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/background-pattern.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -65,7 +64,7 @@ const WhoWeWorkFor = () => {
               <p
                 style={{
                   fontSize: "18px",
-                  color: "var(--body-color)",
+                  color: "#cccccc",
                   maxWidth: "600px",
                   margin: "0 auto",
                   fontWeight: "500",

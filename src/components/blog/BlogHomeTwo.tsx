@@ -17,7 +17,7 @@ const BlogHomeTwo = ({ style_2 }: any) => {
             <div className="cs_section_heading_text">
               
               <h2 className="cs_section_title anim_heading_title">
-                New Day New Inspiration
+              
               </h2>
             </div>
             <div className="cs_section_heading_right cs_btn_anim">
