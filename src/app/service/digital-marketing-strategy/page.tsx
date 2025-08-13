@@ -129,24 +129,60 @@ const DigitalMarketingStrategy = () => {
                 }}>
                   {/* Benefit 1 */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                    borderRadius: '20px',
+                    padding: '50px 35px',
+                    border: '1px solid rgba(255,193,7,0.2)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
+                    {/* Icon background */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '-20px',
+                      right: '-20px',
+                      width: '100px',
+                      height: '100px',
+                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
+                      borderRadius: '50%',
+                      opacity: 0.7
+                    }}></div>
+                    
+                    {/* Icon */}
+                    <div style={{
+                      width: '60px',
+                      height: '60px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '25px',
+                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                    }}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '26px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '20px',
+                      position: 'relative'
                     }}>
                       Save Time & Money
                     </h3>
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6'
+                      lineHeight: '1.7',
+                      opacity: 0.9
                     }}>
                       Automate email marketing and lead tracking to save 10–15 hours weekly and cut costs by 20%.
                     </p>
@@ -154,24 +190,60 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Benefit 2 */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                    borderRadius: '20px',
+                    padding: '50px 35px',
+                    border: '1px solid rgba(255,193,7,0.2)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
+                    {/* Icon background */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '-20px',
+                      right: '-20px',
+                      width: '100px',
+                      height: '100px',
+                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
+                      borderRadius: '50%',
+                      opacity: 0.7
+                    }}></div>
+                    
+                    {/* Icon */}
+                    <div style={{
+                      width: '60px',
+                      height: '60px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '25px',
+                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                    }}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                      </svg>
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '26px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '20px',
+                      position: 'relative'
                     }}>
                       Drive Growth
                     </h3>
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6'
+                      lineHeight: '1.7',
+                      opacity: 0.9
                     }}>
                       SEO, Google ads, and Facebook ads boost visibility, leading to 25% revenue growth for your service business.
                     </p>
@@ -179,24 +251,60 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Benefit 3 */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                    borderRadius: '20px',
+                    padding: '50px 35px',
+                    border: '1px solid rgba(255,193,7,0.2)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
+                    {/* Icon background */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '-20px',
+                      right: '-20px',
+                      width: '100px',
+                      height: '100px',
+                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
+                      borderRadius: '50%',
+                      opacity: 0.7
+                    }}></div>
+                    
+                    {/* Icon */}
+                    <div style={{
+                      width: '60px',
+                      height: '60px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '25px',
+                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                    }}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '26px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '20px',
+                      position: 'relative'
                     }}>
                       Tailored for Australia
                     </h3>
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6'
+                      lineHeight: '1.7',
+                      opacity: 0.9
                     }}>
                       Localized strategies for businesses in Sydney, Melbourne, Brisbane, and beyond, ensuring relevance and compliance.
                     </p>
@@ -224,20 +332,41 @@ const DigitalMarketingStrategy = () => {
 
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-                  gap: '40px',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+                  gap: '30px',
                   marginTop: '60px'
                 }}>
                   {/* Starter Package */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                    borderRadius: '24px',
+                    padding: '45px 35px',
+                    border: '2px solid rgba(255,193,7,0.15)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    transition: 'all 0.3s ease',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
+                    {/* Package badge */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '20px',
+                      right: '20px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      color: '#1a1a1a',
+                      padding: '8px 16px',
+                      borderRadius: '20px',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px'
+                    }}>
+                      Popular
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '28px',
                       fontWeight: '700',
                       color: '#FFC107',
                       marginBottom: '20px'
@@ -247,16 +376,21 @@ const DigitalMarketingStrategy = () => {
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6',
-                      marginBottom: '20px'
+                      lineHeight: '1.7',
+                      marginBottom: '25px',
+                      opacity: 0.9
                     }}>
                       Ideal for small businesses (1–5). Includes website build, basic SEO, email marketing setup, and GHL CRM integration for lead tracking.
                     </p>
                     <div style={{
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: '600',
                       color: '#FFC107',
-                      marginBottom: '10px'
+                      marginBottom: '10px',
+                      padding: '15px 20px',
+                      background: 'rgba(255,193,7,0.1)',
+                      borderRadius: '12px',
+                      textAlign: 'center'
                     }}>
                       Save 10 hours/week and boost leads by 15%.
                     </div>
@@ -264,33 +398,64 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Pro Package */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,193,7,0.08) 0%, rgba(255,213,79,0.03) 100%)',
+                    borderRadius: '24px',
+                    padding: '45px 35px',
+                    border: '2px solid rgba(255,193,7,0.3)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 25px 50px rgba(255,193,7,0.2), inset 0 1px 0 rgba(255,255,255,0.2)',
+                    transition: 'all 0.3s ease',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    transform: 'scale(1.05)'
                   }}>
+                    {/* Featured badge */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '-10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      color: '#1a1a1a',
+                      padding: '12px 24px',
+                      borderRadius: '20px',
+                      fontSize: '14px',
+                      fontWeight: '700',
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px',
+                      boxShadow: '0 8px 25px rgba(255,193,7,0.4)'
+                    }}>
+                      Most Popular
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '28px',
                       fontWeight: '700',
                       color: '#FFC107',
-                      marginBottom: '20px'
+                      marginBottom: '20px',
+                      marginTop: '15px'
                     }}>
                       Pro Package
                     </h3>
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6',
-                      marginBottom: '20px'
+                      lineHeight: '1.7',
+                      marginBottom: '25px',
+                      opacity: 0.95
                     }}>
                       For medium businesses (5–20). Adds Google and Facebook ads management, advanced email marketing, and complex automations with GHL CRM.
                     </p>
                     <div style={{
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: '600',
-                      color: '#FFC107',
-                      marginBottom: '10px'
+                      color: '#1a1a1a',
+                      marginBottom: '10px',
+                      padding: '15px 20px',
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      borderRadius: '12px',
+                      textAlign: 'center',
+                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
                     }}>
                       Cut costs by 20% and increase conversions by 20%.
                     </div>
@@ -298,14 +463,36 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Enterprise Package */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                    borderRadius: '24px',
+                    padding: '45px 35px',
+                    border: '2px solid rgba(255,193,7,0.15)',
+                    backdropFilter: 'blur(15px)',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    transition: 'all 0.3s ease',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
+                    {/* Package badge */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '20px',
+                      right: '20px',
+                      background: 'linear-gradient(135deg, rgba(255,193,7,0.2) 0%, rgba(255,213,79,0.1) 100%)',
+                      color: '#FFC107',
+                      padding: '8px 16px',
+                      borderRadius: '20px',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      border: '1px solid rgba(255,193,7,0.3)'
+                    }}>
+                      Premium
+                    </div>
+                    
                     <h3 style={{
-                      fontSize: '24px',
+                      fontSize: '28px',
                       fontWeight: '700',
                       color: '#FFC107',
                       marginBottom: '20px'
@@ -315,16 +502,21 @@ const DigitalMarketingStrategy = () => {
                     <p style={{
                       fontSize: '16px',
                       color: '#ffffff',
-                      lineHeight: '1.6',
-                      marginBottom: '20px'
+                      lineHeight: '1.7',
+                      marginBottom: '25px',
+                      opacity: 0.9
                     }}>
                       For large businesses (20+). Full custom website, SEO optimization, multi-channel ads (Google, Facebook), and advanced GHL CRM automations.
                     </p>
                     <div style={{
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: '600',
                       color: '#FFC107',
-                      marginBottom: '10px'
+                      marginBottom: '10px',
+                      padding: '15px 20px',
+                      background: 'rgba(255,193,7,0.1)',
+                      borderRadius: '12px',
+                      textAlign: 'center'
                     }}>
                       Drive 25% revenue growth with tailored strategies.
                     </div>
@@ -333,15 +525,33 @@ const DigitalMarketingStrategy = () => {
 
                 <div style={{
                   textAlign: 'center',
-                  marginTop: '40px',
-                  padding: '30px',
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '12px'
+                  marginTop: '50px',
+                  padding: '40px 35px',
+                  background: 'linear-gradient(145deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
+                  borderRadius: '20px',
+                  border: '1px solid rgba(255,193,7,0.2)',
+                  boxShadow: '0 15px 35px rgba(255,193,7,0.1)'
                 }}>
+                  <div style={{
+                    width: '50px',
+                    height: '50px',
+                    background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                  }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#1a1a1a">
+                      <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H18V0h-2v2H8V0H6v2H4.5C3.12 2 2.01 3.12 2.01 4.5L2 20.5C2 21.88 3.12 23 4.5 23h15c1.38 0 2.5-1.12 2.5-2.5V4.5C22 3.12 20.88 2 19.5 2zm0 18.5h-15V7h15v13.5z"/>
+                    </svg>
+                  </div>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: '20px',
                     color: '#ffffff',
-                    margin: '0'
+                    margin: '0',
+                    fontWeight: '500'
                   }}>
                     All packages include ongoing support to honor your business traditions while innovating for success.
                   </p>
