@@ -21,6 +21,7 @@ import VideoPopup from "@/components/modals/VideoPopup";
 import QuizModal from "@/components/quizModal/QuizModal";
 import FaqArea from "@/components/faq/FaqArea";
 import CTA from "@/components/common/CTA";
+import CRMComparison from "@/components/common/CRMComparison";
 
 // export const metadata = {
 //   title: "Leads360 - Digital  Creative Agency Next js Template",
@@ -36,23 +37,24 @@ const index = () => {
         <div id="smooth-content">
           <main>
             <HeroHomeOne />
+
             {/* <MarqueeAreaHomeOne /> */}
             <WhoWeWorkFor />
             <AboutHomeOne />
             {/* <ServiceHomeOne /> */}
             {/* <AwardsHomeOne /> */}
+            <CRMComparison />
             <Testimonial />
             <TrustedByBusiness />
             <VideoHomeOne setIsVideoOpen={setIsVideoOpen} />
             <BlogHomeOne />
-             <FaqArea /> 
+            <FaqArea />
             <CTA
               title="Ready to Transform Your Business?"
               subtitle="Join forward-thinking business owners who have eliminated chaos and achieved scalable growth with our proven digital marketing strategies, CRM optimization, and business automation solutions."
               buttonText="Start Your Digital Transformation"
             />
             {/* <SubscribeHomeOne /> */}
-
           </main>
           <FooterOne />
         </div>

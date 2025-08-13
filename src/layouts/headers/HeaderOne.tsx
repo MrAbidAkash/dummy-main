@@ -76,9 +76,30 @@ const menu_data: DataType[] = [
   {
     id: 3,
     title: "Services",
-    link: "/service",
-    has_dropdown: false,
-    
+    link: "",
+    has_dropdown: true,
+    sub_menu: [
+      {
+        id: 1,
+        title: "CRM",
+        link: "/service/crm-implementation",
+      },
+      {
+        id: 2,
+        title: "AI Solutions",
+        link: "/service/email-marketing",
+      },
+      {
+        id: 3,
+        title: "Digital Packages",
+        link: "/service/digital-marketing-strategy",
+      },
+      {
+        id: 4,
+        title: "Custom",
+        link: "/service/web-development-maintenance",
+      }
+    ]
   },
   {
     id: 4,
@@ -203,15 +224,47 @@ const HeaderOne = () => {
                       >
                         <Link href={item.link}>{item.title}</Link>
                         {item.has_dropdown && item.sub_menu && (
-                          <ul>
-                            {item.sub_menu.map((sub_item, index) => (
-                              <li key={index}>
-                                <Link href={sub_item.link}>
-                                  {sub_item.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
+                          <div className="services-dropdown">
+                            <div className="services-dropdown-header">
+                              <h3>SERVICES</h3>
+                            </div>
+                            <div className="services-grid">
+                              {item.sub_menu.map((sub_item, index) => (
+                                <div key={index} className="service-item">
+                                  <Link href={sub_item.link}>
+                                    <div className="service-icon">
+                                      {index === 0 && (
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                          <path d="M12 2L2 7v10c0 5.55 3.84 9.05 9 9.05s9-3.5 9-9.05V7l-10-5z"/>
+                                          <path d="M12 8v4l2 2"/>
+                                        </svg>
+                                      )}
+                                      {index === 1 && (
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                          <circle cx="12" cy="12" r="3"/>
+                                          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                        </svg>
+                                      )}
+                                      {index === 2 && (
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                          <line x1="8" y1="21" x2="16" y2="21"/>
+                                          <line x1="12" y1="17" x2="12" y2="21"/>
+                                        </svg>
+                                      )}
+                                      {index === 3 && (
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                          <path d="M12 2L2 7v10c0 5.55 3.84 9.05 9 9.05s9-3.5 9-9.05V7l-10-5z"/>
+                                          <path d="M8 11l2 2 4-4"/>
+                                        </svg>
+                                      )}
+                                    </div>
+                                    <h4>{sub_item.title}</h4>
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
                         )}
                       </li>
                     ))}
@@ -398,6 +451,126 @@ const HeaderOne = () => {
           </div>
         </div>
       </div>
+
+      {/* Services Dropdown Styles */}
+      <style jsx>{`
+        .services-dropdown {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #2d2d2d;
+          border-radius: 8px;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+          padding: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 1000;
+          min-width: 300px;
+          border: 1px solid #444;
+        }
+
+        .menu-item-has-children:hover .services-dropdown {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(10px);
+        }
+
+        .services-dropdown-header {
+          background: #1a1a1a;
+          color: white;
+          padding: 15px 20px;
+          border-radius: 8px 8px 0 0;
+          margin: 0;
+          border-bottom: 1px solid #444;
+        }
+
+        .services-dropdown-header h3 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          color: #ffffff;
+        }
+
+        .services-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0;
+          padding: 20px;
+          background: #2d2d2d;
+          border-radius: 0 0 8px 8px;
+        }
+
+        .service-item {
+          padding: 15px;
+          text-align: center;
+          transition: all 0.3s ease;
+          border-radius: 6px;
+          margin: 5px;
+          background: transparent;
+        }
+
+        .service-item:hover {
+          background: #3a3a3a;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2);
+        }
+
+        .service-item a {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+        }
+
+        .service-icon {
+          margin-bottom: 10px;
+          color: #FFC107;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .service-item h4 {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 600;
+          color: #ffffff;
+          transition: color 0.3s ease;
+        }
+
+        .service-item:hover h4 {
+          color: #FFC107;
+        }
+
+        .service-item:hover .service-icon {
+          transform: scale(1.1);
+          color: #FFC107;
+        }
+
+        /* Ensure menu item has relative positioning */
+        .menu-item-has-children {
+          position: relative;
+        }
+
+        /* Add arrow indicator */
+        .menu-item-has-children > a::after {
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 6px;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid currentColor;
+          transition: transform 0.3s ease;
+        }
+
+        .menu-item-has-children:hover > a::after {
+          transform: rotate(180deg);
+        }
+      `}</style>
     </>
   );
 };
