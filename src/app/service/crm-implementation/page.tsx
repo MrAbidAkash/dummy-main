@@ -15,82 +15,37 @@ const CRMImplementation = () => {
         <div id="smooth-content">
           <main>
             {/* Hero Section */}
-            <section
-              className="cs_hero cs_style1 cs_center"
-              style={{
-                minHeight: "100vh",
-                display: "flex",
-                alignItems: "flex-end",
-                paddingBottom: "15vh",
-                background: "linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%)",
-                position: "relative",
-                overflow: "hidden",
-                padding: "60px 0"
-              }}
-            >
-              {/* CRM Background Image */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundImage: "url('/assets/img/blog (7).jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  zIndex: 0
-                }}
-              ></div>
-
-              {/* Dark Overlay */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: "linear-gradient(135deg, rgba(42, 42, 42, 0.85) 0%, rgba(26, 26, 26, 0.9) 100%)",
-                  zIndex: 1
-                }}
-              ></div>
-
-              {/* Geometric Background Pattern */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  opacity: 0.05,
-                  background: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20S-10 18.954-10 30s8.954 20 20 20 20-8.954 20-20M10 30c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat`,
-                  zIndex: 2
-                }}
-              ></div>
-
-              {/* Animated Lines */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cpath d='M0 300 Q250 200 500 300 T1000 300 L1000 0 L0 0 Z' fill='%23ffffff' opacity='0.02'/%3E%3Cpath d='M0 700 Q250 600 500 700 T1000 700 L1000 1000 L0 1000 Z' fill='%23ffffff' opacity='0.02'/%3E%3C/svg%3E")`,
-                  backgroundSize: "100% 100%",
-                  zIndex: 2
-                }}
-              ></div>
+            <section style={{
+              minHeight: '100vh',
+              background: 'linear-gradient(135deg, rgba(26,26,26,0.8) 0%, rgba(45,45,45,0.8) 100%), url("/assets/img/blog (3).jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              overflow: 'hidden',
+              paddingTop: '120px',
+              paddingBottom: '80px'
+            }}>
+              {/* Background overlay */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'rgba(0,0,0,0.6)',
+                zIndex: 1
+              }}></div>
 
               <div className="container" style={{ position: "relative", zIndex: 10 }}>
-                <div className="cs_hero_text" style={{ textAlign: "center", maxWidth: "900px", margin: "0 auto" }}>
+                <div className="cs_hero_text" style={{ textAlign: "center", maxWidth: "900px", margin: "0 auto", paddingTop: "60px" }}>
                   {/* Main Title */}
                   <h1
                     style={{
-                      fontSize: "clamp(40px, 6vw, 72px)",
+                      fontSize: "clamp(28px, 4.5vw, 48px)",
                       fontWeight: "800",
                       lineHeight: "1.1",
                       marginBottom: "30px",
@@ -104,7 +59,7 @@ const CRMImplementation = () => {
                   {/* Subtitle */}
                   <p
                     style={{
-                      fontSize: "clamp(16px, 2vw, 20px)",
+                      fontSize: "clamp(13px, 1.6vw, 16px)",
                       lineHeight: "1.6",
                       color: "#ffffff",
                       marginBottom: "50px",
