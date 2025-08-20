@@ -7,19 +7,19 @@ const work_for_data = [
     id: 1,
     title: "Small Businesses (1–5)",
     subtitle: "Small Business. Team of 1–5.",
-    fullDescription: "You're a tradie or clinician wearing all the hats—quoting, chasing leads, managing bookings. Admin chaos and missed opportunities are slowing your growth.\n\nYou're constantly switching between calls, quotes, and bookings while manual processes eat up valuable time. Every missed call could be a lost customer, and you're too busy working IN the business to work ON it.",
+    fullDescription: "**Your Challenges:**\n• Wearing all the hats—quoting, leads, bookings\n• Admin chaos eating up time\n• Manual processes everywhere\n\n**The Impact:**\n• Missed calls = lost customers\n• Too busy working IN vs ON business\n• Growth opportunities slipping away",
   },
   {
     id: 2,
     title: "Medium Businesses (5–20)",
     subtitle: "Medium Business. 5–20 staff.",
-    fullDescription: "Your team is steady, but leads slip through the cracks, and marketing is inconsistent. Disorganized processes are stretching your team thin.\n\nInconsistent lead management across team members means marketing efforts lack coordination. Your team is using different systems and processes, making it difficult to maintain service quality as you scale.",
+    fullDescription: "**Your Challenges:**\n• Leads slipping through cracks\n• Inconsistent marketing\n• Different systems per team member\n\n**The Impact:**\n• Poor team coordination\n• Hard to maintain quality at scale\n• Marketing efforts uncoordinated",
   },
   {
     id: 3,
     title: "Large Businesses (20+)",
     subtitle: "Large Businesses (20+)",
-    fullDescription: "Your service business is growing fast, but disconnected systems and unclear reporting create chaos. Complexity is slowing down decision-making.\n\nMultiple systems that don't communicate create fragmented customer data across platforms. This makes it difficult to get real-time business insights while manual processes break down at scale.",
+    fullDescription: "**Your Challenges:**\n• Disconnected systems\n• Unclear reporting\n• Manual processes breaking down\n\n**The Impact:**\n• Fragmented customer data\n• No real-time insights\n• Slow decision-making",
   },
 ];
 
@@ -200,26 +200,30 @@ const WhoWeWorkFor = () => {
                       background: "#1a1a1a",
                       border: "1px solid rgba(254, 202, 21, 0.2)",
                       borderRadius: "20px",
-                      padding: "40px 25px",
+                      padding: "30px 20px",
                       display: "flex",
                       flexDirection: "column",
-                      alignItems: "center",
-                      textAlign: "center",
+                      alignItems: "flex-start",
+                      textAlign: "left",
                       transform: "rotateY(180deg)",
+                      overflow: "auto",
                     }}
                   >
-                    <p
+                    <div
                       style={{
-                        fontSize: "16px",
+                        fontSize: "14px",
                         color: "#ffffff",
-                        lineHeight: "1.6",
-                        marginBottom: "20px",
-                        whiteSpace: "pre-line",
+                        lineHeight: "1.5",
+                        width: "100%",
                         flex: "1",
                       }}
-                    >
-                      {item.fullDescription}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: item.fullDescription
+                          .replace(/\*\*(.*?)\*\*/g, '<strong style="color: #FECA15; font-size: 15px; display: block; margin: 12px 0 8px 0;">$1</strong>')
+                          .replace(/• /g, '<span style="color: #FECA15; margin-right: 6px;">•</span> ')
+                          .replace(/\n/g, '<br />')
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -233,8 +237,10 @@ const WhoWeWorkFor = () => {
           @media (max-width: 768px) {
             .cs_service_card {
               margin-bottom: 20px !important;
-              padding: 30px 20px !important;
-              minHeight: 350px !important;
+              minHeight: 380px !important;
+            }
+            .cs_service_card > div {
+              height: 380px !important;
             }
             .cs_service_card h3 {
               font-size: 20px !important;
@@ -245,18 +251,21 @@ const WhoWeWorkFor = () => {
             .cs_service_card h4 {
               font-size: 16px !important;
             }
-            .cs_service_card p {
-              font-size: 15px !important;
+            .cs_service_card div[style*="transform: rotateY(180deg)"] {
+              padding: 25px 18px !important;
+              font-size: 13px !important;
             }
-            .cs_service_card .cs_round_btn {
-              padding: 8px 15px !important;
+            .cs_service_card div[style*="transform: rotateY(180deg)"] strong {
               font-size: 14px !important;
+              margin: 10px 0 6px 0 !important;
             }
           }
           @media (max-width: 480px) {
             .cs_service_card {
-              minHeight: 300px !important;
-              padding: 20px 15px !important;
+              minHeight: 350px !important;
+            }
+            .cs_service_card > div {
+              height: 350px !important;
             }
             .cs_section_title {
               font-size: 28px !important;
@@ -267,12 +276,13 @@ const WhoWeWorkFor = () => {
             .cs_service_card h4 {
               font-size: 14px !important;
             }
-            .cs_service_card p {
-              font-size: 14px !important;
-            }
-            .cs_service_card .cs_round_btn {
-              padding: 6px 12px !important;
+            .cs_service_card div[style*="transform: rotateY(180deg)"] {
+              padding: 20px 15px !important;
               font-size: 12px !important;
+            }
+            .cs_service_card div[style*="transform: rotateY(180deg)"] strong {
+              font-size: 13px !important;
+              margin: 8px 0 5px 0 !important;
             }
           }
         `,
