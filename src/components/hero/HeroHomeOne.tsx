@@ -217,11 +217,12 @@ const HeroHomeOne = () => {
         __html: `
           @media (max-width: 768px) {
             .cs_hero {
-              height: 85vh !important;
+              height: 70vh !important;
             }
             .cs_hero .container {
               justify-content: flex-start !important;
-              padding-top: 15vh !important;
+              padding-top: 12vh !important;
+              padding-bottom: 5vh !important;
             }
             .cs_hero_text {
               max-width: 95% !important;
@@ -242,14 +243,18 @@ const HeroHomeOne = () => {
               height: 55px !important;
               font-size: 17px !important;
             }
+            .cs_height_30 {
+              height: 20px !important;
+            }
           }
           @media (max-width: 480px) {
             .cs_hero {
-              height: 80vh !important;
+              height: 65vh !important;
             }
             .cs_hero .container {
               justify-content: flex-start !important;
-              padding-top: 12vh !important;
+              padding-top: 10vh !important;
+              padding-bottom: 3vh !important;
             }
             .cs_hero_text {
               max-width: 98% !important;
@@ -257,7 +262,7 @@ const HeroHomeOne = () => {
             }
             .cs_hero_title {
               font-size: 34px !important;
-              margin-bottom: 18px !important;
+              margin-bottom: 15px !important;
               line-height: 1.1 !important;
             }
             .cs_hero_subtitle {
@@ -271,26 +276,34 @@ const HeroHomeOne = () => {
               height: 52px !important;
               font-size: 16px !important;
             }
+            .cs_height_30 {
+              height: 15px !important;
+            }
           }
           @media (max-width: 360px) {
             .cs_hero {
-              height: 75vh !important;
+              height: 60vh !important;
             }
             .cs_hero .container {
-              padding-top: 10vh !important;
+              padding-top: 8vh !important;
+              padding-bottom: 2vh !important;
             }
             .cs_hero_title {
               font-size: 28px !important;
-              margin-bottom: 15px !important;
+              margin-bottom: 12px !important;
             }
             .cs_hero_subtitle {
               font-size: 15px !important;
               padding: 0 5px !important;
+              margin-bottom: 18px !important;
             }
             .cs_hero_btn.cs_round_btn {
               width: 160px !important;
               height: 48px !important;
               font-size: 15px !important;
+            }
+            .cs_height_30 {
+              height: 10px !important;
             }
           }
         `,
