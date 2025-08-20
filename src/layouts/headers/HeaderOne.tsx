@@ -113,6 +113,12 @@ const menu_data: DataType[] = [
     link: "/contact",
     has_dropdown: false,
   },
+  {
+    id: 6,
+    title: "Demo",
+    link: "/slide-animation",
+    has_dropdown: false,
+  },
   
  
   
