@@ -139,6 +139,7 @@ const HeroHomeOne = () => {
                   textAlign: "center",
                   padding: "20px",
                   maxWidth: "800px",
+                  width: "100%",
                 }}
               >
                 <div
@@ -216,38 +217,80 @@ const HeroHomeOne = () => {
         __html: `
           @media (max-width: 768px) {
             .cs_hero {
-              height: 80vh !important;
+              height: 85vh !important;
+            }
+            .cs_hero .container {
+              justify-content: flex-start !important;
+              padding-top: 15vh !important;
+            }
+            .cs_hero_text {
+              max-width: 95% !important;
+              padding: 15px !important;
             }
             .cs_hero_title {
-              font-size: 32px !important;
-              margin-bottom: 15px !important;
+              font-size: 42px !important;
+              margin-bottom: 20px !important;
+              line-height: 1.1 !important;
             }
             .cs_hero_subtitle {
-              font-size: 16px !important;
+              font-size: 18px !important;
               padding: 0 10px !important;
+              margin-bottom: 25px !important;
             }
             .cs_hero_btn.cs_round_btn {
-              width: 160px !important;
-              height: 50px !important;
-              font-size: 16px !important;
+              width: 180px !important;
+              height: 55px !important;
+              font-size: 17px !important;
             }
           }
           @media (max-width: 480px) {
             .cs_hero {
-              height: 70vh !important;
+              height: 80vh !important;
+            }
+            .cs_hero .container {
+              justify-content: flex-start !important;
+              padding-top: 12vh !important;
+            }
+            .cs_hero_text {
+              max-width: 98% !important;
+              padding: 10px !important;
             }
             .cs_hero_title {
-              font-size: 24px !important;
-              margin-bottom: 10px !important;
+              font-size: 34px !important;
+              margin-bottom: 18px !important;
+              line-height: 1.1 !important;
             }
             .cs_hero_subtitle {
-              font-size: 14px !important;
+              font-size: 16px !important;
+              padding: 0 8px !important;
+              margin-bottom: 20px !important;
+              line-height: 1.4 !important;
+            }
+            .cs_hero_btn.cs_round_btn {
+              width: 170px !important;
+              height: 52px !important;
+              font-size: 16px !important;
+            }
+          }
+          @media (max-width: 360px) {
+            .cs_hero {
+              height: 75vh !important;
+            }
+            .cs_hero .container {
+              padding-top: 10vh !important;
+            }
+            .cs_hero_title {
+              font-size: 28px !important;
+              margin-bottom: 15px !important;
+            }
+            .cs_hero_subtitle {
+              font-size: 15px !important;
               padding: 0 5px !important;
             }
             .cs_hero_btn.cs_round_btn {
-              width: 140px !important;
-              height: 45px !important;
-              font-size: 14px !important;
+              width: 160px !important;
+              height: 48px !important;
+              font-size: 15px !important;
             }
           }
         `,
