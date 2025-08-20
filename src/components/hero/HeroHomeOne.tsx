@@ -75,7 +75,7 @@ const HeroHomeOne = () => {
             <div
               className="container"
               style={{
-                height: "100vh",
+                height: "100%",
                 maxWidth: "1200px",
                 position: "relative",
                 zIndex: "2",
@@ -84,6 +84,7 @@ const HeroHomeOne = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "0 15px",
+                minHeight: "100%",
               }}
             >
               <style dangerouslySetInnerHTML={{
@@ -217,96 +218,101 @@ const HeroHomeOne = () => {
         __html: `
           @media (max-width: 768px) {
             .cs_hero {
-              height: 45vh !important;
+              height: 50vh !important;
+              min-height: 400px !important;
             }
             .cs_hero .container {
-              justify-content: flex-start !important;
-              padding-top: 5vh !important;
-              padding-bottom: 1vh !important;
+              justify-content: center !important;
+              padding: 20px 15px !important;
+              height: 100% !important;
             }
             .cs_hero_text {
               max-width: 95% !important;
-              padding: 10px !important;
+              padding: 15px !important;
+              text-align: center !important;
             }
             .cs_hero_title {
-              font-size: 42px !important;
-              margin-bottom: 10px !important;
-              line-height: 1.1 !important;
+              font-size: 32px !important;
+              margin-bottom: 15px !important;
+              line-height: 1.2 !important;
             }
             .cs_hero_subtitle {
-              font-size: 18px !important;
+              font-size: 16px !important;
               padding: 0 10px !important;
-              margin-bottom: 15px !important;
+              margin-bottom: 20px !important;
+              line-height: 1.4 !important;
             }
             .cs_hero_btn.cs_round_btn {
               width: 180px !important;
               height: 55px !important;
-              font-size: 17px !important;
+              font-size: 16px !important;
             }
             .cs_height_30 {
-              height: 8px !important;
+              height: 15px !important;
             }
           }
           @media (max-width: 480px) {
             .cs_hero {
-              height: 40vh !important;
+              height: 45vh !important;
+              min-height: 350px !important;
             }
             .cs_hero .container {
-              justify-content: flex-start !important;
-              padding-top: 4vh !important;
-              padding-bottom: 1vh !important;
+              justify-content: center !important;
+              padding: 15px 10px !important;
+              height: 100% !important;
             }
             .cs_hero_text {
               max-width: 98% !important;
-              padding: 8px !important;
+              padding: 10px !important;
+              text-align: center !important;
             }
             .cs_hero_title {
-              font-size: 34px !important;
-              margin-bottom: 8px !important;
-              line-height: 1.1 !important;
+              font-size: 28px !important;
+              margin-bottom: 12px !important;
+              line-height: 1.2 !important;
             }
             .cs_hero_subtitle {
-              font-size: 16px !important;
+              font-size: 15px !important;
               padding: 0 8px !important;
-              margin-bottom: 12px !important;
+              margin-bottom: 18px !important;
               line-height: 1.4 !important;
             }
             .cs_hero_btn.cs_round_btn {
               width: 170px !important;
-              height: 52px !important;
-              font-size: 16px !important;
+              height: 50px !important;
+              font-size: 15px !important;
             }
             .cs_height_30 {
-              height: 5px !important;
+              height: 12px !important;
             }
           }
           @media (max-width: 360px) {
             .cs_hero {
-              height: 35vh !important;
+              height: 40vh !important;
+              min-height: 320px !important;
             }
             .cs_hero .container {
-              padding-top: 3vh !important;
-              padding-bottom: 0.5vh !important;
+              padding: 10px 8px !important;
             }
             .cs_hero_text {
-              padding: 5px !important;
+              padding: 8px !important;
             }
             .cs_hero_title {
-              font-size: 28px !important;
-              margin-bottom: 6px !important;
+              font-size: 24px !important;
+              margin-bottom: 10px !important;
             }
             .cs_hero_subtitle {
-              font-size: 15px !important;
+              font-size: 14px !important;
               padding: 0 5px !important;
-              margin-bottom: 10px !important;
+              margin-bottom: 15px !important;
             }
             .cs_hero_btn.cs_round_btn {
               width: 160px !important;
               height: 48px !important;
-              font-size: 15px !important;
+              font-size: 14px !important;
             }
             .cs_height_30 {
-              height: 3px !important;
+              height: 10px !important;
             }
           }
         `,
