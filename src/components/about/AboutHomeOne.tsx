@@ -448,235 +448,17 @@ const AboutHomeOne = () => {
                   height: "350px",
                   borderRadius: "15px",
                   overflow: "hidden",
-                  background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+                  backgroundImage: `url(${item.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}>
-                  {/* Person with Laptop - Main Image */}
+                  {/* Image overlay for better contrast */}
                   <div style={{
                     position: "absolute",
-                    left: "20px",
-                    bottom: "0",
-                    width: "60%",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "flex-end",
-                    zIndex: 1,
-                  }}>
-                    <div
-                      ref={(el) => {
-                        if (el) imageRefs.current[index] = el;
-                      }}
-                      style={{
-                        width: "100%",
-                        height: "85%",
-                        backgroundImage: `url(${item.img})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center top",
-                        borderRadius: "15px 15px 0 0",
-                        position: "relative",
-                      }}
-                    >
-                      {/* Person Image Overlay */}
-                      <div style={{
-                        position: "absolute",
-                        inset: "0",
-                        background: "linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%)",
-                        borderRadius: "15px 15px 0 0",
-                      }}></div>
-                    </div>
-                  </div>
-
-                  {/* CRM Comparison Chart - Right Side */}
-                  <div style={{
-                    position: "absolute",
-                    top: "20px",
-                    right: "20px",
-                    width: "42%",
-                    height: "calc(100% - 40px)",
-                    background: "rgba(255,255,255,0.98)",
-                    padding: "24px",
-                    borderRadius: "16px",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255,255,255,0.3)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                    animation: "fadeInScale 1s ease-out 0.8s forwards",
-                    opacity: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    overflow: "hidden",
-                    zIndex: 2,
-                  }}>
-                    {/* Chart Title */}
-                    <div style={{
-                      textAlign: "center",
-                      marginBottom: "20px",
-                      flexShrink: 0,
-                    }}>
-                      <h4 style={{
-                        color: "#2c2c2c",
-                        fontSize: "16px",
-                        fontWeight: "700",
-                        margin: "0 0 12px 0",
-                        lineHeight: "1.3",
-                      }}>
-                        CRM Benefits for Tradies & Small Businesses
-                      </h4>
-                      <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: "16px",
-                        fontSize: "11px",
-                        fontWeight: "600",
-                      }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                          <div style={{ width: "14px", height: "10px", background: "#ff6b6b", borderRadius: "3px" }}></div>
-                          <span style={{ color: "#666" }}>Manual Processes</span>
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                          <div style={{ width: "14px", height: "10px", background: "#ffd93d", borderRadius: "3px" }}></div>
-                          <span style={{ color: "#666" }}>Custom CRM</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Chart Sections Container */}
-                    <div style={{
-                      flex: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                      gap: "24px",
-                      minHeight: 0,
-                    }}>
-                      {/* Admin Time */}
-                      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                        <div style={{ 
-                          fontSize: "13px", 
-                          fontWeight: "600", 
-                          color: "#333", 
-                          marginBottom: "12px", 
-                          textAlign: "left",
-                        }}>
-                          Admin Time (Weekly)
-                        </div>
-                        <div style={{ 
-                          display: "flex", 
-                          alignItems: "center", 
-                          gap: "12px",
-                        }}>
-                          <div style={{
-                            minWidth: "60px",
-                            height: "32px",
-                            background: "#ff6b6b",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 107, 107, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "white", fontWeight: "700" }}>20h</span>
-                          </div>
-                          <div style={{
-                            minWidth: "40px",
-                            height: "32px",
-                            background: "#ffd93d",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 217, 61, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "#333", fontWeight: "700" }}>6h</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Lead Conversion Rate */}
-                      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                        <div style={{ 
-                          fontSize: "13px", 
-                          fontWeight: "600", 
-                          color: "#333", 
-                          marginBottom: "12px", 
-                          textAlign: "left",
-                        }}>
-                          Lead Conversion Rate
-                        </div>
-                        <div style={{ 
-                          display: "flex", 
-                          alignItems: "center", 
-                          gap: "12px",
-                        }}>
-                          <div style={{
-                            minWidth: "50px",
-                            height: "32px",
-                            background: "#ff6b6b",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 107, 107, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "white", fontWeight: "700" }}>15%</span>
-                          </div>
-                          <div style={{
-                            minWidth: "60px",
-                            height: "32px",
-                            background: "#ffd93d",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 217, 61, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "#333", fontWeight: "700" }}>35%</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Missed Leads */}
-                      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                        <div style={{ 
-                          fontSize: "13px", 
-                          fontWeight: "600", 
-                          color: "#333", 
-                          marginBottom: "12px", 
-                          textAlign: "left",
-                        }}>
-                          Missed Leads
-                        </div>
-                        <div style={{ 
-                          display: "flex", 
-                          alignItems: "center", 
-                          gap: "12px",
-                        }}>
-                          <div style={{
-                            minWidth: "55px",
-                            height: "32px",
-                            background: "#ff6b6b",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 107, 107, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "white", fontWeight: "700" }}>30%</span>
-                          </div>
-                          <div style={{
-                            minWidth: "35px",
-                            height: "32px",
-                            background: "#ffd93d",
-                            borderRadius: "6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            boxShadow: "0 2px 8px rgba(255, 217, 61, 0.3)",
-                          }}>
-                            <span style={{ fontSize: "12px", color: "#333", fontWeight: "700" }}>5%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    inset: "0",
+                    background: "linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%)",
+                    borderRadius: "15px",
+                  }}></div>
 
                   {/* Templates Count Badge */}
                   <div style={{
@@ -689,7 +471,7 @@ const AboutHomeOne = () => {
                     border: "1px solid rgba(254,202,21,0.3)",
                     animation: "fadeInScale 1s ease-out 1.4s forwards",
                     opacity: 0,
-                    zIndex: 2,
+                    zIndex: 3,
                   }}>
                     <div style={{
                       color: "#333",
@@ -706,6 +488,375 @@ const AboutHomeOne = () => {
                       textAlign: "center",
                     }}>
                       50+
+                    </div>
+                  </div>
+
+                  {/* CRM Comparison Chart - Bottom Left Corner */}
+                  <div style={{
+                    position: "absolute",
+                    bottom: "15px",
+                    left: "15px",
+                    width: "340px",
+                    height: "180px",
+                    background: "rgba(255,255,255,0.98)",
+                    padding: "16px",
+                    borderRadius: "12px",
+                    backdropFilter: "blur(20px)",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                    animation: "fadeInScale 1s ease-out 0.8s forwards",
+                    opacity: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    overflow: "hidden",
+                    zIndex: 2,
+                  }}>
+                    {/* Chart Title */}
+                    <div style={{
+                      textAlign: "center",
+                      marginBottom: "10px",
+                      flexShrink: 0,
+                    }}>
+                      <h4 style={{
+                        color: "#2c2c2c",
+                        fontSize: "12px",
+                        fontWeight: "700",
+                        margin: "0 0 6px 0",
+                        lineHeight: "1.3",
+                      }}>
+                        CRM Benefits for Tradies & Small Businesses
+                      </h4>
+                      <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "10px",
+                        fontSize: "8px",
+                        fontWeight: "600",
+                      }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+                          <div style={{ width: "8px", height: "5px", background: "#ff6b6b", borderRadius: "1px" }}></div>
+                          <span style={{ color: "#666" }}>Manual Processes</span>
+                        </div>
+                        <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+                          <div style={{ width: "8px", height: "5px", background: "#ffd93d", borderRadius: "1px" }}></div>
+                          <span style={{ color: "#666" }}>Custom CRM</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Chart Container */}
+                    <div style={{
+                      flex: 1,
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-end",
+                      gap: "8px",
+                      padding: "8px 4px 4px 4px",
+                      height: "100px",
+                      overflow: "hidden",
+                    }}>
+                      {/* Admin Time Section */}
+                      <div style={{
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        height: "100%",
+                        maxHeight: "100px",
+                      }}>
+                        <div style={{
+                          fontSize: "8px",
+                          fontWeight: "600",
+                          color: "#333",
+                          marginBottom: "4px",
+                          textAlign: "center",
+                          whiteSpace: "nowrap",
+                          height: "16px",
+                          lineHeight: "8px",
+                        }}>
+                          Admin Time (Weekly)
+                        </div>
+                        <div style={{
+                          display: "flex",
+                          alignItems: "flex-end",
+                          gap: "4px",
+                          height: "70px",
+                          position: "relative",
+                        }}>
+                          {/* Manual Process Bar - 20 hours */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ff6b6b",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>20hours</span>
+                            <div style={{
+                              width: "18px",
+                              height: "50px",
+                              background: "#ff6b6b",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                              position: "relative",
+                            }}>
+                              <span style={{ 
+                                fontSize: "7px", 
+                                color: "white", 
+                                fontWeight: "700",
+                                transform: "rotate(-90deg)",
+                                whiteSpace: "nowrap",
+                                position: "absolute",
+                              }}>20h</span>
+                            </div>
+                          </div>
+                          {/* CRM Bar - 6 hours */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ffd93d",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>6hours</span>
+                            <div style={{
+                              width: "18px",
+                              height: "15px",
+                              background: "#ffd93d",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                            }}>
+                              <span style={{ 
+                                fontSize: "7px", 
+                                color: "#333", 
+                                fontWeight: "700",
+                              }}>6h</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Lead Conversion Section */}
+                      <div style={{
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        height: "100%",
+                        maxHeight: "100px",
+                      }}>
+                        <div style={{
+                          fontSize: "8px",
+                          fontWeight: "600",
+                          color: "#333",
+                          marginBottom: "4px",
+                          textAlign: "center",
+                          whiteSpace: "nowrap",
+                          height: "16px",
+                          lineHeight: "8px",
+                        }}>
+                          Lead Conversion Rate
+                        </div>
+                        <div style={{
+                          display: "flex",
+                          alignItems: "flex-end",
+                          gap: "4px",
+                          height: "70px",
+                          position: "relative",
+                        }}>
+                          {/* Manual Process Bar - 15% */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ff6b6b",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>15%</span>
+                            <div style={{
+                              width: "18px",
+                              height: "20px",
+                              background: "#ff6b6b",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                            }}>
+                              <span style={{ 
+                                fontSize: "7px", 
+                                color: "white", 
+                                fontWeight: "700",
+                              }}>15%</span>
+                            </div>
+                          </div>
+                          {/* CRM Bar - 35% */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ffd93d",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>35%</span>
+                            <div style={{
+                              width: "18px",
+                              height: "40px",
+                              background: "#ffd93d",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                              position: "relative",
+                            }}>
+                              <span style={{ 
+                                fontSize: "7px", 
+                                color: "#333", 
+                                fontWeight: "700",
+                                transform: "rotate(-90deg)",
+                                whiteSpace: "nowrap",
+                                position: "absolute",
+                              }}>35%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Missed Leads Section */}
+                      <div style={{
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        height: "100%",
+                        maxHeight: "100px",
+                      }}>
+                        <div style={{
+                          fontSize: "8px",
+                          fontWeight: "600",
+                          color: "#333",
+                          marginBottom: "4px",
+                          textAlign: "center",
+                          whiteSpace: "nowrap",
+                          height: "16px",
+                          lineHeight: "8px",
+                        }}>
+                          Missed Leads
+                        </div>
+                        <div style={{
+                          display: "flex",
+                          alignItems: "flex-end",
+                          gap: "4px",
+                          height: "70px",
+                          position: "relative",
+                        }}>
+                          {/* Manual Process Bar - 30% */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ff6b6b",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>30%</span>
+                            <div style={{
+                              width: "18px",
+                              height: "35px",
+                              background: "#ff6b6b",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                              position: "relative",
+                            }}>
+                              <span style={{ 
+                                fontSize: "7px", 
+                                color: "white", 
+                                fontWeight: "700",
+                                transform: "rotate(-90deg)",
+                                whiteSpace: "nowrap",
+                                position: "absolute",
+                              }}>30%</span>
+                            </div>
+                          </div>
+                          {/* CRM Bar - 5% */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "flex-end",
+                          }}>
+                            <span style={{
+                              fontSize: "7px",
+                              color: "#ffd93d",
+                              fontWeight: "700",
+                              marginBottom: "2px",
+                              height: "8px",
+                              lineHeight: "8px",
+                            }}>5%</span>
+                            <div style={{
+                              width: "18px",
+                              height: "8px",
+                              background: "#ffd93d",
+                              borderRadius: "2px 2px 0 0",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                            }}>
+                              <span style={{ 
+                                fontSize: "6px", 
+                                color: "#333", 
+                                fontWeight: "700",
+                              }}>5%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
