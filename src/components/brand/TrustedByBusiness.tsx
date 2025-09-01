@@ -40,6 +40,18 @@ const business_logos = [
     name: 'Brix Electrical',
     logo: '/assets/logos/logo (6).jpg',
     alt: 'Brix Electrical Logo'
+  },
+  {
+    id: 7,
+    name: 'You Me and the Community',
+    logo: '/assets/logos/logo1 (1).png',
+    alt: 'You Me and the Community Logo'
+  },
+  {
+    id: 8,
+    name: 'DCB Digital',
+    logo: '/assets/logos/logo1 (2).png',
+    alt: 'DCB Digital Logo'
   }
 ];
 
@@ -98,16 +110,16 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
                 {business_logos.map((item, i) => (
                   <div key={i} className="cs_partner_logo" style={{
                     display: 'inline-flex', 
-                    margin: '0 15px',
-                    padding: '30px 40px',
+                    margin: '0 10px',
+                    padding: '15px 20px',
                     background: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '8px',
+                    borderRadius: '6px',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                     border: '1px solid rgba(0,0,0,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
-                    minHeight: '90px',
-                    width: '240px',
+                    minHeight: '60px',
+                    width: '180px',
                     alignItems: 'center',
                     justifyContent: 'center',
                     transform: 'translateY(0)',
@@ -116,17 +128,17 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
                     <Image
                       src={item.logo}
                       alt={item.alt}
-                      width={180}
-                      height={70}
+                      width={140}
+                      height={50}
                       style={{
                         objectFit: 'contain',
                         objectPosition: 'center',
                         filter: 'grayscale(0%)',
                         transition: 'all 0.3s ease',
-                        width: '180px',
-                        height: '70px',
-                        maxWidth: '180px',
-                        maxHeight: '70px'
+                        width: '140px',
+                        height: '50px',
+                        maxWidth: '140px',
+                        maxHeight: '50px'
                       }}
                     />
                   </div>
@@ -136,16 +148,16 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
                 {business_logos.map((item, i) => (
                   <div key={`duplicate-${i}`} className="cs_partner_logo" style={{
                     display: 'inline-flex', 
-                    margin: '0 15px',
-                    padding: '30px 40px',
+                    margin: '0 10px',
+                    padding: '15px 20px',
                     background: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '8px',
+                    borderRadius: '6px',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                     border: '1px solid rgba(0,0,0,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
-                    minHeight: '90px',
-                    width: '240px',
+                    minHeight: '60px',
+                    width: '180px',
                     alignItems: 'center',
                     justifyContent: 'center',
                     transform: 'translateY(0)',
@@ -154,17 +166,17 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
                     <Image
                       src={item.logo}
                       alt={item.alt}
-                      width={180}
-                      height={70}
+                      width={140}
+                      height={50}
                       style={{
                         objectFit: 'contain',
                         objectPosition: 'center',
                         filter: 'grayscale(0%)',
                         transition: 'all 0.3s ease',
-                        width: '180px',
-                        height: '70px',
-                        maxWidth: '180px',
-                        maxHeight: '70px'
+                        width: '140px',
+                        height: '50px',
+                        maxWidth: '140px',
+                        maxHeight: '50px'
                       }}
                     />
                   </div>
@@ -209,10 +221,10 @@ const TrustedByBusiness = ({ style_2, style_3 }: any) => {
         
         @media (max-width: 768px) {
           .cs_partner_logo {
-            margin: 0 15px !important;
-            padding: 15px 20px !important;
-            min-height: 70px !important;
-            width: 160px !important;
+            margin: 0 8px !important;
+            padding: 10px 15px !important;
+            min-height: 50px !important;
+            width: 140px !important;
           }
         }
       `}</style>
