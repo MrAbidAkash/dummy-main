@@ -5,10 +5,53 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import Wrapper from "@/layouts/Wrapper";
 import Link from "next/link";
+import Testimonial from "@/components/testimonial/Testimonial";
+import CTA from "@/components/common/CTA";
+// import CTA from "@/components/CTA";
 
 const DigitalMarketingStrategy = () => {
   return (
-    <Wrapper>
+    <>
+      <style jsx>{`
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .benefit-icon {
+          transition: transform 0.3s ease !important;
+        }
+
+        .benefit-icon:hover {
+          transform: rotate(5deg) scale(1.1) !important;
+        }
+
+        .benefit-icon-2:hover {
+          transform: rotate(-5deg) scale(1.1) !important;
+        }
+
+        .benefit-icon-3:hover {
+          transform: scale(1.15) !important;
+        }
+      `}</style>
+      <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -120,195 +163,298 @@ const DigitalMarketingStrategy = () => {
                   </p>
                 </div>
 
-                {/* Benefits Grid */}
+                {/* Tech Stack Consolidation */}
                 <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                  gap: '40px',
-                  marginTop: '60px'
+                  maxWidth: '1100px',
+                  margin: '60px auto 0',
+                  position: 'relative'
                 }}>
-                  {/* Benefit 1 */}
+                  
+                  {/* Benefits Stack */}
                   <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                    borderRadius: '20px',
-                    padding: '50px 35px',
-                    border: '1px solid rgba(255,193,7,0.2)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '25px',
+                    position: 'relative'
                   }}>
-                    {/* Icon background */}
+                    {/* Benefit 1 */}
                     <div style={{
-                      position: 'absolute',
-                      top: '-20px',
-                      right: '-20px',
-                      width: '100px',
-                      height: '100px',
-                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
-                      borderRadius: '50%',
-                      opacity: 0.7
-                    }}></div>
-                    
-                    {/* Icon */}
-                    <div style={{
-                      width: '60px',
-                      height: '60px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                      borderRadius: '16px',
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '25px',
-                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                      background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                      borderRadius: '20px',
+                      padding: '35px 40px',
+                      border: '1px solid rgba(255,193,7,0.15)',
+                      position: 'relative',
+                      overflow: 'hidden',
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                      opacity: 0,
+                      transform: 'translateX(-30px)',
+                      animation: 'slideInLeft 0.8s ease-out 0.2s forwards'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                      e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                     }}>
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                      </svg>
+                      {/* Background pattern */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '0',
+                        right: '0',
+                        width: '200px',
+                        height: '100%',
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(255,193,7,0.03) 100%)',
+                        pointerEvents: 'none'
+                      }}></div>
+
+                      {/* Icon */}
+                      <div 
+                        className="benefit-icon"
+                        style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginRight: '30px',
+                        flexShrink: 0,
+                        boxShadow: '0 10px 25px rgba(255,193,7,0.3)',
+                        position: 'relative',
+                        zIndex: 2
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                      </div>
+
+                      {/* Content */}
+                      <div style={{ flex: 1, position: 'relative', zIndex: 2 }}>
+                        <h3 style={{
+                          fontSize: '26px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '12px',
+                          letterSpacing: '-0.5px'
+                        }}>
+                          Save Time & Money
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: '#ffffff',
+                          lineHeight: '1.6',
+                          opacity: '0.9',
+                          margin: '0',
+                          maxWidth: '650px'
+                        }}>
+                          Automate email marketing and lead tracking to save 10–15 hours weekly and cut costs by 20%. Streamline your operations with intelligent workflows.
+                        </p>
+                      </div>
+
+                      {/* Accent line */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '0',
+                        top: '0',
+                        bottom: '0',
+                        width: '4px',
+                        background: 'linear-gradient(180deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '0 4px 4px 0'
+                      }}></div>
                     </div>
-                    
-                    <h3 style={{
-                      fontSize: '26px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px',
-                      position: 'relative'
+
+                    {/* Benefit 2 */}
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                      borderRadius: '20px',
+                      padding: '35px 40px',
+                      border: '1px solid rgba(255,193,7,0.15)',
+                      position: 'relative',
+                      overflow: 'hidden',
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                      opacity: 0,
+                      transform: 'translateX(-30px)',
+                      animation: 'slideInLeft 0.8s ease-out 0.4s forwards'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                      e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                     }}>
-                      Save Time & Money
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.7',
-                      opacity: 0.9
+                      {/* Background pattern */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '0',
+                        right: '0',
+                        width: '200px',
+                        height: '100%',
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(255,193,7,0.03) 100%)',
+                        pointerEvents: 'none'
+                      }}></div>
+
+                      {/* Icon */}
+                      <div 
+                        className="benefit-icon benefit-icon-2"
+                        style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginRight: '30px',
+                        flexShrink: 0,
+                        boxShadow: '0 10px 25px rgba(255,193,7,0.3)',
+                        position: 'relative',
+                        zIndex: 2
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                        </svg>
+                      </div>
+
+                      {/* Content */}
+                      <div style={{ flex: 1, position: 'relative', zIndex: 2 }}>
+                        <h3 style={{
+                          fontSize: '26px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '12px',
+                          letterSpacing: '-0.5px'
+                        }}>
+                          Drive Growth
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: '#ffffff',
+                          lineHeight: '1.6',
+                          opacity: '0.9',
+                          margin: '0',
+                          maxWidth: '650px'
+                        }}>
+                          SEO, Google ads, and Facebook ads boost visibility, leading to 25% revenue growth for your service business. Maximize your digital presence.
+                        </p>
+                      </div>
+
+                      {/* Accent line */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '0',
+                        top: '0',
+                        bottom: '0',
+                        width: '4px',
+                        background: 'linear-gradient(180deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '0 4px 4px 0'
+                      }}></div>
+                    </div>
+
+                    {/* Benefit 3 */}
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                      borderRadius: '20px',
+                      padding: '35px 40px',
+                      border: '1px solid rgba(255,193,7,0.15)',
+                      position: 'relative',
+                      overflow: 'hidden',
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                      opacity: 0,
+                      transform: 'translateX(-30px)',
+                      animation: 'slideInLeft 0.8s ease-out 0.6s forwards'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                      e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                     }}>
-                      Automate email marketing and lead tracking to save 10–15 hours weekly and cut costs by 20%.
-                    </p>
+                      {/* Background pattern */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '0',
+                        right: '0',
+                        width: '200px',
+                        height: '100%',
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(255,193,7,0.03) 100%)',
+                        pointerEvents: 'none'
+                      }}></div>
+
+                      {/* Icon */}
+                      <div 
+                        className="benefit-icon benefit-icon-3"
+                        style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginRight: '30px',
+                        flexShrink: 0,
+                        boxShadow: '0 10px 25px rgba(255,193,7,0.3)',
+                        position: 'relative',
+                        zIndex: 2
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      </div>
+
+                      {/* Content */}
+                      <div style={{ flex: 1, position: 'relative', zIndex: 2 }}>
+                        <h3 style={{
+                          fontSize: '26px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '12px',
+                          letterSpacing: '-0.5px'
+                        }}>
+                          Tailored for Australia
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: '#ffffff',
+                          lineHeight: '1.6',
+                          opacity: '0.9',
+                          margin: '0',
+                          maxWidth: '650px'
+                        }}>
+                          Localized strategies for businesses in Sydney, Melbourne, Brisbane, and beyond, ensuring relevance and compliance with Australian standards.
+                        </p>
+                      </div>
+
+                      {/* Accent line */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '0',
+                        top: '0',
+                        bottom: '0',
+                        width: '4px',
+                        background: 'linear-gradient(180deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '0 4px 4px 0'
+                      }}></div>
+                    </div>
                   </div>
 
-                  {/* Benefit 2 */}
-                  <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                    borderRadius: '20px',
-                    padding: '50px 35px',
-                    border: '1px solid rgba(255,193,7,0.2)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    {/* Icon background */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '-20px',
-                      right: '-20px',
-                      width: '100px',
-                      height: '100px',
-                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
-                      borderRadius: '50%',
-                      opacity: 0.7
-                    }}></div>
-                    
-                    {/* Icon */}
-                    <div style={{
-                      width: '60px',
-                      height: '60px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                      borderRadius: '16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '25px',
-                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
-                    }}>
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
-                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                      </svg>
-                    </div>
-                    
-                    <h3 style={{
-                      fontSize: '26px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px',
-                      position: 'relative'
-                    }}>
-                      Drive Growth
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.7',
-                      opacity: 0.9
-                    }}>
-                      SEO, Google ads, and Facebook ads boost visibility, leading to 25% revenue growth for your service business.
-                    </p>
-                  </div>
-
-                  {/* Benefit 3 */}
-                  <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                    borderRadius: '20px',
-                    padding: '50px 35px',
-                    border: '1px solid rgba(255,193,7,0.2)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    {/* Icon background */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '-20px',
-                      right: '-20px',
-                      width: '100px',
-                      height: '100px',
-                      background: 'linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
-                      borderRadius: '50%',
-                      opacity: 0.7
-                    }}></div>
-                    
-                    {/* Icon */}
-                    <div style={{
-                      width: '60px',
-                      height: '60px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                      borderRadius: '16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '25px',
-                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
-                    }}>
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="#1a1a1a">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                      </svg>
-                    </div>
-                    
-                    <h3 style={{
-                      fontSize: '26px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px',
-                      position: 'relative'
-                    }}>
-                      Tailored for Australia
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.7',
-                      opacity: 0.9
-                    }}>
-                      Localized strategies for businesses in Sydney, Melbourne, Brisbane, and beyond, ensuring relevance and compliance.
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </section>
@@ -340,12 +486,11 @@ const DigitalMarketingStrategy = () => {
                 }}>
                   {/* Starter Package */}
                   <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                    borderRadius: '24px',
+                    background: 'rgba(255,255,255,0.05)',
+                    borderRadius: '16px',
                     padding: '35px 25px',
-                    border: '2px solid rgba(255,193,7,0.15)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(255,193,7,0.2)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
                     overflow: 'hidden',
@@ -359,10 +504,10 @@ const DigitalMarketingStrategy = () => {
                       position: 'absolute',
                       top: '15px',
                       right: '15px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      background: '#FFC107',
                       color: '#1a1a1a',
                       padding: '6px 12px',
-                      borderRadius: '15px',
+                      borderRadius: '8px',
                       fontSize: '11px',
                       fontWeight: '600',
                       textTransform: 'uppercase',
@@ -375,13 +520,12 @@ const DigitalMarketingStrategy = () => {
                     <div style={{
                       width: '80px',
                       height: '80px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      background: '#FFC107',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      margin: '0 auto 25px',
-                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                      margin: '0 auto 25px'
                     }}>
                       <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -430,12 +574,11 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Pro Package */}
                   <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,193,7,0.08) 0%, rgba(255,213,79,0.03) 100%)',
-                    borderRadius: '24px',
+                    background: 'rgba(255,193,7,0.08)',
+                    borderRadius: '16px',
                     padding: '35px 25px',
                     border: '2px solid rgba(255,193,7,0.3)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 25px 50px rgba(255,193,7,0.2), inset 0 1px 0 rgba(255,255,255,0.2)',
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
                     overflow: 'hidden',
@@ -451,15 +594,14 @@ const DigitalMarketingStrategy = () => {
                       top: '-8px',
                       left: '50%',
                       transform: 'translateX(-50%)',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      background: '#FFC107',
                       color: '#1a1a1a',
                       padding: '10px 20px',
-                      borderRadius: '15px',
+                      borderRadius: '8px',
                       fontSize: '12px',
                       fontWeight: '700',
                       textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      boxShadow: '0 8px 25px rgba(255,193,7,0.4)'
+                      letterSpacing: '1px'
                     }}>
                       Most Popular
                     </div>
@@ -468,13 +610,12 @@ const DigitalMarketingStrategy = () => {
                     <div style={{
                       width: '80px',
                       height: '80px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      background: '#FFC107',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      margin: '15px auto 25px',
-                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                      margin: '15px auto 25px'
                     }}>
                       <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
                         <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99l-2.54 3.38v5.63h2v8h2v-8h2zm-7.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-6H10l-2.54-7.63A1.5 1.5 0 0 0 6.04 8H3.5c-.8 0-1.54.37-2.01.99L.95 11.37v5.63h2v6h2v-6h2z"/>
@@ -513,10 +654,9 @@ const DigitalMarketingStrategy = () => {
                       color: '#1a1a1a',
                       marginBottom: '10px',
                       padding: '12px 15px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                      borderRadius: '10px',
-                      textAlign: 'center',
-                      boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
+                      background: '#FFC107',
+                      borderRadius: '8px',
+                      textAlign: 'center'
                     }}>
                       Cut costs by 20% and increase conversions by 20%.
                     </div>
@@ -524,12 +664,11 @@ const DigitalMarketingStrategy = () => {
 
                   {/* Enterprise Package */}
                   <div style={{
-                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                    borderRadius: '24px',
+                    background: 'rgba(255,255,255,0.05)',
+                    borderRadius: '16px',
                     padding: '35px 25px',
-                    border: '2px solid rgba(255,193,7,0.15)',
-                    backdropFilter: 'blur(15px)',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(255,193,7,0.2)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                     transition: 'all 0.3s ease',
                     position: 'relative',
                     overflow: 'hidden',
@@ -543,10 +682,10 @@ const DigitalMarketingStrategy = () => {
                       position: 'absolute',
                       top: '15px',
                       right: '15px',
-                      background: 'linear-gradient(135deg, rgba(255,193,7,0.2) 0%, rgba(255,213,79,0.1) 100%)',
+                      background: 'rgba(255,193,7,0.2)',
                       color: '#FFC107',
                       padding: '6px 12px',
-                      borderRadius: '15px',
+                      borderRadius: '8px',
                       fontSize: '11px',
                       fontWeight: '600',
                       textTransform: 'uppercase',
@@ -560,13 +699,12 @@ const DigitalMarketingStrategy = () => {
                     <div style={{
                       width: '80px',
                       height: '80px',
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                      background: '#FFC107',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      margin: '0 auto 25px',
-                      boxShadow: '0 10px 30px rgba(255,193,7,0.4)'
+                      margin: '0 auto 25px'
                     }}>
                       <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
                         <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
@@ -614,39 +752,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 </div>
 
-                <div style={{
-                  textAlign: 'center',
-                  marginTop: '50px',
-                  padding: '40px 35px',
-                  background: 'linear-gradient(145deg, rgba(255,193,7,0.1) 0%, rgba(255,213,79,0.05) 100%)',
-                  borderRadius: '20px',
-                  border: '1px solid rgba(255,193,7,0.2)',
-                  boxShadow: '0 15px 35px rgba(255,193,7,0.1)'
-                }}>
-                  <div style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    boxShadow: '0 8px 25px rgba(255,193,7,0.3)'
-                  }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#1a1a1a">
-                      <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H18V0h-2v2H8V0H6v2H4.5C3.12 2 2.01 3.12 2.01 4.5L2 20.5C2 21.88 3.12 23 4.5 23h15c1.38 0 2.5-1.12 2.5-2.5V4.5C22 3.12 20.88 2 19.5 2zm0 18.5h-15V7h15v13.5z"/>
-                    </svg>
-                  </div>
-                  <p style={{
-                    fontSize: '20px',
-                    color: '#ffffff',
-                    margin: '0',
-                    fontWeight: '500'
-                  }}>
-                    All packages include ongoing support to honor your business traditions while innovating for success.
-                  </p>
-                </div>
               </div>
             </section>
 
@@ -667,110 +772,522 @@ const DigitalMarketingStrategy = () => {
                   </h2>
                 </div>
 
+                {/* Elegant Animated Service Cards */}
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
                   gap: '40px',
-                  marginTop: '60px'
+                  marginTop: '80px',
+                  maxWidth: '1400px',
+                  margin: '80px auto 0',
+                  perspective: '1000px'
                 }}>
                   {/* Website Build */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+                    borderRadius: '24px',
+                    padding: '0',
+                    border: 'none',
+                    position: 'relative',
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    overflow: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    cursor: 'pointer'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-12px) rotateX(5deg)';
+                    e.currentTarget.style.boxShadow = '0 30px 60px rgba(255,193,7,0.12)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1.1) rotateY(10deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(-5px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) rotateX(0deg)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.08)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1) rotateY(0deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(0)';
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px'
+                    
+                    {/* Top section with number */}
+                    <div style={{
+                      padding: '30px 30px 0',
+                      position: 'relative',
+                      zIndex: 2
                     }}>
-                      Website Build
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        marginBottom: '30px'
+                      }}>
+                        <div style={{
+                          width: '2px',
+                          height: '60px',
+                          background: 'linear-gradient(to bottom, #FFC107, rgba(255,193,7,0.3))',
+                          borderRadius: '2px'
+                        }}></div>
+                        <div style={{
+                          width: '50px',
+                          height: '50px',
+                          background: 'rgba(255,193,7,0.1)',
+                          borderRadius: '16px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255,193,7,0.2)',
+                          color: '#FFC107',
+                          fontWeight: '600',
+                          fontSize: '18px',
+                          fontFamily: 'monospace'
+                        }}>
+                          01
+                        </div>
+                      </div>
+
+                      {/* Icon with animation */}
+                      <div className="icon-container" style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, rgba(255,193,7,0.8) 100%)',
+                        borderRadius: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '25px',
+                        transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        transformStyle: 'preserve-3d'
+                      }}>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Content section */}
+                    <div className="card-content" style={{
+                      padding: '0 30px 40px',
+                      position: 'relative',
+                      zIndex: 2,
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'transform 0.4s ease'
                     }}>
-                      High-converting websites tailored for tradies and allied health, optimized for mobile and SEO to attract local clients in Sydney or Melbourne.
-                    </p>
+                      <h3 style={{
+                        fontSize: '28px',
+                        fontWeight: '700',
+                        color: '#ffffff',
+                        marginBottom: '20px',
+                        lineHeight: '1.2',
+                        position: 'relative'
+                      }}>
+                        Website Build
+                        <span style={{
+                          position: 'absolute',
+                          bottom: '-8px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: '#FFC107',
+                          borderRadius: '2px'
+                        }}></span>
+                      </h3>
+                      <p style={{
+                        fontSize: '16px',
+                        color: 'rgba(255,255,255,0.85)',
+                        lineHeight: '1.7',
+                        flex: 1
+                      }}>
+                        High-converting websites tailored for tradies and allied health, optimized for mobile and SEO to attract local clients in Sydney or Melbourne.
+                      </p>
+                    </div>
                   </div>
 
                   {/* SEO */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+                    borderRadius: '24px',
+                    padding: '0',
+                    border: 'none',
+                    position: 'relative',
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    overflow: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    cursor: 'pointer'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-12px) rotateX(5deg)';
+                    e.currentTarget.style.boxShadow = '0 30px 60px rgba(255,193,7,0.12)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1.1) rotateY(10deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(-5px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) rotateX(0deg)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.08)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1) rotateY(0deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(0)';
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px'
+                    
+                    {/* Top section with number */}
+                    <div style={{
+                      padding: '30px 30px 0',
+                      position: 'relative',
+                      zIndex: 2
                     }}>
-                      SEO
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        marginBottom: '30px'
+                      }}>
+                        <div style={{
+                          width: '2px',
+                          height: '60px',
+                          background: 'linear-gradient(to bottom, #FFC107, rgba(255,193,7,0.3))',
+                          borderRadius: '2px'
+                        }}></div>
+                        <div style={{
+                          width: '50px',
+                          height: '50px',
+                          background: 'rgba(255,193,7,0.1)',
+                          borderRadius: '16px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255,193,7,0.2)',
+                          color: '#FFC107',
+                          fontWeight: '600',
+                          fontSize: '18px',
+                          fontFamily: 'monospace'
+                        }}>
+                          02
+                        </div>
+                      </div>
+
+                      {/* Icon with animation */}
+                      <div className="icon-container" style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, rgba(255,193,7,0.8) 100%)',
+                        borderRadius: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '25px',
+                        transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        transformStyle: 'preserve-3d'
+                      }}>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Content section */}
+                    <div className="card-content" style={{
+                      padding: '0 30px 40px',
+                      position: 'relative',
+                      zIndex: 2,
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'transform 0.4s ease'
                     }}>
-                      Local SEO strategies to rank higher on Google for searches like 'tradies in Brisbane' or 'allied health in Perth', driving organic traffic.
-                    </p>
+                      <h3 style={{
+                        fontSize: '28px',
+                        fontWeight: '700',
+                        color: '#ffffff',
+                        marginBottom: '20px',
+                        lineHeight: '1.2',
+                        position: 'relative'
+                      }}>
+                        SEO
+                        <span style={{
+                          position: 'absolute',
+                          bottom: '-8px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: '#FFC107',
+                          borderRadius: '2px'
+                        }}></span>
+                      </h3>
+                      <p style={{
+                        fontSize: '16px',
+                        color: 'rgba(255,255,255,0.85)',
+                        lineHeight: '1.7',
+                        flex: 1
+                      }}>
+                        Local SEO strategies to rank higher on Google for searches like 'tradies in Brisbane' or 'allied health in Perth', driving organic traffic.
+                      </p>
+                    </div>
                   </div>
 
                   {/* Email Marketing */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+                    borderRadius: '24px',
+                    padding: '0',
+                    border: 'none',
+                    position: 'relative',
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    overflow: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    cursor: 'pointer'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-12px) rotateX(5deg)';
+                    e.currentTarget.style.boxShadow = '0 30px 60px rgba(255,193,7,0.12)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1.1) rotateY(10deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(-5px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) rotateX(0deg)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.08)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1) rotateY(0deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(0)';
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px'
+                    
+                    {/* Top section with number */}
+                    <div style={{
+                      padding: '30px 30px 0',
+                      position: 'relative',
+                      zIndex: 2
                     }}>
-                      Email Marketing
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        marginBottom: '30px'
+                      }}>
+                        <div style={{
+                          width: '2px',
+                          height: '60px',
+                          background: 'linear-gradient(to bottom, #FFC107, rgba(255,193,7,0.3))',
+                          borderRadius: '2px'
+                        }}></div>
+                        <div style={{
+                          width: '50px',
+                          height: '50px',
+                          background: 'rgba(255,193,7,0.1)',
+                          borderRadius: '16px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255,193,7,0.2)',
+                          color: '#FFC107',
+                          fontWeight: '600',
+                          fontSize: '18px',
+                          fontFamily: 'monospace'
+                        }}>
+                          03
+                        </div>
+                      </div>
+
+                      {/* Icon with animation */}
+                      <div className="icon-container" style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, rgba(255,193,7,0.8) 100%)',
+                        borderRadius: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '25px',
+                        transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        transformStyle: 'preserve-3d'
+                      }}>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Content section */}
+                    <div className="card-content" style={{
+                      padding: '0 30px 40px',
+                      position: 'relative',
+                      zIndex: 2,
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'transform 0.4s ease'
                     }}>
-                      Automated campaigns for follow-ups and rebookings, integrated with GHL CRM to nurture leads and boost retention by 20%.
-                    </p>
+                      <h3 style={{
+                        fontSize: '28px',
+                        fontWeight: '700',
+                        color: '#ffffff',
+                        marginBottom: '20px',
+                        lineHeight: '1.2',
+                        position: 'relative'
+                      }}>
+                        Email Marketing
+                        <span style={{
+                          position: 'absolute',
+                          bottom: '-8px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: '#FFC107',
+                          borderRadius: '2px'
+                        }}></span>
+                      </h3>
+                      <p style={{
+                        fontSize: '16px',
+                        color: 'rgba(255,255,255,0.85)',
+                        lineHeight: '1.7',
+                        flex: 1
+                      }}>
+                        Automated campaigns for follow-ups and rebookings, integrated with GHL CRM to nurture leads and boost retention by 20%.
+                      </p>
+                    </div>
                   </div>
 
                   {/* Google & Facebook Ads */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+                    borderRadius: '24px',
+                    padding: '0',
+                    border: 'none',
+                    position: 'relative',
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    overflow: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    cursor: 'pointer'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-12px) rotateX(5deg)';
+                    e.currentTarget.style.boxShadow = '0 30px 60px rgba(255,193,7,0.12)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1.1) rotateY(10deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(-5px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) rotateX(0deg)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.08)';
+                    const icon = e.currentTarget.querySelector('.icon-container') as HTMLElement;
+                    if (icon) icon.style.transform = 'scale(1) rotateY(0deg)';
+                    const content = e.currentTarget.querySelector('.card-content') as HTMLElement;
+                    if (content) content.style.transform = 'translateY(0)';
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '20px'
+                    
+                    {/* Top section with number */}
+                    <div style={{
+                      padding: '30px 30px 0',
+                      position: 'relative',
+                      zIndex: 2
                     }}>
-                      Google & Facebook Ads
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        marginBottom: '30px'
+                      }}>
+                        <div style={{
+                          width: '2px',
+                          height: '60px',
+                          background: 'linear-gradient(to bottom, #FFC107, rgba(255,193,7,0.3))',
+                          borderRadius: '2px'
+                        }}></div>
+                        <div style={{
+                          width: '50px',
+                          height: '50px',
+                          background: 'rgba(255,193,7,0.1)',
+                          borderRadius: '16px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255,193,7,0.2)',
+                          color: '#FFC107',
+                          fontWeight: '600',
+                          fontSize: '18px',
+                          fontFamily: 'monospace'
+                        }}>
+                          04
+                        </div>
+                      </div>
+
+                      {/* Icon with animation */}
+                      <div className="icon-container" style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, rgba(255,193,7,0.8) 100%)',
+                        borderRadius: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '25px',
+                        transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        transformStyle: 'preserve-3d'
+                      }}>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Content section */}
+                    <div className="card-content" style={{
+                      padding: '0 30px 40px',
+                      position: 'relative',
+                      zIndex: 2,
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'transform 0.4s ease'
                     }}>
-                      Targeted ads to reach high-value clients, with GHL CRM tracking to optimize campaigns and increase ROI by 25%.
-                    </p>
+                      <h3 style={{
+                        fontSize: '28px',
+                        fontWeight: '700',
+                        color: '#ffffff',
+                        marginBottom: '20px',
+                        lineHeight: '1.2',
+                        position: 'relative'
+                      }}>
+                        Google & Facebook Ads
+                        <span style={{
+                          position: 'absolute',
+                          bottom: '-8px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: '#FFC107',
+                          borderRadius: '2px'
+                        }}></span>
+                      </h3>
+                      <p style={{
+                        fontSize: '16px',
+                        color: 'rgba(255,255,255,0.85)',
+                        lineHeight: '1.7',
+                        flex: 1
+                      }}>
+                        Targeted ads to reach high-value clients, with GHL CRM tracking to optimize campaigns and increase ROI by 25%.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -793,225 +1310,284 @@ const DigitalMarketingStrategy = () => {
                   </h2>
                 </div>
 
+                {/* Vertical Timeline Design - Crossover Style */}
                 <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                  gap: '40px',
-                  marginTop: '60px'
+                  maxWidth: '800px',
+                  margin: '80px auto 0',
+                  padding: '0 20px',
+                  position: 'relative'
                 }}>
-                  {/* Step 1 */}
+                  {/* Main Timeline Container */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)',
-                    textAlign: 'center'
+                    position: 'relative',
+                    paddingLeft: '120px'
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '10px'
-                    }}>
-                      Step 1: Consultation
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
-                    }}>
-                      Book a free demo to discuss your business needs, from website build to ads and automations.
-                    </p>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)',
-                    textAlign: 'center'
-                  }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '10px'
-                    }}>
-                      Step 2: Customization
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
-                    }}>
-                      We tailor the package with SEO, email marketing, ads, and GHL CRM integrations for your service business.
-                    </p>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)',
-                    textAlign: 'center'
-                  }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: '700',
-                      color: '#FFC107',
-                      marginBottom: '10px'
-                    }}>
-                      Step 3: Launch & Support
-                    </h3>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6'
-                    }}>
-                      Launch your transformed digital presence with ongoing support to ensure 25% growth and 20% cost savings.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Testimonials Section */}
-            <section style={{
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
-              padding: '100px 0'
-            }}>
-              <div className="container">
-                <div className="cs_section_heading cs_style_1" style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <h2 className="cs_section_title" style={{
-                    fontSize: 'clamp(32px, 4vw, 48px)',
-                    fontWeight: '700',
-                    color: '#FFC107',
-                    marginBottom: '40px'
-                  }}>
-                    Trusted by Service Businesses
-                  </h2>
-                </div>
-
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-                  gap: '40px',
-                  marginTop: '60px'
-                }}>
-                  {/* Testimonial 1 */}
-                  <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
-                  }}>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6',
-                      fontStyle: 'italic',
-                      marginBottom: '20px'
-                    }}>
-                      "Leads360's digital package transformed our plumbing business with a new website and ads. We saw 25% more bookings!"
-                    </p>
+                    
+                    {/* Step 1: Consultation */}
                     <div style={{
-                      fontSize: '14px',
-                      color: '#FFC107',
-                      fontWeight: '600'
+                      position: 'relative',
+                      marginBottom: '60px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateX(10px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateX(0)';
                     }}>
-                      — Julia Magesh
-                    </div>
-                  </div>
+                      {/* Circle Icon */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '-120px',
+                        top: '10px',
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 8px 25px rgba(255,193,7,0.3)',
+                        zIndex: 3
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
 
-                  {/* Testimonial 2 */}
-                  <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    borderRadius: '16px',
-                    padding: '40px 30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(10px)'
-                  }}>
-                    <p style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      lineHeight: '1.6',
-                      fontStyle: 'italic',
-                      marginBottom: '20px'
-                    }}>
-                      "The SEO and email automation saved us hours and boosted rebookings. Highly recommend for allied health."
-                    </p>
-                    <div style={{
-                      fontSize: '14px',
-                      color: '#FFC107',
-                      fontWeight: '600'
-                    }}>
-                      — Derek B
+                      {/* Dotted Line */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '-85px',
+                        top: '80px',
+                        width: '2px',
+                        height: '60px',
+                        background: 'repeating-linear-gradient(to bottom, #FFC107 0px, #FFC107 8px, transparent 8px, transparent 16px)',
+                        zIndex: 1
+                      }}></div>
+
+                      {/* Step Number & Title */}
+                      <div style={{
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                        borderRadius: '16px',
+                        padding: '25px 30px',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        backdropFilter: 'blur(15px)'
+                      }}>
+                        <h3 style={{
+                          fontSize: '24px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '15px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '15px'
+                        }}>
+                          <span style={{
+                            background: '#FFC107',
+                            color: '#1a1a1a',
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '8px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '16px',
+                            fontWeight: '800'
+                          }}>
+                            1
+                          </span>
+                          Describe the role
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: 'rgba(255,255,255,0.9)',
+                          lineHeight: '1.6',
+                          margin: '0'
+                        }}>
+                          Book a free demo to discuss your business needs, from website build to ads and automations. We specialize in digital transformation for service businesses.
+                        </p>
+                      </div>
                     </div>
+
+                    {/* Step 2: Customization */}
+                    <div style={{
+                      position: 'relative',
+                      marginBottom: '60px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateX(10px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}>
+                      {/* Circle Icon */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '-120px',
+                        top: '10px',
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 8px 25px rgba(255,193,7,0.3)',
+                        zIndex: 3
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      </div>
+
+                      {/* Dotted Line */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '-85px',
+                        top: '80px',
+                        width: '2px',
+                        height: '60px',
+                        background: 'repeating-linear-gradient(to bottom, #FFC107 0px, #FFC107 8px, transparent 8px, transparent 16px)',
+                        zIndex: 1
+                      }}></div>
+
+                      {/* Step Number & Title */}
+                      <div style={{
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                        borderRadius: '16px',
+                        padding: '25px 30px',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        backdropFilter: 'blur(15px)'
+                      }}>
+                        <h3 style={{
+                          fontSize: '24px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '15px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '15px'
+                        }}>
+                          <span style={{
+                            background: '#FFC107',
+                            color: '#1a1a1a',
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '8px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '16px',
+                            fontWeight: '800'
+                          }}>
+                            2
+                          </span>
+                          Set smart filters
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: 'rgba(255,255,255,0.9)',
+                          lineHeight: '1.6',
+                          margin: '0'
+                        }}>
+                          We tailor the package with SEO, email marketing, ads, and GHL CRM integrations for your service business. Custom solutions from Sydney to Brisbane.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Step 3: Launch & Support */}
+                    <div style={{
+                      position: 'relative',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateX(10px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}>
+                      {/* Circle Icon */}
+                      <div style={{
+                        position: 'absolute',
+                        left: '-120px',
+                        top: '10px',
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 100%)',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 8px 25px rgba(255,193,7,0.3)',
+                        zIndex: 3
+                      }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a">
+                          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                        </svg>
+                      </div>
+
+                      {/* Step Number & Title */}
+                      <div style={{
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+                        borderRadius: '16px',
+                        padding: '25px 30px',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        backdropFilter: 'blur(15px)'
+                      }}>
+                        <h3 style={{
+                          fontSize: '24px',
+                          fontWeight: '700',
+                          color: '#FFC107',
+                          marginBottom: '15px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '15px'
+                        }}>
+                          <span style={{
+                            background: '#FFC107',
+                            color: '#1a1a1a',
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '8px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '16px',
+                            fontWeight: '800'
+                          }}>
+                            3
+                          </span>
+                          Launch & Support
+                        </h3>
+                        <p style={{
+                          fontSize: '16px',
+                          color: 'rgba(255,255,255,0.9)',
+                          lineHeight: '1.6',
+                          margin: '0'
+                        }}>
+                          Launch your transformed digital presence with ongoing support to ensure 25% growth and 20% cost savings. Our team provides continuous optimization.
+                        </p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
             </section>
-
-            {/* CTA Section */}
-            <section style={{
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
-              padding: '80px 0',
-              textAlign: 'center'
-            }}>
-              <div className="container">
-                <h2 style={{
-                  fontSize: 'clamp(28px, 4vw, 42px)',
-                  fontWeight: '700',
-                  color: '#FFC107',
-                  marginBottom: '20px'
-                }}>
-                  Ready to Transform Your Service Business?
-                </h2>
-                <p style={{
-                  fontSize: '18px',
-                  color: '#ffffff',
-                  maxWidth: '700px',
-                  margin: '0 auto 40px',
-                  lineHeight: '1.6'
-                }}>
-                  Start your digital transformation today with our comprehensive packages designed for Australian service businesses.
-                </p>
-                <Link
-                  href="/contact"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    background: 'linear-gradient(135deg, #FFC107 0%, #FFD54F 50%, #FFC107 100%)',
-                    color: '#1a1a1a',
-                    padding: '18px 36px',
-                    borderRadius: '12px',
-                    textDecoration: 'none',
-                    fontSize: '18px',
-                    fontWeight: '600',
-                    transition: 'all 0.3s ease',
-                    border: 'none',
-                    boxShadow: '0 4px 15px rgba(255, 193, 7, 0.3)'
-                  }}
-                >
-                  Book Your Free Demo
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-                  </svg>
-                </Link>
-              </div>
-            </section>
+             <Testimonial />
+             <CTA
+              title="Ready to Transform Your Business?"
+              subtitle="Join forward-thinking business owners who have eliminated chaos and achieved scalable growth with our proven digital marketing strategies, CRM optimization, and business automation solutions."
+              buttonText="Start Your Digital Transformation"
+            />
           </main>
           <FooterOne />
         </div>
       </div>
     </Wrapper>
+    </>
   );
 };
 

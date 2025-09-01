@@ -35,8 +35,8 @@ const about_content: DataType = {
 
 We honor the traditions that make your business unique—whether it's a tradie's personal touch or a clinician's patient care—while embracing cutting-edge technology to keep you ahead in the digital race. From small startups to large enterprises, we're your partner in scaling smarter without losing what makes your business special.`,
   founder_title: `Meet Our Founder: A Visionary in Digital Transformation`,
-  founder_content: `Our founder, [Your Name], brings a unique blend of expertise to Leads360. With a PhD in Molecular Genetics, experience as a fitness trainer, and a track record of building six businesses from scratch, [Your Name] understands the challenges of scaling a service-based business. As a digital transformation specialist, [Your Name] has helped countless Australian businesses—tradies, allied health professionals, and more—navigate the digital world with proactive marketing strategies.`,
-  founder_quote: `"My vision is simple: help businesses thrive by focusing on proactive systems, not chasing leads. By combining tradition with innovation, we empower you to save time, make more money, and win the race in today's digital landscape."—[Your Name]`,
+  founder_content: `Our founder, Santy, brings a unique blend of expertise to Leads360. With a PhD in Molecular Genetics, experience as a fitness trainer, and a track record of building six businesses from scratch, Santy understands the challenges of scaling a service-based business. As a digital transformation specialist, Santy has helped countless Australian businesses—tradies, allied health professionals, and more—navigate the digital world with proactive marketing strategies.`,
+  founder_quote: `"My vision is simple: help businesses thrive by focusing on proactive systems, not chasing leads. By combining tradition with innovation, we empower you to save time, make more money, and win the race in today's digital landscape."—Santy`,
   team_title: `Our Team: Experts in CRM and Growth`,
   trust_title: `Why Trust Leads360?`,
   trust_points: [
@@ -303,14 +303,84 @@ const About = () => {
             <div className="cs_height_100 cs_height_lg_60"></div>
             <div className="text-center mb-5">
               <h2 className="cs_section_title_2 cs_color_1">{trust_title}</h2>
+              <div className="cs_hr_design mx-auto mt-4" style={{ 
+                width: '80px', 
+                height: '3px', 
+                background: 'linear-gradient(90deg, #ffd700 0%, #ffed4e 100%)',
+                borderRadius: '2px'
+              }}></div>
             </div>
             
             <div className="row justify-content-center">
               {trust_points.map((point, index) => (
-                <div key={index} className="col-lg-4 col-md-6 mb-4">
-                  <div className="cs_trust_card text-center p-4 h-100">
-                    <h4 className="cs_color_1 mb-3">{point.title}</h4>
-                    <p className="cs_ternary_color">{point.description}</p>
+                <div key={index} className="col-lg-4 col-md-6 mb-5">
+                  <div className="cs_trust_card text-center h-100" style={{
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 215, 0, 0.1)',
+                    borderRadius: '16px',
+                    padding: '40px 30px',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    backdropFilter: 'blur(10px)',
+                    cursor: 'pointer'
+                  }}>
+                    {/* Subtle gradient overlay */}
+                    <div style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      height: '1px',
+                      background: 'linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.3) 50%, transparent 100%)',
+                      transition: 'all 0.4s ease'
+                    }}></div>
+                    
+                    {/* Number indicator */}
+                    <div className="mb-4" style={{
+                      width: '60px',
+                      height: '60px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                      border: '2px solid rgba(255, 215, 0, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto',
+                      fontSize: '1.2rem',
+                      fontWeight: '700',
+                      color: '#ffd700',
+                      transition: 'all 0.4s ease'
+                    }}>
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    
+                    <h4 className="cs_color_1 mb-4" style={{
+                      fontSize: '1.4rem',
+                      fontWeight: '600',
+                      lineHeight: '1.3',
+                      letterSpacing: '-0.5px'
+                    }}>{point.title}</h4>
+                    
+                    <p className="cs_ternary_color" style={{
+                      fontSize: '1rem',
+                      lineHeight: '1.7',
+                      opacity: '0.9',
+                      margin: '0'
+                    }}>{point.description}</p>
+                    
+                    {/* Decorative bottom accent */}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '0',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '0px',
+                      height: '3px',
+                      background: 'linear-gradient(90deg, #ffd700 0%, #ffed4e 100%)',
+                      borderRadius: '2px 2px 0 0',
+                      transition: 'width 0.4s ease'
+                    }}></div>
                   </div>
                 </div>
               ))}
@@ -383,6 +453,46 @@ const About = () => {
         </div>
         <div className="cs_height_150 cs_height_lg_80"></div>
       </section>
+
+      {/* Enhanced styles for trust cards */}
+      <style jsx>{`
+        .cs_trust_card:hover {
+          transform: translateY(-8px) !important;
+          background: rgba(255, 255, 255, 0.06) !important;
+          border-color: rgba(255, 215, 0, 0.25) !important;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 215, 0, 0.1) !important;
+        }
+        
+        .cs_trust_card:hover > div:first-child {
+          background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.6) 50%, transparent 100%) !important;
+          height: 2px !important;
+        }
+        
+        .cs_trust_card:hover > div:nth-child(2) {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%) !important;
+          border-color: rgba(255, 215, 0, 0.4) !important;
+          transform: scale(1.1) !important;
+        }
+        
+        .cs_trust_card:hover > div:last-child {
+          width: 60px !important;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+          .cs_trust_card {
+            padding: 30px 20px !important;
+          }
+          
+          .cs_trust_card h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
