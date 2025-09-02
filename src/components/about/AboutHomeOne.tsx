@@ -17,7 +17,7 @@ interface DataType {
 
 const about_data: DataType[] = [
   {
-    img: "/assets/img/blog5.jpg",
+    img: "/assets/img/blog3.jpg",
     sub_title: "Your Business Challenges",
     title: "Your Challenges? We Get It.",
     des: "You're not alone — and these problems don't fix themselves. We help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.",
@@ -28,7 +28,7 @@ const about_data: DataType[] = [
     ]
   },
   {
-    img: "/assets/img/blog8.jpg",
+    img: "/assets/img/blog7.jpg",
     sub_title: "CRM Solutions", 
     title: "How We Fix It with GoHighLevel CRM",
     des: "Our comprehensive CRM solution addresses every challenge with smart automation and integrated systems designed specifically for tradies and small businesses.",
@@ -56,6 +56,8 @@ const AboutHomeOne = () => {
   const contentRefs = useRef<HTMLDivElement[]>([]);
   const imageRefs = useRef<HTMLDivElement[]>([]);
   const lineRefs = useRef<HTMLDivElement[]>([]);
+  const cardRefs = useRef<HTMLDivElement[]>([]);
+  const textRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -64,92 +66,30 @@ const AboutHomeOne = () => {
     // Initialize GSAP ScrollTrigger
     ScrollTrigger.refresh();
 
-    // Heavy parallel scrolling animations for each section
+    // Enhanced parallax effects for each section with smooth depth
     parallaxRefs.current.forEach((el, index) => {
       if (!el) return;
 
-      // Main section reveal with perspective
+      // Skip animations for second slide (index === 1)
+      if (index === 1) return;
+
+      // Sophisticated section reveal with depth and perspective
       gsap.fromTo(
         el,
         {
           opacity: 0,
-          y: 100,
-          rotationX: 45,
-          transformPerspective: 1000,
+          y: 120,
+          rotationX: 25,
+          transformPerspective: 1200,
+          scale: 0.95,
         },
         {
           opacity: 1,
           y: 0,
           rotationX: 0,
-          duration: 1.5,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      // Continuous parallax effect during scroll
-      gsap.to(el, {
-        yPercent: -20,
-        ease: "none",
-        scrollTrigger: {
-          trigger: el,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
-    });
-
-    // Content animations with staggered reveals
-    contentRefs.current.forEach((el, index) => {
-      if (!el) return;
-
-      const children = el.children;
-      gsap.fromTo(
-        children,
-        {
-          opacity: 0,
-          y: 60,
-          x: index % 2 === 0 ? -40 : 40,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          x: 0,
-          duration: 1.2,
-          stagger: 0.15,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 75%",
-            end: "bottom 25%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    // Image parallax effects
-    imageRefs.current.forEach((el, index) => {
-      if (!el) return;
-
-      // Image reveal animation
-      gsap.fromTo(
-        el,
-        {
-          scale: 1.3,
-          opacity: 0,
-        },
-        {
           scale: 1,
-          opacity: 1,
-          duration: 1.8,
-          ease: "power2.out",
+          duration: 2.2,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: el,
             start: "top 85%",
@@ -159,39 +99,329 @@ const AboutHomeOne = () => {
         }
       );
 
-      // Continuous image parallax
+      // Multi-layered parallax with different speeds for depth
       gsap.to(el, {
-        yPercent: index % 2 === 0 ? -15 : 15,
+        yPercent: index % 2 === 0 ? -25 : -15,
         ease: "none",
         scrollTrigger: {
           trigger: el,
           start: "top bottom",
           end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+
+      // Subtle horizontal drift for organic movement
+      gsap.to(el, {
+        xPercent: index % 2 === 0 ? 2 : -2,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 3,
+        },
+      });
+
+      // Scale breathing effect during scroll
+      gsap.to(el, {
+        scale: 1.02,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom center",
           scrub: 2,
+          onEnter: () => gsap.to(el, { scale: 1.01, duration: 0.5 }),
+          onLeave: () => gsap.to(el, { scale: 1, duration: 0.5 }),
         },
       });
     });
 
-    // Heavy line animations
+    // Enhanced content animations with sophisticated staggering
+    contentRefs.current.forEach((el, index) => {
+      if (!el) return;
+
+      // Skip animations for second slide (index === 1)
+      if (index === 1) return;
+
+      const children = Array.from(el.children);
+      
+      // Main content container animation
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          y: 80,
+          rotationY: index % 2 === 0 ? -15 : 15,
+          transformPerspective: 1000,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          rotationY: 0,
+          duration: 1.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 75%",
+            end: "bottom 25%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Individual child elements with cascading reveal
+      children.forEach((child, childIndex) => {
+        gsap.fromTo(
+          child,
+          {
+            opacity: 0,
+            y: 60,
+            x: index % 2 === 0 ? -30 : 30,
+            scale: 0.9,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            scale: 1,
+            duration: 1.4,
+            delay: childIndex * 0.12,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 70%",
+              end: "bottom 30%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+
+        // Subtle parallax for child elements
+        gsap.to(child, {
+          yPercent: -(childIndex + 1) * 5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.8,
+          },
+        });
+      });
+    });
+
+    // Advanced image parallax with depth layers
+    imageRefs.current.forEach((el, index) => {
+      if (!el) return;
+
+      // Skip animations for second slide (index === 1)
+      if (index === 1) return;
+
+      // Image reveal with sophisticated easing
+      gsap.fromTo(
+        el,
+        {
+          scale: 1.4,
+          opacity: 0,
+          rotationZ: index % 2 === 0 ? 2 : -2,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotationZ: 0,
+          duration: 2.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            end: "bottom 15%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Multi-speed parallax for depth
+      gsap.to(el, {
+        yPercent: index % 2 === 0 ? -20 : 20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2,
+        },
+      });
+
+      // Subtle scale animation during scroll
+      gsap.to(el, {
+        scale: 1.1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 2.5,
+        },
+      });
+
+      // Rotation effect for organic movement
+      gsap.to(el, {
+        rotationZ: index % 2 === 0 ? 1 : -1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 4,
+        },
+      });
+    });
+
+    // Enhanced line animations with wave effect
     lineRefs.current.forEach((el, index) => {
       if (!el) return;
 
+      // Initial line reveal
       gsap.fromTo(
         el,
         {
           scaleX: 0,
           opacity: 0,
+          transformOrigin: "left center",
         },
         {
           scaleX: 1,
           opacity: 1,
-          duration: 2,
-          delay: 0.5 + index * 0.2,
-          ease: "power3.out",
+          duration: 2.5,
+          delay: 0.8 + index * 0.3,
+          ease: "power3.out", 
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
             end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Subtle breathing animation
+      gsap.to(el, {
+        scaleY: 1.2,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom center",
+          scrub: 2,
+        },
+      });
+    });
+
+    // Add smooth scroll momentum
+    gsap.to(container, {
+      y: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.5,
+      },
+    });
+
+    // Background elements parallax
+    const backgroundEl = container.querySelector('[data-background]');
+    if (backgroundEl) {
+      gsap.to(backgroundEl, {
+        yPercent: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    // Enhanced card animations for third slide
+    cardRefs.current.forEach((card, index) => {
+      if (!card) return;
+
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 100,
+          rotationY: 15,
+          scale: 0.9,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          rotationY: 0,
+          scale: 1,
+          duration: 1.6,
+          delay: index * 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            end: "bottom 15%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Floating effect for cards
+      gsap.to(card, {
+        y: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 2,
+        },
+      });
+
+      // Subtle rotation during scroll
+      gsap.to(card, {
+        rotationY: index % 2 === 0 ? 2 : -2,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 3,
+        },
+      });
+    });
+
+    // Text reveal animations
+    textRefs.current.forEach((text, index) => {
+      if (!text) return;
+
+      gsap.fromTo(
+        text,
+        {
+          opacity: 0,
+          y: 30,
+          clipPath: "inset(100% 0 0 0)",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0 0 0)",
+          duration: 1.2,
+          delay: index * 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: text,
+            start: "top 85%",
+            end: "bottom 15%",
             toggleActions: "play none none reverse",
           },
         }
@@ -251,14 +481,50 @@ const AboutHomeOne = () => {
 
         .parallax-container {
           transform-style: preserve-3d;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          perspective: 1200px;
         }
 
         .content-slide {
-          will-change: transform;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
         }
 
         .heavy-line {
           transform-origin: left center;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+        }
+
+        /* Smooth scrolling performance optimizations */
+        * {
+          -webkit-transform: translateZ(0);
+          -moz-transform: translateZ(0);
+          -ms-transform: translateZ(0);
+          -o-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+
+        /* Enhanced 3D transforms */
+        .parallax-container > div {
+          transform-style: preserve-3d;
+          will-change: transform;
+        }
+
+        /* Subtle motion blur reduction */
+        .content-slide > * {
+          transform: translateZ(0);
+          backface-visibility: hidden;
+          perspective: 1000px;
+        }
+
+        /* Smooth transitions */
+        .parallax-container,
+        .content-slide,
+        .heavy-line {
+          transition: transform 0.1s ease-out;
         }
 
         @media (max-width: 768px) {
@@ -275,23 +541,43 @@ const AboutHomeOne = () => {
             padding: 40px 0 !important;
             margin-bottom: 20px !important;
           }
+          
+          /* Reduce motion on mobile for performance */
+          .parallax-container {
+            transform: none !important;
+          }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+          .parallax-container,
+          .content-slide,
+          .heavy-line {
+            transform: none !important;
+            animation: none !important;
+          }
         }
       `}</style>
 
-      {/* Background Elements */}
-      <div style={{
-        position: "absolute",
-        top: "0",
-        left: "0",
-        right: "0",
-        bottom: "0",
-        backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(254,202,21,0.08) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(13,110,253,0.06) 0%, transparent 50%),
-          linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.01) 50%, transparent 100%)
-        `,
-        pointerEvents: "none",
-      }}></div>
+      {/* Background Elements with Enhanced Parallax */}
+      <div 
+        data-background="true"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          right: "0",
+          bottom: "0",
+          backgroundImage: `
+            radial-gradient(circle at 20% 20%, rgba(254,202,21,0.06) 0%, transparent 60%),
+            radial-gradient(circle at 80% 80%, rgba(13,110,253,0.04) 0%, transparent 60%),
+            linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.008) 50%, transparent 100%)
+          `,
+          pointerEvents: "none",
+          transform: "translateZ(0)",
+          willChange: "transform",
+        }}
+      ></div>
 
       {about_data.map((item, index) => (
         <div
@@ -393,6 +679,8 @@ const AboutHomeOne = () => {
                   backdropFilter: "blur(20px)",
                   position: "relative",
                   overflow: "hidden",
+                  willChange: "transform, opacity",
+                  transform: "translateZ(0)",
                 }}>
                   <div style={{
                     position: "absolute",
@@ -478,6 +766,8 @@ const AboutHomeOne = () => {
                   backgroundImage: `url(${item.img})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  willChange: "transform",
+                  transform: "translateZ(0)",
                 }}>
                   {/* Image overlay for better contrast */}
                   <div style={{
@@ -531,376 +821,7 @@ const AboutHomeOne = () => {
                       lineHeight: "1.2",
                       textShadow: "0 1px 2px rgba(0,0,0,0.3)",
                     }}>
-                      CRM Solutions
-                    </div>
-                  </div>
-
-                  {/* CRM Comparison Chart - Bottom Left Corner */}
-                  <div style={{
-                    position: "absolute",
-                    bottom: "15px",
-                    left: "15px",
-                    width: "340px",
-                    height: "180px",
-                    background: "rgba(255,255,255,0.98)",
-                    padding: "16px",
-                    borderRadius: "12px",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255,255,255,0.3)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
-                    animation: "fadeInScale 1s ease-out 0.8s forwards",
-                    opacity: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    overflow: "hidden",
-                    zIndex: 2,
-                  }}>
-                    {/* Chart Title */}
-                    <div style={{
-                      textAlign: "center",
-                      marginBottom: "10px",
-                      flexShrink: 0,
-                    }}>
-                      <h4 style={{
-                        color: "#2c2c2c",
-                        fontSize: "12px",
-                        fontWeight: "700",
-                        margin: "0 0 6px 0",
-                        lineHeight: "1.3",
-                      }}>
-                        CRM Benefits for Tradies & Small Businesses
-                      </h4>
-                      <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: "10px",
-                        fontSize: "8px",
-                        fontWeight: "600",
-                      }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-                          <div style={{ width: "8px", height: "5px", background: "#ff6b6b", borderRadius: "1px" }}></div>
-                          <span style={{ color: "#666" }}>Manual Processes</span>
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-                          <div style={{ width: "8px", height: "5px", background: "#ffd93d", borderRadius: "1px" }}></div>
-                          <span style={{ color: "#666" }}>Custom CRM</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Chart Container */}
-                    <div style={{
-                      flex: 1,
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "flex-end",
-                      gap: "8px",
-                      padding: "8px 4px 4px 4px",
-                      height: "100px",
-                      overflow: "hidden",
-                    }}>
-                      {/* Admin Time Section */}
-                      <div style={{
-                        flex: 1,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        height: "100%",
-                        maxHeight: "100px",
-                      }}>
-                        <div style={{
-                          fontSize: "8px",
-                          fontWeight: "600",
-                          color: "#333",
-                          marginBottom: "4px",
-                          textAlign: "center",
-                          whiteSpace: "nowrap",
-                          height: "16px",
-                          lineHeight: "8px",
-                        }}>
-                          Admin Time (Weekly)
-                        </div>
-                        <div style={{
-                          display: "flex",
-                          alignItems: "flex-end",
-                          gap: "4px",
-                          height: "70px",
-                          position: "relative",
-                        }}>
-                          {/* Manual Process Bar - 20 hours */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ff6b6b",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>20hours</span>
-                            <div style={{
-                              width: "18px",
-                              height: "50px",
-                              background: "#ff6b6b",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
-                              position: "relative",
-                            }}>
-                              <span style={{ 
-                                fontSize: "7px", 
-                                color: "white", 
-                                fontWeight: "700",
-                                transform: "rotate(-90deg)",
-                                whiteSpace: "nowrap",
-                                position: "absolute",
-                              }}>20h</span>
-                            </div>
-                          </div>
-                          {/* CRM Bar - 6 hours */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ffd93d",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>6hours</span>
-                            <div style={{
-                              width: "18px",
-                              height: "15px",
-                              background: "#ffd93d",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
-                            }}>
-                              <span style={{ 
-                                fontSize: "7px", 
-                                color: "#333", 
-                                fontWeight: "700",
-                              }}>6h</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Lead Conversion Section */}
-                      <div style={{
-                        flex: 1,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        height: "100%",
-                        maxHeight: "100px",
-                      }}>
-                        <div style={{
-                          fontSize: "8px",
-                          fontWeight: "600",
-                          color: "#333",
-                          marginBottom: "4px",
-                          textAlign: "center",
-                          whiteSpace: "nowrap",
-                          height: "16px",
-                          lineHeight: "8px",
-                        }}>
-                          Lead Conversion Rate
-                        </div>
-                        <div style={{
-                          display: "flex",
-                          alignItems: "flex-end",
-                          gap: "4px",
-                          height: "70px",
-                          position: "relative",
-                        }}>
-                          {/* Manual Process Bar - 15% */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ff6b6b",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>15%</span>
-                            <div style={{
-                              width: "18px",
-                              height: "20px",
-                              background: "#ff6b6b",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
-                            }}>
-                              <span style={{ 
-                                fontSize: "7px", 
-                                color: "white", 
-                                fontWeight: "700",
-                              }}>15%</span>
-                            </div>
-                          </div>
-                          {/* CRM Bar - 35% */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ffd93d",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>35%</span>
-                            <div style={{
-                              width: "18px",
-                              height: "40px",
-                              background: "#ffd93d",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
-                              position: "relative",
-                            }}>
-                              <span style={{ 
-                                fontSize: "7px", 
-                                color: "#333", 
-                                fontWeight: "700",
-                                transform: "rotate(-90deg)",
-                                whiteSpace: "nowrap",
-                                position: "absolute",
-                              }}>35%</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Missed Leads Section */}
-                      <div style={{
-                        flex: 1,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        height: "100%",
-                        maxHeight: "100px",
-                      }}>
-                        <div style={{
-                          fontSize: "8px",
-                          fontWeight: "600",
-                          color: "#333",
-                          marginBottom: "4px",
-                          textAlign: "center",
-                          whiteSpace: "nowrap",
-                          height: "16px",
-                          lineHeight: "8px",
-                        }}>
-                          Missed Leads
-                        </div>
-                        <div style={{
-                          display: "flex",
-                          alignItems: "flex-end",
-                          gap: "4px",
-                          height: "70px",
-                          position: "relative",
-                        }}>
-                          {/* Manual Process Bar - 30% */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ff6b6b",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>30%</span>
-                            <div style={{
-                              width: "18px",
-                              height: "35px",
-                              background: "#ff6b6b",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
-                              position: "relative",
-                            }}>
-                              <span style={{ 
-                                fontSize: "7px", 
-                                color: "white", 
-                                fontWeight: "700",
-                                transform: "rotate(-90deg)",
-                                whiteSpace: "nowrap",
-                                position: "absolute",
-                              }}>30%</span>
-                            </div>
-                          </div>
-                          {/* CRM Bar - 5% */}
-                          <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "flex-end",
-                          }}>
-                            <span style={{
-                              fontSize: "7px",
-                              color: "#ffd93d",
-                              fontWeight: "700",
-                              marginBottom: "2px",
-                              height: "8px",
-                              lineHeight: "8px",
-                            }}>5%</span>
-                            <div style={{
-                              width: "18px",
-                              height: "8px",
-                              background: "#ffd93d",
-                              borderRadius: "2px 2px 0 0",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
-                            }}>
-                              <span style={{ 
-                                fontSize: "6px", 
-                                color: "#333", 
-                                fontWeight: "700",
-                              }}>5%</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      Business Solutions
                     </div>
                   </div>
                 </div>
@@ -958,8 +879,7 @@ const AboutHomeOne = () => {
                       borderRadius: "15px",
                       backdropFilter: "blur(15px)",
                       border: "2px solid rgba(254,202,21,0.3)",
-                      animation: "fadeInScale 1s ease-out 1s forwards",
-                      opacity: 0,
+                      opacity: 1,
                       textAlign: "center",
                     }}>
                       <div style={{
@@ -989,6 +909,376 @@ const AboutHomeOne = () => {
                         CRM Solutions
                       </div>
                     </div>
+
+                    {/* CRM Comparison Chart */}
+                    <div style={{
+                      position: "absolute",
+                      bottom: "20px",
+                      left: "20px",
+                      width: "320px",
+                      height: "160px",
+                      background: "rgba(255,255,255,0.96)",
+                      padding: "14px",
+                      borderRadius: "10px",
+                      backdropFilter: "blur(25px)",
+                      border: "1px solid rgba(255,255,255,0.4)",
+                      boxShadow: "0 12px 40px rgba(0, 0, 0, 0.25)",
+                      opacity: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      overflow: "hidden",
+                      zIndex: 5,
+                      transform: "translateZ(0)",
+                      willChange: "auto",
+                    }}>
+                      {/* Chart Title */}
+                      <div style={{
+                        textAlign: "center",
+                        marginBottom: "8px",
+                        flexShrink: 0,
+                      }}>
+                        <h4 style={{
+                          color: "#2c2c2c",
+                          fontSize: "11px",
+                          fontWeight: "700",
+                          margin: "0 0 4px 0",
+                          lineHeight: "1.2",
+                        }}>
+                          CRM Benefits for Tradies & Small Businesses
+                        </h4>
+                        <div style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "8px",
+                          fontSize: "7px",
+                          fontWeight: "600",
+                        }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                            <div style={{ width: "6px", height: "4px", background: "#ff6b6b", borderRadius: "1px" }}></div>
+                            <span style={{ color: "#666" }}>Manual</span>
+                          </div>
+                          <div style={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                            <div style={{ width: "6px", height: "4px", background: "#ffd93d", borderRadius: "1px" }}></div>
+                            <span style={{ color: "#666" }}>CRM</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Chart Container */}
+                      <div style={{
+                        flex: 1,
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        gap: "6px",
+                        padding: "6px 2px 2px 2px",
+                        height: "85px",
+                        overflow: "hidden",
+                      }}>
+                        {/* Admin Time Section */}
+                        <div style={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          height: "100%",
+                          maxHeight: "85px",
+                        }}>
+                          <div style={{
+                            fontSize: "7px",
+                            fontWeight: "600",
+                            color: "#333",
+                            marginBottom: "3px",
+                            textAlign: "center",
+                            whiteSpace: "nowrap",
+                            height: "12px",
+                            lineHeight: "7px",
+                          }}>
+                            Admin Time
+                          </div>
+                          <div style={{
+                            display: "flex",
+                            alignItems: "flex-end",
+                            gap: "3px",
+                            height: "60px",
+                            position: "relative",
+                          }}>
+                            {/* Manual Process Bar - 20 hours */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ff6b6b",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>20h</span>
+                              <div style={{
+                                width: "16px",
+                                height: "42px",
+                                background: "#ff6b6b",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                                position: "relative",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "6px", 
+                                  color: "white", 
+                                  fontWeight: "700",
+                                  transform: "rotate(-90deg)",
+                                  whiteSpace: "nowrap",
+                                  position: "absolute",
+                                }}>20</span>
+                              </div>
+                            </div>
+                            {/* CRM Bar - 6 hours */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ffd93d",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>6h</span>
+                              <div style={{
+                                width: "16px",
+                                height: "12px",
+                                background: "#ffd93d",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "6px", 
+                                  color: "#333", 
+                                  fontWeight: "700",
+                                }}>6</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Lead Conversion Section */}
+                        <div style={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          height: "100%",
+                          maxHeight: "85px",
+                        }}>
+                          <div style={{
+                            fontSize: "7px",
+                            fontWeight: "600",
+                            color: "#333",
+                            marginBottom: "3px",
+                            textAlign: "center",
+                            whiteSpace: "nowrap",
+                            height: "12px",
+                            lineHeight: "7px",
+                          }}>
+                            Conversion
+                          </div>
+                          <div style={{
+                            display: "flex",
+                            alignItems: "flex-end",
+                            gap: "3px",
+                            height: "60px",
+                            position: "relative",
+                          }}>
+                            {/* Manual Process Bar - 15% */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ff6b6b",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>15%</span>
+                              <div style={{
+                                width: "16px",
+                                height: "18px",
+                                background: "#ff6b6b",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "6px", 
+                                  color: "white", 
+                                  fontWeight: "700",
+                                }}>15</span>
+                              </div>
+                            </div>
+                            {/* CRM Bar - 35% */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ffd93d",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>35%</span>
+                              <div style={{
+                                width: "16px",
+                                height: "35px",
+                                background: "#ffd93d",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                                position: "relative",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "6px", 
+                                  color: "#333", 
+                                  fontWeight: "700",
+                                  transform: "rotate(-90deg)",
+                                  whiteSpace: "nowrap",
+                                  position: "absolute",
+                                }}>35</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Missed Leads Section */}
+                        <div style={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          height: "100%",
+                          maxHeight: "85px",
+                        }}>
+                          <div style={{
+                            fontSize: "7px",
+                            fontWeight: "600",
+                            color: "#333",
+                            marginBottom: "3px",
+                            textAlign: "center",
+                            whiteSpace: "nowrap",
+                            height: "12px",
+                            lineHeight: "7px",
+                          }}>
+                            Missed Leads
+                          </div>
+                          <div style={{
+                            display: "flex",
+                            alignItems: "flex-end",
+                            gap: "3px",
+                            height: "60px",
+                            position: "relative",
+                          }}>
+                            {/* Manual Process Bar - 30% */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ff6b6b",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>30%</span>
+                              <div style={{
+                                width: "16px",
+                                height: "30px",
+                                background: "#ff6b6b",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 107, 107, 0.3)",
+                                position: "relative",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "6px", 
+                                  color: "white", 
+                                  fontWeight: "700",
+                                  transform: "rotate(-90deg)",
+                                  whiteSpace: "nowrap",
+                                  position: "absolute",
+                                }}>30</span>
+                              </div>
+                            </div>
+                            {/* CRM Bar - 5% */}
+                            <div style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              height: "100%",
+                              justifyContent: "flex-end",
+                            }}>
+                              <span style={{
+                                fontSize: "6px",
+                                color: "#ffd93d",
+                                fontWeight: "700",
+                                marginBottom: "1px",
+                                height: "6px",
+                                lineHeight: "6px",
+                              }}>5%</span>
+                              <div style={{
+                                width: "16px",
+                                height: "6px",
+                                background: "#ffd93d",
+                                borderRadius: "2px 2px 0 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                boxShadow: "0 2px 4px rgba(255, 217, 61, 0.3)",
+                              }}>
+                                <span style={{ 
+                                  fontSize: "5px", 
+                                  color: "#333", 
+                                  fontWeight: "700",
+                                }}>5</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -1001,6 +1291,8 @@ const AboutHomeOne = () => {
                   backdropFilter: "blur(20px)",
                   position: "relative",
                   overflow: "hidden",
+                  willChange: "transform, opacity",
+                  transform: "translateZ(0)",
                 }}>
                   <div style={{
                     position: "absolute",
@@ -1161,16 +1453,23 @@ const AboutHomeOne = () => {
                     const [title, description] = feature.split('\n\n');
                     const colors = ["#FECA15", "#0d6efd", "#28a745"];
                     return (
-                      <div key={idx} style={{
-                        background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%)",
-                        padding: "30px 25px",
-                        borderRadius: "15px",
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        backdropFilter: "blur(20px)",
-                        position: "relative",
-                        overflow: "hidden",
-                        minHeight: "220px",
-                      }}>
+                      <div 
+                        key={idx} 
+                        ref={(el) => {
+                          if (el) cardRefs.current[idx] = el;
+                        }}
+                        style={{
+                          background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%)",
+                          padding: "30px 25px",
+                          borderRadius: "15px",
+                          border: "1px solid rgba(255,255,255,0.1)",
+                          backdropFilter: "blur(20px)",
+                          position: "relative",
+                          overflow: "hidden",
+                          minHeight: "220px",
+                          willChange: "transform, opacity",
+                          transform: "translateZ(0)",
+                        }}>
                         <div style={{
                           position: "absolute",
                           top: "0",
@@ -1206,22 +1505,34 @@ const AboutHomeOne = () => {
                           marginBottom: "15px",
                           paddingRight: "50px",
                         }}>
-                          <h4 style={{
-                            color: colors[idx],
-                            fontSize: "16px",
-                            fontWeight: "700",
-                            marginBottom: "15px",
-                            lineHeight: "1.3",
-                          }}>
+                          <h4 
+                            ref={(el) => {
+                              if (el) textRefs.current[idx * 2] = el;
+                            }}
+                            style={{
+                              color: colors[idx],
+                              fontSize: "16px",
+                              fontWeight: "700",
+                              marginBottom: "15px",
+                              lineHeight: "1.3",
+                              willChange: "transform, opacity",
+                            }}
+                          >
                             {title}
                           </h4>
                           
                           {/* Bullet points content */}
-                          <div style={{
-                            color: "#b0b0b0",
-                            fontSize: "14px",
-                            lineHeight: "1.6",
-                          }}>
+                          <div 
+                            ref={(el) => {
+                              if (el) textRefs.current[idx * 2 + 1] = el;
+                            }}
+                            style={{
+                              color: "#b0b0b0",
+                              fontSize: "14px",
+                              lineHeight: "1.6",
+                              willChange: "transform, opacity",
+                            }}
+                          >
                             {description.split('\n').map((point, pointIdx) => {
                               if (point.trim().startsWith('•')) {
                                 return (
