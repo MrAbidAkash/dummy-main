@@ -18,27 +18,34 @@ interface DataType {
 const about_data: DataType[] = [
   {
     img: "/assets/img/blog5.jpg",
-    sub_title: "Templates & Reports",
-    title: "Onboard clients faster with templates",
-    des: "Skip the manual setup with prebuilt reports and dashboards for SEO, PPC, ecommerce, and more. Customize every detail to match your brand and meet client expectations.",
-    features: []
-  },
-  {
-    img: "/assets/img/blog8.jpg",
-    sub_title: "Access Management", 
-    title: "Control access with confidence",
-    des: "Easily manage who can view or edit dashboards and reports. Protect client data while giving your team the access they need to move faster.",
-    features: []
-  },
-  {
-    img: "/assets/img/blog2.jpg",
-    sub_title: "Real business problems. Real solutions.",
+    sub_title: "Your Business Challenges",
     title: "Your Challenges? We Get It.",
     des: "You're not alone — and these problems don't fix themselves. We help small to medium-sized business owners solve these daily bottlenecks with systems that are simple, smart, and built to save time.",
     features: [
       "\"I keep missing calls, DMs, and emails — I just can't keep up.\"\n\nLeads slip through, stalling your service business growth.",
       "\"I know we need follow-ups and reviews... but it never happens.\"\n\nManual tasks eat time, leaving no room for consistent client nurturing.",
       "\"All our tools work... but none of them talk to each other.\"\n\nDisconnected systems create chaos, slowing down your service business."
+    ]
+  },
+  {
+    img: "/assets/img/blog8.jpg",
+    sub_title: "CRM Solutions", 
+    title: "How We Fix It with GoHighLevel CRM",
+    des: "Our comprehensive CRM solution addresses every challenge with smart automation and integrated systems designed specifically for tradies and small businesses.",
+    features: [
+      "Convert & Nurture\n\n• GoHighLevel CRM tracks leads from web, social, and calls in one place\n• Email + SMS automation for follow-ups and rebooking\n• Online booking tools for instant scheduling\n• Review requests to build credibility across Australia",
+      "Scale with Systems\n\n• AI voice bots handle missed calls for tradies and clinicians\n• Website + social media chatbots respond 24/7\n• Automation workflows reduce admin chaos\n• Integrations with Xero, Cliniko, ServiceM8, and Calendly"
+    ]
+  },
+  {
+    img: "/assets/img/blog2.jpg",
+    sub_title: "Why Choose Leads360",
+    title: "Why Choose Leads360 for Your Service Business?",
+    des: "Join the many service-based businesses across Australia who trust Leads360 to transform chaos into growth.",
+    features: [
+      "Results That Drive Growth\n\n• Save 10-15 hours weekly with automated workflows\n• Cut operational costs by up to 20%\n• Drive 25% revenue growth through effective lead tracking\n• Custom GoHighLevel CRM solutions for service businesses",
+      "Always Ahead of the Curve\n\n• Latest CRM technologies and integrations\n• Cutting-edge AI voice bots for missed calls\n• 24/7 chatbots for website and social media\n• Future-proofed systems for competitive growth",
+      "Partners in Your Business Environment\n\n• Understanding Australian service industry challenges\n• Systems that honor your business environment\n• Aligning teams and tools to scale without chaos\n• Maintaining human connection while streamlining operations"
     ]
   },
 ];
@@ -415,28 +422,48 @@ const AboutHomeOne = () => {
                     position: "relative",
                     zIndex: 2,
                   }}>
-                    {["Instant Setup", "Brand Customization", "Client Ready"].map((feature, idx) => (
+                    {[
+                      "\"I keep missing calls, DMs, and emails — I just can't keep up.\"",
+                      "\"I know we need follow-ups and reviews... but it never happens.\"",
+                      "\"All our tools work... but none of them talk to each other.\""
+                    ].map((challenge, idx) => (
                       <div key={idx} style={{
                         display: "flex",
-                        alignItems: "center",
+                        alignItems: "flex-start",
                         gap: "10px",
-                        padding: "10px 0",
+                        padding: "12px 0",
                         borderBottom: idx < 2 ? "1px solid rgba(255,255,255,0.1)" : "none",
                       }}>
                         <div style={{
                           width: "6px",
                           height: "6px",
-                          background: "#FECA15",
+                          background: "#ff6b6b",
                           borderRadius: "50%",
                           flexShrink: 0,
+                          marginTop: "6px",
                         }}></div>
-                        <span style={{
-                          color: "#c0c0c0",
-                          fontSize: "14px",
-                          fontWeight: "500",
-                        }}>
-                          {feature}
-                        </span>
+                        <div style={{ flex: 1 }}>
+                          <p style={{
+                            color: "#ff9999",
+                            fontSize: "13px",
+                            fontWeight: "600",
+                            fontStyle: "italic",
+                            marginBottom: "6px",
+                            lineHeight: "1.3",
+                          }}>
+                            {challenge}
+                          </p>
+                          <p style={{
+                            color: "#c0c0c0",
+                            fontSize: "12px",
+                            lineHeight: "1.4",
+                            margin: "0",
+                          }}>
+                            {idx === 0 && "Leads slip through, stalling your service business growth."}
+                            {idx === 1 && "Manual tasks eat time, leaving no room for consistent client nurturing."}
+                            {idx === 2 && "Disconnected systems create chaos, slowing down your service business."}
+                          </p>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -460,34 +487,51 @@ const AboutHomeOne = () => {
                     borderRadius: "15px",
                   }}></div>
 
-                  {/* Templates Count Badge */}
+                  {/* CRM Solutions Badge */}
                   <div style={{
                     position: "absolute",
                     top: "15px",
                     left: "15px",
-                    background: "rgba(254,202,21,0.9)",
-                    padding: "8px 12px",
-                    borderRadius: "8px",
-                    border: "1px solid rgba(254,202,21,0.3)",
+                    background: "rgba(254,202,21,0.15)",
+                    padding: "15px 20px",
+                    borderRadius: "12px",
+                    border: "1px solid rgba(254,202,21,0.4)",
+                    backdropFilter: "blur(10px)",
                     animation: "fadeInScale 1s ease-out 1.4s forwards",
                     opacity: 0,
                     zIndex: 3,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "8px",
+                    minWidth: "120px",
                   }}>
                     <div style={{
-                      color: "#333",
-                      fontSize: "8px",
-                      fontWeight: "600",
-                      marginBottom: "2px",
+                      width: "30px",
+                      height: "30px",
+                      background: "rgba(254,202,21,0.9)",
+                      borderRadius: "6px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}>
-                      Templates Ready
+                      <span style={{
+                        color: "#333",
+                        fontSize: "16px",
+                        fontWeight: "700",
+                      }}>
+                        ✓
+                      </span>
                     </div>
                     <div style={{
-                      color: "#333",
-                      fontSize: "14px",
+                      color: "#fff",
+                      fontSize: "13px",
                       fontWeight: "700",
                       textAlign: "center",
+                      lineHeight: "1.2",
+                      textShadow: "0 1px 2px rgba(0,0,0,0.3)",
                     }}>
-                      50+
+                      CRM Solutions
                     </div>
                   </div>
 
@@ -873,14 +917,14 @@ const AboutHomeOne = () => {
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
                   gap: "30px",
-                  alignItems: "center",
-                  minHeight: "350px",
+                  alignItems: "stretch",
+                  minHeight: "450px",
                 }}
               >
                 {/* Left Image Panel */}
                 <div style={{
                   position: "relative",
-                  height: "350px",
+                  height: "450px",
                   borderRadius: "15px",
                   overflow: "hidden",
                 }}>
@@ -903,50 +947,46 @@ const AboutHomeOne = () => {
                       background: "linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%)",
                     }}></div>
 
-                    {/* Security Badge */}
+                    {/* CRM Solutions Badge */}
                     <div style={{
                       position: "absolute",
                       top: "50%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
-                      background: "rgba(13,110,253,0.2)",
+                      background: "rgba(254,202,21,0.2)",
                       padding: "20px",
                       borderRadius: "15px",
                       backdropFilter: "blur(15px)",
-                      border: "2px solid rgba(13,110,253,0.3)",
+                      border: "2px solid rgba(254,202,21,0.3)",
                       animation: "fadeInScale 1s ease-out 1s forwards",
                       opacity: 0,
                       textAlign: "center",
                     }}>
                       <div style={{
-                        width: "30px",
-                        height: "30px",
+                        width: "35px",
+                        height: "35px",
                         margin: "0 auto 10px",
                         position: "relative",
+                        background: "#FECA15",
+                        borderRadius: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}>
-                        <div style={{
-                          width: "100%",
-                          height: "60%",
-                          border: "3px solid #0d6efd",
-                          borderRadius: "8px 8px 0 0",
-                          position: "absolute",
-                          top: "0",
-                        }}></div>
-                        <div style={{
-                          width: "100%",
-                          height: "50%",
-                          background: "#0d6efd",
-                          borderRadius: "6px",
-                          position: "absolute",
-                          bottom: "0",
-                        }}></div>
+                        <span style={{
+                          color: "#333",
+                          fontSize: "18px",
+                          fontWeight: "700",
+                        }}>
+                          ✓
+                        </span>
                       </div>
                       <div style={{
                         color: "#ffffff",
                         fontSize: "12px",
                         fontWeight: "600",
                       }}>
-                        Secure Access
+                        CRM Solutions
                       </div>
                     </div>
                   </div>
@@ -983,37 +1023,103 @@ const AboutHomeOne = () => {
                     {item.des}
                   </p>
 
+                  {/* Convert & Nurture Section */}
                   <div style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "12px",
+                    marginBottom: "25px",
                     position: "relative",
                     zIndex: 2,
                   }}>
-                    {["Role-based Access", "Data Protection", "Team Management"].map((feature, idx) => (
-                      <div key={idx} style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                        padding: "10px 0",
-                        borderBottom: idx < 2 ? "1px solid rgba(255,255,255,0.1)" : "none",
-                      }}>
-                        <div style={{
-                          width: "6px",
-                          height: "6px",
-                          background: "#0d6efd",
-                          borderRadius: "50%",
-                          flexShrink: 0,
-                        }}></div>
-                        <span style={{
-                          color: "#c0c0c0",
-                          fontSize: "14px",
-                          fontWeight: "500",
+                    <h4 style={{
+                      color: "#FECA15",
+                      fontSize: "14px",
+                      fontWeight: "700",
+                      marginBottom: "12px",
+                    }}>
+                      Convert & Nurture
+                    </h4>
+                    <div style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}>
+                      {[
+                        "GoHighLevel CRM tracks leads from web, social, and calls in one place",
+                        "Email + SMS automation for follow-ups and rebooking",
+                        "Online booking tools for instant scheduling",
+                        "Review requests to build credibility across Australia"
+                      ].map((feature, idx) => (
+                        <div key={idx} style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "8px",
                         }}>
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
+                          <div style={{
+                            width: "4px",
+                            height: "4px",
+                            background: "#FECA15",
+                            borderRadius: "50%",
+                            flexShrink: 0,
+                            marginTop: "6px",
+                          }}></div>
+                          <span style={{
+                            color: "#c0c0c0",
+                            fontSize: "12px",
+                            lineHeight: "1.4",
+                          }}>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Scale with Systems Section */}
+                  <div style={{
+                    position: "relative",
+                    zIndex: 2,
+                  }}>
+                    <h4 style={{
+                      color: "#0d6efd",
+                      fontSize: "14px",
+                      fontWeight: "700",
+                      marginBottom: "12px",
+                    }}>
+                      Scale with Systems
+                    </h4>
+                    <div style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}>
+                      {[
+                        "AI voice bots handle missed calls for tradies and clinicians",
+                        "Website + social media chatbots respond 24/7",
+                        "Automation workflows reduce admin chaos",
+                        "Integrations with Xero, Cliniko, ServiceM8, and Calendly"
+                      ].map((feature, idx) => (
+                        <div key={idx} style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "8px",
+                        }}>
+                          <div style={{
+                            width: "4px",
+                            height: "4px",
+                            background: "#0d6efd",
+                            borderRadius: "50%",
+                            flexShrink: 0,
+                            marginTop: "6px",
+                          }}></div>
+                          <span style={{
+                            color: "#c0c0c0",
+                            fontSize: "12px",
+                            lineHeight: "1.4",
+                          }}>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1044,15 +1150,15 @@ const AboutHomeOne = () => {
                   </p>
                 </div>
 
-                {/* Problem Solution Cards */}
+                {/* Why Choose Leads360 Cards */}
                 <div style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                  gap: "25px",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+                  gap: "30px",
                   marginTop: "30px",
                 }}>
                   {item.features?.map((feature, idx) => {
-                    const [problem, solution] = feature.split('\n\n');
+                    const [title, description] = feature.split('\n\n');
                     const colors = ["#FECA15", "#0d6efd", "#28a745"];
                     return (
                       <div key={idx} style={{
@@ -1063,6 +1169,7 @@ const AboutHomeOne = () => {
                         backdropFilter: "blur(20px)",
                         position: "relative",
                         overflow: "hidden",
+                        minHeight: "220px",
                       }}>
                         <div style={{
                           position: "absolute",
@@ -1075,8 +1182,8 @@ const AboutHomeOne = () => {
 
                         <div style={{
                           position: "absolute",
-                          top: "20px",
-                          right: "20px",
+                          top: "15px",
+                          right: "15px",
                           width: "35px",
                           height: "35px",
                           background: `${colors[idx]}20`,
@@ -1096,26 +1203,49 @@ const AboutHomeOne = () => {
                         </div>
 
                         <div style={{
-                          marginBottom: "20px",
+                          marginBottom: "15px",
+                          paddingRight: "50px",
                         }}>
                           <h4 style={{
                             color: colors[idx],
-                            fontSize: "15px",
-                            fontWeight: "600",
+                            fontSize: "16px",
+                            fontWeight: "700",
                             marginBottom: "15px",
-                            fontStyle: "italic",
-                            lineHeight: "1.4",
+                            lineHeight: "1.3",
                           }}>
-                            {problem}
+                            {title}
                           </h4>
-                          <p style={{
+                          
+                          {/* Bullet points content */}
+                          <div style={{
                             color: "#b0b0b0",
                             fontSize: "14px",
                             lineHeight: "1.6",
-                            margin: "0",
                           }}>
-                            {solution}
-                          </p>
+                            {description.split('\n').map((point, pointIdx) => {
+                              if (point.trim().startsWith('•')) {
+                                return (
+                                  <div key={pointIdx} style={{
+                                    display: "flex",
+                                    alignItems: "flex-start",
+                                    gap: "8px",
+                                    marginBottom: "8px",
+                                  }}>
+                                    <div style={{
+                                      width: "4px",
+                                      height: "4px",
+                                      background: colors[idx],
+                                      borderRadius: "50%",
+                                      flexShrink: 0,
+                                      marginTop: "8px",
+                                    }}></div>
+                                    <span>{point.replace('•', '').trim()}</span>
+                                  </div>
+                                );
+                              }
+                              return null;
+                            })}
+                          </div>
                         </div>
                       </div>
                     );
